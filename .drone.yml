@@ -7,3 +7,4 @@ steps:
   commands:
     - composer install
     - phpunit
+    
