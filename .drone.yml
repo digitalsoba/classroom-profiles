@@ -1,7 +1,8 @@
 kind: pipeline
 name: default
 
-build:
+steps:
+- name: PHP unit test
   image: epcallan/php7-testing-phpunit:7.1-phpunit5
   commands:
     - composer install
