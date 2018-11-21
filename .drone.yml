@@ -7,14 +7,18 @@ platform:
   arch: amd64
 
 steps:
-- name: install
+- name: Install composer
   image: composer
   commands:
-  - composer install
+  - composer install --prefer-dist
 
-- name: test
-  image: php:7
+- name: PHPUnit Test
+  image: php:7.3-rc-cli-alpine
   commands:
+  - php -v
+  - composer -V
+  - cp .env.example .env
+  - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
 
 ...
