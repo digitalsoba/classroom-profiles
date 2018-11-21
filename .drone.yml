@@ -1,9 +1,23 @@
+---
 kind: pipeline
 name: default
 
+platform:
+  os: linux
+  arch: amd64
+
 steps:
-- name: PHP unit test
-  image: epcallan/php7-testing-phpunit:7.1-phpunit5
+- name: Install composer
+  image: composer
   commands:
-    - composer install
-    - phpunit
+  - composer install --prefer-dist
+
+- name: PHPUnit Test
+  image: php:7.3-rc-cli-alpine
+  commands:
+  - php -v
+  - cp .env.example .env
+  - php artisan key:generate
+  - vendor/bin/phpunit --configuration phpunit.xml
+
+...
