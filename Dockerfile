@@ -1,4 +1,4 @@
-# # Backend
+# Backend
 FROM composer:latest as vendor
 COPY database/ database/
 
@@ -28,6 +28,11 @@ RUN yarn install \
 # PHP/Apache 
 FROM php:7.3-rc-apache
 
+# Install php extensions
+RUN docker-php-ext-install pdo_mysql \
+    # Enable apache modules
+    && a2enmod headers rewrite 
+
 # Add apache.conf file 
 COPY ./deploy/apache.conf /etc/apache2/sites-enabled/000-default.conf  
 
@@ -39,11 +44,8 @@ COPY --from=frontend /app/public/js/ /var/www/html/public/js/
 COPY --from=frontend /app/public/css/ /var/www/html/public/css/
 COPY --from=frontend /app/mix-manifest.json /var/www/html/mix-manifest.json
 
-# Install php extensions
-RUN docker-php-ext-install pdo_mysql \
-    # Enable apache modules
-    && a2enmod headers rewrite \
-    && chown -hR www-data:www-data /var/www
+# Change /var/www permission
+RUN chown -hR www-data:www-data /var/www
 
 # Expose port 80 and 443
 EXPOSE 80 443
