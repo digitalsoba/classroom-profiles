@@ -10,7 +10,7 @@ Make sure you have the following:
 - Git 
 - A terminal
 - [Docker](https://www.docker.com/get-started)
-- [Docker-Compose] (https://docs.docker.com/compose/install/)
+- [Docker-Compose](https://docs.docker.com/compose/install/)
 - [Composer](https://getcomposer.org/doc/00-intro.md)
 - [NPM](https://www.npmjs.com/get-npm) or [Yarn](https://yarnpkg.com/lang/en/docs/install/)
 
