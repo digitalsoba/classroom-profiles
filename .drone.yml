@@ -7,7 +7,7 @@ platform:
   arch: amd64
 
 steps:
-- name: Install composer
+- name: Build
   image: composer
   commands:
   - composer install --prefer-dist
@@ -20,4 +20,7 @@ steps:
   - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
 
+trigger:
+  event:
+  - pull_request
 ...
