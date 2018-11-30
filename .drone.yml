@@ -20,4 +20,7 @@ steps:
   - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
 
+trigger:
+  event:
+  - pull_request
 ...
