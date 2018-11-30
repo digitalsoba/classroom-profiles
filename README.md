@@ -18,7 +18,7 @@ Make sure you have the following:
 1. Clone the repo into your projects folder with your terminal using `git clone https://github.com/CSUN-Comp490/classroom-profiles.git` and change directory into the project `cd classroom-profiles`
 2. Run `composer install` on the terminal
 3. Run `yarn` or `npm install` to grab Frontend packages
-4. Copy the .env.example as a .env file `cp .env.example .env` If you using the database, ask your Ops person for the proper .env file
+4. Copy the .env.example as a .env file with `cp .env.example .env` If you're using the database, ask your Ops person for the proper .env file
 5. Run `php artisan key:generate`
 6. Now run `docker-compose up -d` to start your local dev environment
 7. Visit `https://localhost:8080` to view the project
