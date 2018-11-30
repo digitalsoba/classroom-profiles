@@ -21,6 +21,6 @@ Make sure you have the following:
 4. Copy the .env.example as a .env file with `cp .env.example .env` If you're using the database, ask your Ops person for the proper .env file
 5. Run `php artisan key:generate`
 6. Now run `docker-compose up -d` to start your local dev environment
-7. Visit `https://localhost:8080` to view the project
+7. Visit `http://localhost:8080` to view the project
 
 **Tip: When you're done developing, run `docker-compose down` to stop your environment**
