@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//To test getting a room given as a query
+Route::get('/map', 'MapsController@map');
+
+//To test a predefined array of rooms at once
+Route::get('/mapTest', 'MapsController@mapTest');
