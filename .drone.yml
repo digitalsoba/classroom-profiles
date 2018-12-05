@@ -21,7 +21,7 @@ steps:
   - vendor/bin/phpunit --configuration phpunit.xml
 
 - name: Deploy to ECR test
-  image: alpine:latest
+  image: ubuntu:latest
   commands:
   - echo "$DB_HOST" > wow.txt
   - ls -la
