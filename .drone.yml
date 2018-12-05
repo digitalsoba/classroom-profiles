@@ -24,6 +24,13 @@ steps:
   image: ubuntu:latest
   commands:
   - echo "$DB_HOST" > wow.txt
-  - ls -la
-  - cat wow.txt
+
+- name: Deploy to dockerhub 
+  image: plugins/docker
+  settings:
+    username: digitalsoba
+    password: 
+      from_secret: DOCKERHUB_PASS
+    repo: digitalsoba/foobar
+    tags: latest
 ...
