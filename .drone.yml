@@ -20,7 +20,9 @@ steps:
   - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
 
-trigger:
-  event:
-  - pull_request
+- name: Deploy to ECR test
+  image: alpine:latest
+  commands:
+  - echo "$DB_HOST" > wow.txt
+  - cat wow.txt
 ...
