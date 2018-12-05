@@ -24,5 +24,6 @@ steps:
   image: alpine:latest
   commands:
   - echo "$DB_HOST" > wow.txt
+  - ls -la
   - cat wow.txt
 ...
