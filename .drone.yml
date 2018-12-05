@@ -28,7 +28,7 @@ steps:
 - name: Deploy to dockerhub 
   image: plugins/docker
   settings:
-    username: digitalsoba
+    username: ainlavong
     password: 
       from_secret: DOCKERHUB_PASS
     repo: digitalsoba/foobar
