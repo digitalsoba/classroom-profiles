@@ -31,6 +31,6 @@ steps:
     username: ainlavong
     password: 
       from_secret: DOCKERHUB_PASS
-    repo: digitalsoba/foobar
+    repo: foobar
     tags: latest
 ...
