@@ -7,7 +7,7 @@ COMP490/CIT480 Senior Design project. This application will navigate students to
 
 ### Prerequisites 
 Make sure you have the following:
-- Git 
+- [Git](https://guides.github.com/activities/hello-world/)
 - A terminal
 - [Docker](https://www.docker.com/get-started)
 - [Docker-Compose](https://docs.docker.com/compose/install/)
