@@ -19,7 +19,7 @@ class EquipmentsController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
@@ -47,7 +47,8 @@ class EquipmentsController extends Controller
      */
     public function show($Building_Room)
     {
-
+        $data= Equipment::find($Building_Room);
+        return view('pages.equipDetail')->with('data',$data);
         return Equipment::find($Building_Room);
     }
 
