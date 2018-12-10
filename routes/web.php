@@ -28,5 +28,11 @@ Route::get('/equip', function () {
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/index', function () {
+    //$title="This is a test";
+    //return view('pages.index')->with("apple",$title);
+    return view('pages.index');
+
+});
 
 Route::resource("equip","EquipmentsController");
