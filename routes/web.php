@@ -11,6 +11,22 @@
 |
 */
 
+
+
+/*
+Route::get('/equip', function () {
+    return "This is equip";
+});
+Route::get("/classRoomNumber/{roomNum}",function($roomNum){
+    return $roomNum;
+});
+Route::get('/equip', function () {
+    return view('pages.equip');
+});
+
+*/
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource("equip","EquipmentsController");
