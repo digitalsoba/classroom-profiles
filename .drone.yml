@@ -29,6 +29,7 @@ steps:
 
 ---
 kind: pipeline
+name: deploy
 steps:
 - name: Deploy to dockerhub 
   image: alpine
