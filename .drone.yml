@@ -1,6 +1,7 @@
 ---
 kind: pipeline
-name: default
+name: build-test
+
 platform:
   os: linux
   arch: amd64
@@ -26,6 +27,9 @@ steps:
       from_secret: slack_webhook
     channel: classrooms-drone
 
+---
+kind: pipeline
+steps:
 - name: Deploy to dockerhub 
   image: alpine
   command:
@@ -33,9 +37,9 @@ steps:
 trigger:
   status:
   - success
-depends_on:
-- build
 
+depends_on:
+- build-test
 
 # trigger:
 #   event:
