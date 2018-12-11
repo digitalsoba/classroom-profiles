@@ -15,21 +15,18 @@ steps:
 - name: PHPUnit Test
   image: php:7.3-rc-cli-alpine
   commands:
-  - php -v
   - cp .env.example .env
   - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
-  when:
-  status: [ success, failure ]
 
 - name: slack
   image: plugins/slack
+  when:
+    status: [ success, failure ]
   settings:
     webhook:
       from_secret: slack_webhook
     channel: classrooms-drone
-  when:
-  status: [ success, failure ]
   template: >
     {{#success build.status}}
       build {{build.number}} succeeded. Good job.
