@@ -42,26 +42,18 @@ kind: pipeline
 name: deploy
 steps:
 
-- name: docker  
-  image: plugins/docker
+- name: deploy  
+  image: plugins/ecr
   settings:
-    username: ainlavong
-    password: 
-      from_secrets: password
-    repo: ainlavong/testing
-    tags: latest
-# - name: deploy  
-#   image: plugins/ecr
-#   settings:
-#     access_key: 
-#        from_secrets: aws_access_key_id
-#     secret_key: 
-#        from_secrets: aws_secret_access_key
-#     repo: -.-531697185897.dkr.ecr.us-west-2.amazonaws.com/test
-#       #  from_secrets: ecr_repo
-#     registry: 531697185897.dkr.ecr.us-west-2.amazonaws.com
-#       #  from_secrets: ecr_registry
-#     region: us-west-2
+    access_key: 
+       from_secret: aws_access_key_id
+    secret_key: 
+       from_secret: aws_secret_access_key
+    repo:
+       from_secret: ecr_repo
+    registry:
+       from_secret: ecr_registry
+    region: us-west-2
 
 trigger:
   status:
