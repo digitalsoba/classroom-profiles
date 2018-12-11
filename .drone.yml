@@ -52,7 +52,7 @@ steps:
       from_secrets: ecr_repo
     registry: 
       from_secrets: ecr_registry
-    region: us-west-2
+
 trigger:
   status:
   - success
