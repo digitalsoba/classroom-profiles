@@ -1,5 +1,5 @@
 # Classroom-Profiles
-[![Build Status](https://drone.matabit.org/api/badges/CSUN-Comp490/classroom-profiles/status.svg)](https://drone.matabit.org/CSUN-Comp490/classroom-profiles)
+[![Build Status](https://cloud.drone.io/api/badges/CSUN-Comp490/classroom-profiles/status.svg?branch=dev)](https://cloud.drone.io/CSUN-Comp490/classroom-profiles)
 
 [![Build Status](https://cloud.drone.io/api/badges/CSUN-Comp490/classroom-profiles/status.svg?branch=dev)](https://cloud.drone.io/CSUN-Comp490/classroom-profiles)
 
@@ -10,7 +10,7 @@ COMP490/CIT480 Senior Design project. This application will navigate students to
 
 ### Prerequisites 
 Make sure you have the following:
-- Git 
+- [Git](https://guides.github.com/activities/hello-world/)
 - A terminal
 - [Docker](https://www.docker.com/get-started)
 - [Docker-Compose](https://docs.docker.com/compose/install/)
