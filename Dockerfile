@@ -45,8 +45,7 @@ COPY --from=frontend /app/public/css/ /var/www/html/public/css/
 COPY --from=frontend /app/mix-manifest.json /var/www/html/mix-manifest.json
 
 # Change /var/www permission
-RUN chown -hR www-data:www-data /var/www \
-    && cp .env.example .env
+RUN chown -hR www-data:www-data /var/www 
 
 # Expose port 80 and 443
 EXPOSE 80 443

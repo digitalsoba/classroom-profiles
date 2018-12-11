@@ -34,14 +34,6 @@ steps:
         Build {{build.number}} failed. Fix me please.
       {{/success}}
 
-# trigger:
-#   event:
-#   - pull_request
----
-kind: pipeline
-name: deploy
-steps:
-
 - name: deploy  
   image: plugins/ecr
   settings:
@@ -55,12 +47,22 @@ steps:
        from_secret: ecr_registry
     region: us-west-2
 
-trigger:
-  status:
-  - success
+# trigger:
+#   event:
+#   - pull_request
+# ---
+# kind: pipeline
+# name: deploy
+# steps:
 
-depends_on:
-- build-test
+
+
+# trigger:
+#   status:
+#   - success
+
+# depends_on:
+# - build-test
 
 # trigger:
 #   event:
