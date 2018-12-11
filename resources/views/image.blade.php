@@ -5,16 +5,38 @@
  * Time: 10:00 AM
  */
 
-<div class="container">
+@extends("layout.app")
 
+@section('content')
 
-    {!! Form::open(['action'=> 'ImageController@store', 'method'=>'POST']) !!}
-    <div class="form-group" >
-        {{Form::label('zipcode', 'Zipcode')}}
-        {{Form::text('zipcode', '', ['class'=> 'form-control', 'placeholder' => 'Zipcode'])}}
-
+    <div class="row">
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="https://cdn.metalab.csun.edu/classrooms/EU103/front.jpg" alt="Lights" style="width:100%">
+                    <div class="caption">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="https://cdn.metalab.csun.edu/classrooms/EU103/exit.jpg" alt="Nature" style="width:100%">
+                    <div class="caption">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="https://cdn.metalab.csun.edu/classrooms/EU103/media.jpg" alt="Fjords" style="width:100%">
+                    <div class="caption">
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 
-    {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
-    {!! Form::close() !!}
-</div>
+@endsection

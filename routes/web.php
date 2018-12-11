@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/image', function () {
+    return view('image');
+})-> name('image');
+
+
+Route::get('image/{room}', 'ImageController@imageAPI')->name('room-image');
