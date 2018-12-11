@@ -41,10 +41,18 @@ steps:
 kind: pipeline
 name: deploy
 steps:
-- name: Deploy to dockerhub 
-  image: alpine
-  commands:
-    - ls -la
+- name: deploy  
+  image: plugins/ecr
+  settings:
+    access_key: 
+      from_secrets: access_key
+    secret_key: 
+      from_secrets: secret_key
+    repo: 
+      from_secrets: ecr_repo
+    registry: 
+      from_secrets: ecr_registry
+    region: us-west-2
 trigger:
   status:
   - success
