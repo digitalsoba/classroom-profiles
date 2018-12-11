@@ -19,6 +19,8 @@ steps:
   - cp .env.example .env
   - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
+  when:
+  status: [ sucess, failure ]
 
 - name: slack
   image: plugins/slack
@@ -35,6 +37,9 @@ steps:
       build {{build.number}} failed. Fix me please.
     {{/success}}
 
+# trigger:
+#   event:
+#   - pull_request
 ---
 kind: pipeline
 name: deploy
