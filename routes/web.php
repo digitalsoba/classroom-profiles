@@ -32,6 +32,11 @@ Route::get('/', function () {
     return view('pages.index');
 });
 
+
+Route::get('/image', function () {
+    return view('image');
+})-> name('image');
+
 //To test getting a room given as a query
 Route::get('/map', 'MapsController@map');
 
