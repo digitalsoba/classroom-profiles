@@ -20,7 +20,7 @@ steps:
   - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
   when:
-  status: [ sucess, failure ]
+  status: [ success, failure ]
 
 - name: slack
   image: plugins/slack
@@ -29,7 +29,7 @@ steps:
       from_secret: slack_webhook
     channel: classrooms-drone
   when:
-  status: [ sucess, failure ]
+  status: [ success, failure ]
   template: >
     {{#success build.status}}
       build {{build.number}} succeeded. Good job.
