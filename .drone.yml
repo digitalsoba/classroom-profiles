@@ -19,6 +19,10 @@ steps:
   - cp .env.example .env
   - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
+  when:
+  status:
+  - success
+  - failure
 
 - name: slack
   image: plugins/slack
