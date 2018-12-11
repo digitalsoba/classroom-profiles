@@ -26,6 +26,10 @@ steps:
     webhook:
       from_secret: slack_webhook
     channel: classrooms-drone
+  when:
+  status:
+  - success
+  - failure
 
 ---
 kind: pipeline
