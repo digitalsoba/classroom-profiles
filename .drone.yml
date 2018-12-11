@@ -27,12 +27,12 @@ steps:
     webhook:
       from_secret: slack_webhook
     channel: classrooms-drone
-  template: >
-    {{#success build.status}}
-      build {{build.number}} succeeded. Good job.
-    {{else}}
-      build {{build.number}} failed. Fix me please.
-    {{/success}}
+    template: >
+      {{#success build.status}}
+        build {{build.number}} succeeded. Good job.
+      {{else}}
+        build {{build.number}} failed. Fix me please.
+      {{/success}}
 
 # trigger:
 #   event:
