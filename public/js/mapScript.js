@@ -30,6 +30,23 @@ function start(accessToken) {
     mymap.fitBounds(boundLines.getBounds());
 }
 
+function LineBetweenRooms(rooms)
+{
+    var latlings = [];
+    for(room of rooms)
+    {
+        addPoint(room[0], room[1], room[2], room[3]);
+        latlings.push([room[0], room[1]]);
+    }
+
+    var polyline = L.polyline(latlngs, {
+        color: 'red', weight: 5
+    }).addTo(mymap);
+
+    mymap.fitBounds(polyline.getBounds());
+}
+
+
 function demoLine() {
 
     var latlngs = [
