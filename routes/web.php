@@ -11,6 +11,20 @@
 |
 */
 
+
+
+/*
+Route::get('/equip', function () {
+    return "This is equip";
+});
+Route::get("/classRoomNumber/{roomNum}",function($roomNum){
+    return $roomNum;
+});
+Route::get('/equip', function () {
+    return view('pages.equip');
+});
+
+*/
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,3 +34,11 @@ Route::get('/map', 'MapsController@map');
 
 //To test a predefined array of rooms at once
 Route::get('/mapTest', 'MapsController@mapTest');
+
+Route::get('/index', function () {
+    //$title="This is a test";
+    //return view('pages.index')->with("apple",$title);
+    return view('pages.index');
+});
+
+Route::resource("equip","EquipmentsController");
