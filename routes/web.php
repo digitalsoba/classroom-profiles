@@ -35,6 +35,9 @@ Route::get('/map', 'MapsController@map');
 //To test a predefined array of rooms at once
 Route::get('/mapTest', 'MapsController@mapTest');
 
+//Gets the route between of a collection of rooms, in the order given
+Route::get('/route', 'MapsController@mapRoute');
+
 Route::get('/index', function () {
     //$title="This is a test";
     //return view('pages.index')->with("apple",$title);
