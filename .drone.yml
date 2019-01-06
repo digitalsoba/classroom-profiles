@@ -10,7 +10,7 @@ steps:
 - name: Build
   image: composer
   commands:
-  - composer install --prefer-dist
+  - composer update
 
 - name: PHPUnit Test
   image: php:7.3-rc-cli-alpine
