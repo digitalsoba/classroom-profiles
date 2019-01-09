@@ -34,6 +34,15 @@ steps:
 #         Build {{build.number}} failed. Fix me please.
 #       {{/success}}
 
+
+# trigger:
+#   event:
+#   - pull_request
+---
+kind: pipeline
+name: deploy
+steps:
+  
 - name: deploy  
   image: plugins/docker
   settings:
@@ -48,15 +57,6 @@ steps:
       - DB_USERNAME
       - DB_PASSWORD
       - MAPBOX_API_KEY
-
-
-# trigger:
-#   event:
-#   - pull_request
-# ---
-# kind: pipeline
-# name: deploy
-# steps:
 
 
 
