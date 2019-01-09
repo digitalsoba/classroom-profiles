@@ -41,7 +41,7 @@ steps:
       from_secret: docker_user
     password: 
       from_secret: docker_password
-    repo: test
+    repo: ainlavong/test
     build_args:
       - DB_DATABASE
       - DB_HOST
