@@ -42,7 +42,6 @@ steps:
     password: 
       from_secret: docker_password
     repo: test
-    auto_tag: true
     build_args:
       - DB_DATABASE
       - DB_HOST
