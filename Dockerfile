@@ -47,5 +47,12 @@ COPY --from=frontend /app/mix-manifest.json /var/www/html/mix-manifest.json
 # Change /var/www permission
 RUN chown -hR www-data:www-data /var/www 
 
+# Build Args
+ARG DB_DATABASE
+ARG DB_HOST
+ARG DB_USERNAME
+ARG DB_PASSWORD
+ARG MAPBOX_API_KEY
+
 # Expose port 80 and 443
 EXPOSE 80 443

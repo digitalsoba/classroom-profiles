@@ -19,33 +19,37 @@ steps:
   - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
 
-- name: slack
-  image: plugins/slack
-  when:
-    status: [ success, failure ]
-  settings:
-    webhook:
-      from_secret: slack_webhook
-    channel: classrooms-drone
-    template: >
-      {{#success build.status}}
-        Build {{build.number}} succeeded. Good job.
-      {{else}}
-        Build {{build.number}} failed. Fix me please.
-      {{/success}}
+# - name: slack
+#   image: plugins/slack
+#   when:
+#     status: [ success, failure ]
+#   settings:
+#     webhook:
+#       from_secret: slack_webhook
+#     channel: classrooms-drone
+#     template: >
+#       {{#success build.status}}
+#         Build {{build.number}} succeeded. Good job.
+#       {{else}}
+#         Build {{build.number}} failed. Fix me please.
+#       {{/success}}
 
 - name: deploy  
-  image: plugins/ecr
+  image: plugins/docker
   settings:
-    access_key: 
-       from_secret: aws_access_key_id
-    secret_key: 
-       from_secret: aws_secret_access_key
-    repo:
-       from_secret: ecr_repo
-    registry:
-       from_secret: ecr_registry
-    region: us-west-2
+    username:
+      from_secret: docker_username
+    password: 
+      from_secret: docker_password
+    repo: test
+    auto_tag: true
+    build_args:
+      - DB_DATABASE
+      - DB_HOST
+      - DB_USERNAME
+      - DB_PASSWORD
+      - MAPBOX_API_KEY
+
 
 # trigger:
 #   event:
