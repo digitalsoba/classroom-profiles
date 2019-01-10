@@ -9,34 +9,16 @@
 
 @section('content')
 
-    <div class="row">
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <a href="">
-                    <img src="https://cdn.metalab.csun.edu/classrooms/EU103/front.jpg" alt="Lights" style="width:100%">
-                    <div class="caption">
-                    </div>
-                </a>
-            </div>
+    <div class="container">
+
+        {!! Form::open(['action'=> 'ImageController@store', 'method'=>'POST']) !!}
+        <div class="form-group" >
+            {{Form::label('room', 'Room')}}
+            {{Form::text('room', '', ['class'=> 'form-control', 'placeholder' => 'Name of Room'])}}
         </div>
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <a href="">
-                    <img src="https://cdn.metalab.csun.edu/classrooms/EU103/exit.jpg" alt="Nature" style="width:100%">
-                    <div class="caption">
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <a href="">
-                    <img src="https://cdn.metalab.csun.edu/classrooms/EU103/media.jpg" alt="Fjords" style="width:100%">
-                    <div class="caption">
-                    </div>
-                </a>
-            </div>
-        </div>
+
+        {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
+        {!! Form::close() !!}
     </div>
 
 @endsection

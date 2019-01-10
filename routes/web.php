@@ -11,6 +11,19 @@
 |
 */
 
+
+/*
+Route::get('/equip', function () {
+    return "This is equip";
+});
+Route::get("/classRoomNumber/{roomNum}",function($roomNum){
+    return $roomNum;
+});
+Route::get('/equip', function () {
+    return view('pages.equip');
+});
+
+*/
 Route::get('/', function () {
     return view('welcome');
 });
@@ -19,5 +32,13 @@ Route::get('/image', function () {
     return view('image');
 })-> name('image');
 
-
 Route::get('image/{room}', 'ImageController@imageAPI')->name('room-image');
+
+Route::get('/index', function () {
+    //$title="This is a test";
+    //return view('pages.index')->with("apple",$title);
+    return view('pages.index');
+});
+
+Route::resource("equip","EquipmentsController");
+
