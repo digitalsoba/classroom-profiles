@@ -18,6 +18,8 @@ class LoginController extends Controller
     |
     */
 
+    //use LDAP branch to
+
     use AuthenticatesUsers;
 
     /**

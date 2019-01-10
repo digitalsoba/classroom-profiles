@@ -36,6 +36,27 @@
                     </div>
                 </a>
             </div>
+{{--
+            -------------3D images--------------
+--}}
+            <div>
+
+                <a href="{{url('http://facplan-arcgisweb1.csun.edu/360/'.$building.'/'.$roomNumber.'/')}}"> 3D</a>
+            <img src="JD2212 door.JPG">
+                <script>
+                    pannellum.viewer('panorama1', {
+                        "type": "equirectangular",
+
+                        "panorama": {{$room}}".JPG",
+
+                        "autoLoad": true,
+
+                        "autoRotate": 4
+                    });
+
+                </script>
+
+            </div>
         </div>
     </div>
 

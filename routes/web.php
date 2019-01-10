@@ -37,6 +37,8 @@ Route::get('/image', function () {
     return view('image');
 })-> name('image');
 
+Route::get('/{classroom}', 'ImageController@interactiveImages');
+
 //To test getting a room given as a query
 Route::get('/map', 'MapsController@map');
 

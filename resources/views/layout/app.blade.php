@@ -31,6 +31,7 @@
         <img src="{{ URL::to('/') }}/images/placeHolder.jpg" alt="map Place Holder" style="height:400px;width:100%;">
     </div>
     @include('layout.botnavbar')
+
     @yield("content")
 </body>
 
