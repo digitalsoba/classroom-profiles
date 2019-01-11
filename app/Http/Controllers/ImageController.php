@@ -34,12 +34,12 @@ class ImageController{
     //returns 3D images of a specific classroom
     public function interactiveImages($classroom){
 
-        //needs the panomora photo, the script is what makes tha photo interactive. Can still use the direct link to
+        //needs the panorama photo, the script is what makes tha photo interactive. Can still use the direct link to
         //the 3D website
 
-        $room = $classroom; //
-        $building = substr($room,0,2);
-        $roomNumber = substr($room,2);
+        $room = $classroom; //stores classroom. Ex: JD2216
+        $building = substr($room,0,2);  //stores building of classroom. Ex: JD
+        $roomNumber = substr($room,2);  //stores room number. Ex: 2216
         return view('image',compact('room','building','roomNumber'));
 
 }
