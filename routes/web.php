@@ -37,7 +37,7 @@ Route::get('/image', function () {
     return view('image');
 })-> name('image');
 
-Route::get('/{classroom}', 'ImageController@interactiveImages');
+Route::get('/{classroom}', 'ImageController@interactiveImages',['middleware' => ['Cors']]);
 
 //To test getting a room given as a query
 Route::get('/map', 'MapsController@map');

@@ -34,10 +34,10 @@ class ImageController{
     //returns 3D images of a specific classroom
     public function interactiveImages($classroom){
 
-        //needs the panomora pic and the script is what makes tha pic interactive. Can still use the link he said and
-        //use a Request, but you still need to find the scripts that actually make the pic interactive
+        //needs the panomora photo, the script is what makes tha photo interactive. Can still use the direct link to
+        //the 3D website
 
-        $room = $classroom;
+        $room = $classroom; //
         $building = substr($room,0,2);
         $roomNumber = substr($room,2);
         return view('image',compact('room','building','roomNumber'));
