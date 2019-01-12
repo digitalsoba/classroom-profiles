@@ -10495,3 +10495,9 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+#map {
+  height: 650px;
+  width: 1200px;
+  border: solid black;
+}
+

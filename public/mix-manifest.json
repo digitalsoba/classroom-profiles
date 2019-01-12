@@ -1,4 +1,5 @@
 {
-    "/resources/js/mapScripts.js": "/resources/js/mapScripts.js",
-    "/css/app.css": "/css/app.css"
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/js/mapScripts.js": "/js/mapScripts.js"
 }
