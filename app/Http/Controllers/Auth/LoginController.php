@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -26,6 +27,7 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
+    protected $username = 'username';
 
     /**
      * Create a new controller instance.
@@ -35,5 +37,26 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function login(Request $request)
+    {
+//        $credentials = $request->all('username', 'password');
+//        if (auth()->attempt($credentials)==true) {
+//            // Successful login. Get the user instance.
+//            $user = auth()->user();
+//            $request->session()->flash('level', 'success');
+//            return redirect()->route('pages.index');
+//        } else {
+//            $request->session()->flash('message', 'Invalid username or password');
+//            $request->session()->flash('level', 'danger');
+//            return redirect()->route('page.login');
+//        }
+        $credentials = $request->all('username', 'password');
+        if (auth()->attempt($credentials)) {
+            return redirect()->route('home');
+        }
+        return view('login')->withErrors(['Login Failed']);
+
     }
 }

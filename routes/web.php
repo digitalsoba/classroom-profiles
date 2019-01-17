@@ -32,6 +32,7 @@ Route::get('/', function () {
     return view('pages.index');
 });
 
+Route::get('/', 'Auth\LoginController@login')->name('login');
 
 Route::get('/image', function () {
     return view('image');
