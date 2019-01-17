@@ -10,7 +10,7 @@
             <a class="primary-nav__brand"><span class="sr-only">California State University, Northridge (CSUN)</span>
             </a>
             <a href="" class="primary-nav__sub-brand">Classroom Profiles</a>
-            <a href="{{ route('login') }}" class="primary-nav__sub-brand nav-item">Log In</a>
+            {{--<a href="{{ route('login') }}" class="primary-nav__sub-brand nav-item">Log In</a>--}}
             @if (Route::has('login'))
                     @auth
                         <a href="{{ url('/') }}">Home</a>
