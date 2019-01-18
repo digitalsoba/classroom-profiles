@@ -1,6 +1,11 @@
 @extends("layout.app")
 
 @section('content')
+    <div id="app">
+        <example-component></example-component>
+        <br><br><br>
+        <equipment :equip="{{$data}}"></equipment>
+    </div>
     <div >
         <div class="container-fluid">
             <h3>All classes</h3>
