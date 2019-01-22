@@ -40,6 +40,11 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function attemptLogin()
+    {
+        return view('pages.login');
+    }
+
     public function login(Request $request)
     {
         $credentials = $request->all('username', 'password');
@@ -47,7 +52,7 @@ class LoginController extends Controller
             // Successful login. Get the user instance.
             $user = auth()->user();
             $request->session()->flash('level', 'success');
-            return view('pages.index');
+            return redirect('index')->with('try');
         } else {
             $request->session()->flash('message', 'Invalid username or password');
             $request->session()->flash('level', 'danger');

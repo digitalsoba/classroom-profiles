@@ -18,6 +18,7 @@
         "guzzlehttp/guzzle": "~6.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
+        "laravelcollective/html": "^5.2.0",
         "tiesa/ldap": "dev-master",
         "unsplash/unsplash": "^2.4"
     },
