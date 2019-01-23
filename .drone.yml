@@ -54,13 +54,24 @@ steps:
   commands:
     - aws s3 cp s3://matabit/test/.env.dev .env
 
+- name: Deploy Image  
+  image: plugins/ecr
+  settings:
+    access_key: 
+      from_secret: aws_access_key_id
+    secret_key: 
+      from_secret: aws_secret_access_key
+    repo: 
+      from_secret: repo
+    registry: 
+      from_secret: registry
 
-# trigger:
-#   status:
-#   - success
+trigger:
+  status:
+  - success
 
-# depends_on:
-# - build-test
+depends_on:
+- build-test
 
 # trigger:
 #   event:
