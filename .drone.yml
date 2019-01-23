@@ -19,6 +19,21 @@ steps:
   - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
 
+- name: grab s3 test
+  image: mesosphere/aws-cli
+  environment:
+     AWS_ACCESS_KEY_ID:
+       from_secret: aws_access_key_id
+     AWS_SECRET_ACCESS_KEY:
+       from_secret: aws_secret_access_key
+     AWS_DEFAULT_REGION: us-west-2
+  commands:
+    - aws s3 cp s3://matabit/test/wow.txt .
+
+- name: List files
+  image: alpine:latest
+  commands: 
+    - ls -la
 # - name: slack
 #   image: plugins/slack
 #   when:
