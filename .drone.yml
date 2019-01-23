@@ -15,25 +15,10 @@ steps:
 - name: PHPUnit Test
   image: php:7.3-rc-cli-alpine
   commands:
-  - cp .env.example .env
   - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
 
-- name: grab s3 test
-  image: mesosphere/aws-cli
-  environment:
-     AWS_ACCESS_KEY_ID:
-       from_secret: aws_access_key_id
-     AWS_SECRET_ACCESS_KEY:
-       from_secret: aws_secret_access_key
-     AWS_DEFAULT_REGION: us-west-2
-  commands:
-    - aws s3 cp s3://matabit/test/wow.txt .
 
-- name: List files
-  image: alpine:latest
-  commands: 
-    - ls -la
 # - name: slack
 #   image: plugins/slack
 #   when:
@@ -57,23 +42,22 @@ steps:
 kind: pipeline
 name: deploy
 steps:
-  
-- name: deploy  
-  image: plugins/docker
-  settings:
-    username:
-      from_secret: docker_user
-    password: 
-      from_secret: docker_password
-    repo: ainlavong/test
-    build_args:
-      - DB_DATABASE
-      - DB_HOST
-      - DB_USERNAME
-      - DB_PASSWORD
-      - MAPBOX_API_KEY
 
+- name: grab .env
+  image: mesosphere/aws-cli
+  environment:
+     AWS_ACCESS_KEY_ID:
+       from_secret: aws_access_key_id
+     AWS_SECRET_ACCESS_KEY:
+       from_secret: aws_secret_access_key
+     AWS_DEFAULT_REGION: us-west-2
+  commands:
+    - aws s3 cp s3://matabit/test/.env.dev .env
 
+- name: List files
+  image: alpine:latest
+  commands: 
+    - ls -la
 
 # trigger:
 #   status:
