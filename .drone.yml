@@ -57,6 +57,7 @@ steps:
 - name: Deploy Image  
   image: plugins/ecr
   settings:
+    region: us-west-2
     access_key: 
       from_secret: aws_access_key_id
     secret_key: 
