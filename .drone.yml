@@ -15,7 +15,9 @@ steps:
 - name: PHPUnit Test
   image: php:7.3-rc-cli-alpine
   commands:
+  - cp .env.test .env
   - php artisan key:generate
+  - php artisan migrate --seed
   - vendor/bin/phpunit --configuration phpunit.xml
 
 
@@ -34,7 +36,14 @@ steps:
 #         Build {{build.number}} failed. Fix me please.
 #       {{/success}}
 
-
+services:
+- name: database
+  image: mysql
+  ports:
+  - 3306
+  environment:
+    MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    MYSQL_DATABASE: test
 # trigger:
 #   event:
 #   - pull_request
@@ -54,10 +63,6 @@ steps:
   commands:
     - aws s3 cp s3://matabit/test/.env.dev .env
 
-- name: List files
-  image: alpine:latest
-  commands: 
-    - ls -la
 
 # trigger:
 #   status:
