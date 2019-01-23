@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="//cdn.metalab.csun.edu/metaphor/css/metaphor.css">
     <!-- laravel css and bootstrap -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet" >
+
+
     <title>ClassRoom Profile</title>
     <script type="text/javascript">
         function goToNewPage()
