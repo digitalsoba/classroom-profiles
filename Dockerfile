@@ -45,11 +45,7 @@ COPY --from=frontend /app/public/css/ /var/www/html/public/css/
 COPY --from=frontend /app/mix-manifest.json /var/www/html/mix-manifest.json
 
 # Change /var/www permission
-RUN chown -hR www-data:www-data /var/www \
-  && touch .env \\
-  && echo "APP_KEY=" > .env \\
-  && echo "DB_CONNECTION=mysql" > .env \\
-  && php artisan key:generate
+RUN chown -hR www-data:www-data /var/www 
 
 # Build Args
 ARG DB_DATABASE
