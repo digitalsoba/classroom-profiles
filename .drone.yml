@@ -17,14 +17,13 @@ steps:
   commands:
   - cp .env.test .env
   - php artisan key:generate
-  - php artisan migrate --seed
   - vendor/bin/phpunit --configuration phpunit.xml
 
 
 # - name: slack
 #   image: plugins/slack
 #   when:
-#     status: [ success, failure ]
+#     status: [ failure ]
 #   settings:
 #     webhook:
 #       from_secret: slack_webhook
@@ -36,14 +35,6 @@ steps:
 #         Build {{build.number}} failed. Fix me please.
 #       {{/success}}
 
-services:
-- name: database
-  image: mysql
-  ports:
-  - 3306
-  environment:
-    MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
-    MYSQL_DATABASE: test
 # trigger:
 #   event:
 #   - pull_request
