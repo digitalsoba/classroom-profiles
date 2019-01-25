@@ -16,8 +16,8 @@ services:
       - '8000:8080'
   composer:
     restart: 'no'
-    container_name: composer_install
+    container_name: composer
     image: composer:latest
-    command: install
+    command: update
     volumes:
       - .:/app/

@@ -10,7 +10,7 @@
     <script src="//use.typekit.net/gfb2mjm.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
     <!-- Metaphot frame -->
-    <link rel="stylesheet" href="//cdn.metalab.csun.edu/metaphor/css/metaphor.css">
+    <!-- <link rel="stylesheet" href="//cdn.metalab.csun.edu/metaphor/css/metaphor.css"> -->
     <!-- laravel css and bootstrap -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet" >
     <title>ClassRoom Profile</title>
@@ -32,6 +32,8 @@
     </div>
     @include('layout.botnavbar')
     @yield("content")
+
+    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
 </body>
 
 </html>
