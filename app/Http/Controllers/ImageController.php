@@ -22,12 +22,7 @@ class ImageController {
     }
 
     public function imageAPI($room){
-        $search = $room;
-        $page = 3;
-        $per_page = 15;
-        $orientation = 'landscape';
 
-        Crew\Unsplash\Search::photos($search, $page, $per_page, $orientation);
 
 //        $postData = array(
 //            'search' => $room,
@@ -56,7 +51,7 @@ class ImageController {
 //
 //        return $response;
 
-//        return $room;
+        return "This will show pictures of the room: ". $room;
 
     }
 
