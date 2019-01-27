@@ -1,22 +1,21 @@
-
-<nav class="primary-nav">
-    <div class="container">
-        <div class="primary-nav__mobile">
-            <div class="primary-nav__btn">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <a class="primary-nav__brand"><span class="sr-only">California State University, Northridge (CSUN)</span>
-            </a>
-            <a href="" class="primary-nav__sub-brand">Classroom Profiles</a>
-            <a href="" class="primary-nav__sub-brand nav-item">Log In</a>
-        </div>
-
-        <ul class="primary-nav__links">
-            <li><a class="primary-nav__link active" href="classLocation.html">Classroom</a></li>
-            <li><a class="primary-nav__link" href="parking.html">Parking</a></li>
-            <li><a class="primary-nav__link" href="food.html">Food</a></li>
-        </ul>
+<nav class="navbar navbar-metaphor navbar-metaphor--light navbar-expand-md">
+  <a class="navbar-brand" href="#">
+    <span class="sr-only">CSUN Logo</span>
+    <span class="navbar-brand__subbrand">
+      Classroom Profiles
+      <small></small>
+    </span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup2" aria-controls="navbarNavAltMarkup2" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup2">
+    <div class="navbar-nav text-center">
+      <a class="nav-item nav-link active" href="/">Home</a>
+      <a class="nav-item nav-link" href="#">Login</a>
+      <a class="nav-item nav-link" href="">Classroom</a>
+      <a class="nav-item nav-link" href="#">Parking</a>
+      <a class="nav-item nav-link" href="#">Food</a>
     </div>
+  </div>
 </nav>

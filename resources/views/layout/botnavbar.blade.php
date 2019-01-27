@@ -10,20 +10,11 @@
 </ul>
 
 <div class="tab-container">
-    <ul class="tabs cf">
 
-        <li class="tab__list">
-            <a class="tab__link" href="/equip">Equipment <i class="fas fa-arrow-right"></i></a>
-        </li>
-        <li class="tab__list">
-            <a class="tab__link" href="images.html">Images</a>
-        </li>
-        <li class="tab__list">
-            <a class="tab__link" href="indoor.html">Indoor Amenities</a>
-        </li>
-        <li class="tab__list">
-            <a class="tab__link" href="next-class.html">Next Class</a>
-        </li>
-
+    <ul class="nav flex-column nav-metaphor nav-pills"> 
+      <li class="nav-item"> <a class="nav-link" href="/equip">Equipment </a> </li> 
+      <li class="nav-item"> <a class="nav-link" href="images.html">Images</a> </li> 
+      <li class="nav-item"> <a class="nav-link" href="indoor.html">Indoor Amenities</a> </li> 
+      <li class="nav-item"> <a class="nav-link" href="next-class/html">Next Class</a> </li>
     </ul>
 </div>
