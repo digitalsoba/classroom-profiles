@@ -20,14 +20,16 @@ class ImageController{
 
     public function store(Request $request)
     {
+
         $room = $request->input('room');
 
         return redirect()->route('room-image', ['room' => $room]);
 
     }
 
-    public function imageAPI(){
+    public function imageAPI($room){
 
+        return view('pages.room-image')->with('room',$room);
 
     }
 
