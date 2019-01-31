@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 
 class ImageController{
 
+    public function index()
+    {
+        return view('pages.image');
+    }
+
     public function store(Request $request)
     {
         $room = $request->input('room');
@@ -22,12 +27,7 @@ class ImageController{
     }
 
     public function imageAPI(){
-        $search = 'forest';
-        $page = 3;
-        $per_page = 15;
-        $orientation = 'landscape';
 
-        Crew\Unsplash\Search::photos($search, $page, $per_page, $orientation);
 
     }
 

@@ -16,7 +16,7 @@
             <a class="tab__link" href="/equip">Equipment <i class="fas fa-arrow-right"></i></a>
         </li>
         <li class="tab__list">
-            <a class="tab__link" href="images.html">Images</a>
+            <a class="tab__link" href="/images">Images</a>
         </li>
         <li class="tab__list">
             <a class="tab__link" href="indoor.html">Indoor Amenities</a>

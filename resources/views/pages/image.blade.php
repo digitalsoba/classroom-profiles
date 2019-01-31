@@ -1,9 +1,3 @@
-/**
- * Created by PhpStorm.
- * User: nikitha
- * Date: 12/10/2018
- * Time: 10:00 AM
- */
 
 @extends("layout.app")
 
