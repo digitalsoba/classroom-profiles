@@ -4,17 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{csrf_token()}}">
+    <script>window.Laravel={csrfToken:'{{csrf_token()}}'}</script>
     <!-- Icons -->
     <link rel="icon" href="//www.csun.edu/sites/default/themes/csun/favicon.ico" type="image/x-icon">
     <!-- Fonts -->
     <script src="//use.typekit.net/gfb2mjm.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
-    <!-- Metaphot frame -->
-    <!-- <link rel="stylesheet" href="//cdn.metalab.csun.edu/metaphor/css/metaphor.css"> -->
     <!-- laravel css and bootstrap -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet" >
     <title>ClassRoom Profile</title>
-    <script type="text/javascript">
+   <!-- <script type="text/javascript">
+
         function goToNewPage()
         {
             var url = document.getElementById('list').value;
@@ -22,9 +23,8 @@
                 window.location = url;
             }
         }
-    </script>
+    </script> -->
 </head>
-
 <body>
     @include('layout.topnavbar')
     <div >
@@ -33,6 +33,7 @@
     @include('layout.botnavbar')
     @yield("content")
 
+    <script src="/js/app.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
 </body>
 
