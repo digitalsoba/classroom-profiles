@@ -1,4 +1,5 @@
 //Sets the starting area of the map to show the area around CSUN
+console.log("here");
 var mymap = L.map('map', {
     center: [34.2410366, -118.5298632],
     zoom: 13
@@ -23,6 +24,7 @@ function addPoint(lat, long, building, name) {
  * @param accessToken   Open Street Map's API access token.
  */
 function start(accessToken) {
+    console.log(accessToken);
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> ' +
             'contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +

@@ -11,9 +11,11 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="{{ asset('js/app.js') }}"></script>
+
 </head>
 <body>
-    <div id="map"></div>
+        <div id="map"></div>
+
     <?php
         //check that there are rooms in the array to map
         if(!is_null($rooms) && sizeof($rooms) > 0 && !is_null($rooms[0]))
@@ -109,5 +111,6 @@
             }
         }
     ?>
+
 </body>
 </html>
