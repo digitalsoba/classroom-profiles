@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -21,7 +22,6 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
-
     /**
      * Where to redirect users after login.
      *
@@ -48,15 +48,23 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->all('username', 'password');
+
+       //dd($credentials);
+        dd(auth()->attempt($credentials));
         if (auth()->attempt($credentials)==true) {
+
             // Successful login. Get the user instance.
             $user = auth()->user();
+           // dd($user);
+
             $request->session()->flash('level', 'success');
+            echo 'yes';
             return redirect('index')->with('try');
         } else {
             $request->session()->flash('message', 'Invalid username or password');
             $request->session()->flash('level', 'danger');
-            return view('pages.index');
+            echo 'no';
+            return view('pages.login');
         }
 //        $credentials = $request->all('username', 'password');
 //        if (auth()->attempt($credentials)) {

@@ -68,6 +68,8 @@ return [
         'users' => [
             'driver' => 'ldap',
             'model' => App\User::class,
+//
+//            'model' => CSUNMetaLab\Authentication\MetaUser::class,
         ],
 
         // 'users' => [

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ca26efe43f28d1e28c851dc2ec8df301",
+    "content-hash": "bbbb7a68c7480356a47712ea83408c9d",
     "packages": [
         {
             "name": "csun-metalab/laravel-directory-authentication",

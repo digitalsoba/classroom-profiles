@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -178,6 +178,8 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         CSUNMetaLab\Authentication\Providers\AuthServiceProvider::class,
+        CSUNMetaLab\ProxyPass\Providers\ProxyPassServiceProvider::class,
+
     ],
 
     /*

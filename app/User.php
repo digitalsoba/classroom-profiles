@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends MetaUser
 {
     use Notifiable;
+    protected $primaryKey = "user_id";
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +18,7 @@ class User extends MetaUser
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'username','user_id', 'email', 'password',
     ];
 
     /**
@@ -28,4 +29,12 @@ class User extends MetaUser
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function getEmailUriAttribute() {
+        return explode('@',$this->email)[0];
+    }
+
+    public function scopeWhereEmailURI($query, string $email) {
+        return $query->where('email','LIKE', $email.'@%.edu');
+    }
 }
