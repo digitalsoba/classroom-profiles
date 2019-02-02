@@ -13,7 +13,7 @@
     <ul class="tabs cf">
 
         <li class="tab__list">
-            <a class="tab__link" href="/equip">Equipment <i class="fas fa-arrow-right"></i></a>
+            <a class="tab__link" href="equip">Equipment <i class="fas fa-arrow-right"></i></a>
         </li>
         <li class="tab__list">
             <a class="tab__link" href="{{route('image')}}">Images</a>
