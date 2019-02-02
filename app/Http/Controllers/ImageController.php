@@ -11,7 +11,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 
-class ImageController{
+class ImageController extends Controller {
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
+    public function index()
+    {
+        return view('pages.image');
+    }
 
     public function store(Request $request)
     {
@@ -21,13 +38,9 @@ class ImageController{
 
     }
 
-    public function imageAPI(){
-        $search = 'forest';
-        $page = 3;
-        $per_page = 15;
-        $orientation = 'landscape';
+    public function imageAPI($room){
 
-        Crew\Unsplash\Search::photos($search, $page, $per_page, $orientation);
+        return view('pages.room-image')->with('room',$room);
 
     }
 
