@@ -32,12 +32,16 @@ Route::get('/', function () {
     return view('pages.index');
 });
 
-Route::get('/login', 'Auth\LoginController@attemptLogin');
-Route::post('/login', 'Auth\LoginController@login')->name('login');
+Route::get('/login', 'Auth\LoginController@getLogin');
+Route::post('/login', 'Auth\LoginController@postLogin')->name('login');
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+
 
 Route::get('/image', function () {
     return view('image');
 })-> name('image');
+
 
 //To test getting a room given as a query
 Route::get('/map', 'MapsController@map');
@@ -45,4 +49,4 @@ Route::get('/map', 'MapsController@map');
 //To test a predefined array of rooms at once
 Route::get('/mapTest', 'MapsController@mapTest');
 
-Route::resource("equip","EquipmentsController");
+Route::resource("equip","EquipmentsController",['middleware' => ['auth']]);

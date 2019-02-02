@@ -9,8 +9,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends MetaUser
 {
-    use Notifiable;
+    public $incrementing = false;
     protected $primaryKey = "user_id";
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.

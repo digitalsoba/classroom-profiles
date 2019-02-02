@@ -26,7 +26,8 @@
             {{--<a href="{{ route('login') }}" class="primary-nav__sub-brand nav-item">Log In</a>--}}
             @if (Route::has('login'))
                     @auth
-                        <a href="{{ url('/') }}">Home</a>
+                        <a href="{{ url('/') }}" class="primary-nav__sub-brand nav-item">Home</a>
+                    <a href="{{ route('logout') }}" class="primary-nav__sub-brand nav-item">Log Out</a>
                     @else
                         <a href="{{ route('login') }}" class="primary-nav__sub-brand nav-item">Log In</a>
 

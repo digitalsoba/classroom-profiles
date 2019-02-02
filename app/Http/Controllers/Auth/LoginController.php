@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -40,37 +41,29 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function attemptLogin()
+    public function getLogin()
     {
         return view('pages.login');
     }
 
-    public function login(Request $request)
+    public function postLogin(Request $request)
     {
         $credentials = $request->all('username', 'password');
 
-       //dd($credentials);
-        dd(auth()->attempt($credentials));
         if (auth()->attempt($credentials)==true) {
 
             // Successful login. Get the user instance.
             $user = auth()->user();
-           // dd($user);
-
-            $request->session()->flash('level', 'success');
-            echo 'yes';
-            return redirect('index')->with('try');
+            return redirect('/')->with('try');
         } else {
-            $request->session()->flash('message', 'Invalid username or password');
-            $request->session()->flash('level', 'danger');
-            echo 'no';
+
             return view('pages.login');
         }
-//        $credentials = $request->all('username', 'password');
-//        if (auth()->attempt($credentials)) {
-//            return redirect()->route('home');
-//        }
-//        return view('pages.index')->withErrors(['Login Failed']);
 
+    }
+
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect('/login');
     }
 }
