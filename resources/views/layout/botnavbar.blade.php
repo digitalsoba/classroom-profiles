@@ -10,7 +10,6 @@
 </ul>
 
 <div class="tab-container">
-
     <ul class="nav flex-column nav-metaphor nav-pills"> 
       <li class="nav-item"> <a class="nav-link" href="/equip">Equipment </a> </li> 
       <li class="nav-item"> <a class="nav-link" href="images.html">Images</a> </li> 
