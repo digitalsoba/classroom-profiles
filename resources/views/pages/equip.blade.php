@@ -31,11 +31,10 @@
             <form>
                 <select name="list" id="list" accesskey="target">
             @if(count($data)>1)
-    @foreach($data as $equip)
-        <div class="container">
-            <h3>
-                <option value="/equip/{{$equip->Building_Room}}">{{$equip ->Building_Room}}</option>
-
+                @foreach($data as $equip)
+                    <div class="container">
+                        <h3>
+                            <option value="/equip/{{$equip->Building_Room}}">{{$equip ->Building_Room}}</option>
                         </h3>
                     </div>
                 @endforeach

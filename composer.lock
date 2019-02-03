@@ -484,7 +484,9 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.5.2",
+
+            "version": "1.4.2",
+
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
@@ -505,12 +507,12 @@
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+                "phpunit/phpunit": "~4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -547,59 +549,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2018-12-04T20:46:45+00:00"
-        },
-        {
-            "name": "hughbertd/oauth2-unsplash",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/HughbertD/oauth2-unsplash.git",
-                "reference": "f451f4a49dca4027f6edaa850d2fccdfa8721bfe"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/HughbertD/oauth2-unsplash/zipball/f451f4a49dca4027f6edaa850d2fccdfa8721bfe",
-                "reference": "f451f4a49dca4027f6edaa850d2fccdfa8721bfe",
-                "shasum": ""
-            },
-            "require": {
-                "league/oauth2-client": ">=1.0",
-                "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Unsplash\\OAuth2\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Hugh Downer",
-                    "email": "hugh.downer@gmail.com"
-                }
-            ],
-            "description": "Unsplash OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
-            "keywords": [
-                "Authentication",
-                "SSO",
-                "Unsplash",
-                "authorization",
-                "identity",
-                "idp",
-                "oauth",
-                "oauth2",
-                "single sign on"
-            ],
-            "time": "2017-12-14T13:08:42+00:00"
+            "time": "2017-03-20T17:10:46+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1013,62 +963,72 @@
             "time": "2018-10-12T19:39:35+00:00"
         },
         {
-            "name": "lcobucci/jwt",
-            "version": "3.2.5",
+            "name": "laravelcollective/html",
+            "version": "v5.7.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/lcobucci/jwt.git",
-                "reference": "82be04b4753f8b7693b62852b7eab30f97524f9b"
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "777b6d390811ba249255ed5750bf17a019cd88a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/82be04b4753f8b7693b62852b7eab30f97524f9b",
-                "reference": "82be04b4753f8b7693b62852b7eab30f97524f9b",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/777b6d390811ba249255ed5750bf17a019cd88a5",
+                "reference": "777b6d390811ba249255ed5750bf17a019cd88a5",
                 "shasum": ""
             },
             "require": {
-                "ext-openssl": "*",
-                "php": ">=5.5"
+                "illuminate/http": "5.7.*",
+                "illuminate/routing": "5.7.*",
+                "illuminate/session": "5.7.*",
+                "illuminate/support": "5.7.*",
+                "illuminate/view": "5.7.*",
+                "php": ">=7.1.3"
             },
             "require-dev": {
-                "mdanter/ecc": "~0.3.1",
-                "mikey179/vfsstream": "~1.5",
-                "phpmd/phpmd": "~2.2",
-                "phpunit/php-invoker": "~1.1",
-                "phpunit/phpunit": "~4.5",
-                "squizlabs/php_codesniffer": "~2.3"
-            },
-            "suggest": {
-                "mdanter/ecc": "Required to use Elliptic Curves based algorithms."
+                "illuminate/database": "5.7.*",
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~7.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "5.7-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Collective\\Html\\HtmlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Form": "Collective\\Html\\FormFacade",
+                        "Html": "Collective\\Html\\HtmlFacade"
+                    }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Lcobucci\\JWT\\": "src"
-                }
+                    "Collective\\Html\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Luís Otávio Cobucci Oblonczyk",
-                    "email": "lcobucci@gmail.com",
-                    "role": "Developer"
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                },
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
                 }
             ],
-            "description": "A simple library to work with JSON Web Token and JSON Web Signature",
-            "keywords": [
-                "JWS",
-                "jwt"
-            ],
-            "time": "2018-11-11T12:22:26+00:00"
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "https://laravelcollective.com",
+            "time": "2018-09-05T18:32:53+00:00"
         },
         {
             "name": "league/flysystem",
@@ -1153,73 +1113,6 @@
                 "storage"
             ],
             "time": "2018-11-23T23:41:29+00:00"
-        },
-        {
-            "name": "league/oauth2-client",
-            "version": "2.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/oauth2-client.git",
-                "reference": "cc114abc622a53af969e8664722e84ca36257530"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/cc114abc622a53af969e8664722e84ca36257530",
-                "reference": "cc114abc622a53af969e8664722e84ca36257530",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.0",
-                "paragonie/random_compat": "^1|^2|^9.99",
-                "php": "^5.6|^7.0"
-            },
-            "require-dev": {
-                "eloquent/liberator": "^2.0",
-                "eloquent/phony-phpunit": "^1.0|^3.0",
-                "jakub-onderka/php-parallel-lint": "^0.9.2",
-                "phpunit/phpunit": "^5.7|^6.0",
-                "squizlabs/php_codesniffer": "^2.3|^3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\OAuth2\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alex Bilbie",
-                    "email": "hello@alexbilbie.com",
-                    "homepage": "http://www.alexbilbie.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Woody Gilk",
-                    "homepage": "https://github.com/shadowhand",
-                    "role": "Contributor"
-                }
-            ],
-            "description": "OAuth 2.0 Client Library",
-            "keywords": [
-                "Authentication",
-                "SSO",
-                "authorization",
-                "identity",
-                "idp",
-                "oauth",
-                "oauth2",
-                "single sign on"
-            ],
-            "time": "2018-11-22T18:33:57+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1997,46 +1890,6 @@
             "time": "2018-10-13T15:16:03+00:00"
         },
         {
-            "name": "ralouphie/getallheaders",
-            "version": "2.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ralouphie/getallheaders.git",
-                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
-                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7.0",
-                "satooshi/php-coveralls": ">=1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/getallheaders.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ralph Khattar",
-                    "email": "ralph.khattar@gmail.com"
-                }
-            ],
-            "description": "A polyfill for getallheaders.",
-            "time": "2016-02-11T07:05:27+00:00"
-        },
-        {
             "name": "ramsey/uuid",
             "version": "3.8.0",
             "source": {
@@ -2117,6 +1970,55 @@
                 "uuid"
             ],
             "time": "2018-07-19T23:38:55+00:00"
+        },
+        {
+            "name": "shweshi/laravel-unsplash-wrapper",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shweshi/Laravel-Unsplash-Wrapper.git",
+                "reference": "cf5af5c9141dcbcf6fd115f39d56d6eefe8d0089"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shweshi/Laravel-Unsplash-Wrapper/zipball/cf5af5c9141dcbcf6fd115f39d56d6eefe8d0089",
+                "reference": "cf5af5c9141dcbcf6fd115f39d56d6eefe8d0089",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "illuminate/support": "~5.1",
+                "php": "~5.6|~7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashServiceProvider",
+                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashUsersServiceProvider",
+                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashPhotosServiceProvider",
+                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashCollectionsServiceProvider",
+                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashSearchServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "shweshi\\LaravelUnsplashWrapper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shashi Prakash Gautam",
+                    "email": "contactmespg@gmail.com"
+                }
+            ],
+            "description": "A Laravel wrapper for Unsplash",
+            "time": "2018-02-10T18:25:09+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3172,65 +3074,6 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2017-11-27T11:13:29+00:00"
-        },
-        {
-            "name": "unsplash/unsplash",
-            "version": "2.4.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/unsplash/unsplash-php.git",
-                "reference": "7c6fed642cf4234545624a1263d57c9cb0970fbf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/unsplash/unsplash-php/zipball/7c6fed642cf4234545624a1263d57c9cb0970fbf",
-                "reference": "7c6fed642cf4234545624a1263d57c9cb0970fbf",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.3.0",
-                "hughbertd/oauth2-unsplash": ">=1.0.3",
-                "league/oauth2-client": ">=1.4.2",
-                "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9.0",
-                "php-vcr/php-vcr": "dev-master",
-                "php-vcr/phpunit-testlistener-vcr": "*",
-                "phpunit/phpunit": "~5.1",
-                "satooshi/php-coveralls": "dev-master",
-                "vlucas/phpdotenv": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Crew\\Unsplash\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Charles Lalonde",
-                    "email": "charles@pickcrew.com"
-                },
-                {
-                    "name": "Hugh Downer",
-                    "email": "hugh.downer@gmail.com"
-                },
-                {
-                    "name": "Aaron Klaassen",
-                    "email": "aaron@unsplash.com"
-                },
-                {
-                    "name": "Luke Chesser",
-                    "email": "luke@unsplash.com"
-                }
-            ],
-            "description": "Wrapper to access the Unsplash API and photo library",
-            "time": "2018-03-30T17:45:15+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -4454,6 +4297,46 @@
             "time": "2019-02-01T05:24:07+00:00"
         },
         {
+            "name": "ralouphie/getallheaders",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ralouphie/getallheaders.git",
+                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7.0",
+                "satooshi/php-coveralls": ">=1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/getallheaders.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ralph Khattar",
+                    "email": "ralph.khattar@gmail.com"
+                }
+            ],
+            "description": "A polyfill for getallheaders.",
+            "time": "2016-02-11T07:05:27+00:00"
+        },
+        {
             "name": "sebastian/code-unit-reverse-lookup",
             "version": "1.0.1",
             "source": {
@@ -5117,8 +5000,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.1.3",
-        "ext-json": "^1.6"
+        "php": "^7.1.3"
     },
     "platform-dev": []
 }
