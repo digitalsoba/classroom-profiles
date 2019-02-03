@@ -11,7 +11,6 @@
                     <div class="container">
                         <h3>
                             <option value="/equip/{{$equip->Building_Room}}">{{$equip ->Building_Room}}</option>
-
                         </h3>
                     </div>
                 @endforeach

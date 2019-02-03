@@ -25,8 +25,6 @@ Route::get('/equip', function () {
 */
 
 Route::get('/', function () {
-    //$title="This is a test";
-    //return view('pages.index')->with("apple",$title);
     return view('pages.index');
 });
 
