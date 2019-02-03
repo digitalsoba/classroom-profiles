@@ -18,10 +18,4 @@ class indexTest extends TestCase
         $response = $this->get('/');
         $response->assertStatus(200);
     }
-
-    public function testEquip()
-    {
-        $response = $this->get('/equip');
-        $response->assertStatus(200);
-    }
 }
