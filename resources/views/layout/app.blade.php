@@ -5,6 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{csrf_token()}}">
+    <script>window.Laravel={csrfToken:'{{csrf_token()}}'}</script>
     <!-- Icons -->
     <link rel="icon" href="//www.csun.edu/sites/default/themes/csun/favicon.ico" type="image/x-icon">
     <script>try { Typekit.load(); } catch (e) { }</script>
@@ -19,7 +21,6 @@
         }
     </script>
 </head>
-
 <body>
     @include('layout.topnavbar')
     <div class="container-fluid">

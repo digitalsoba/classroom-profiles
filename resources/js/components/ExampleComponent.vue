@@ -8,6 +8,10 @@
                     <div class="card-body">
                         I'm an example component.
                     </div>
+                    <input v-model="name">
+                    <h3>{{name}}</h3>
+                    <h3>{{nameBackwords}}</h3>
+                    <button @click="doSomething">Click me and look at your console</button>
                 </div>
             </div>
         </div>
@@ -16,7 +20,23 @@
 
 <script>
     export default {
-        mounted() {
+        name: "example",
+        data() {
+            return {
+                name: "Andrew"
+            };
+        },
+        computed: {
+            nameBackwords: function() {
+                return this.name.split("").reverse().join("");
+            }
+        },
+        methods: {
+            doSomething: function() {
+                console.log("ya clicked it!")
+            }
+        },
+        mounted: function() {
             console.log('Component mounted.')
         }
     }
