@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.5.22"
     },
     "dependencies": {
-        "metaphor-theme": "^2.0.12"
+        "metaphor-theme": "^2.0.12",
+        "terser": "^3.14.1"
     }
 }
