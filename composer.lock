@@ -1,171 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbbb7a68c7480356a47712ea83408c9d",
+    "content-hash": "dafb5bb54c74d84586b9298e4b9ecf12",
     "packages": [
-        {
-            "name": "csun-metalab/laravel-directory-authentication",
-            "version": "1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/csun-metalab/laravel-directory-authentication.git",
-                "reference": "d39145657c414887f6a2f84214a93ec4b033e489"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/csun-metalab/laravel-directory-authentication/zipball/d39145657c414887f6a2f84214a93ec4b033e489",
-                "reference": "d39145657c414887f6a2f84214a93ec4b033e489",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/Authentication/"
-                ],
-                "psr-4": {
-                    "CSUNMetaLab\\Authentication\\": "src/Authentication/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matthew Fritz",
-                    "email": "mattf@burbankparanormal.com"
-                }
-            ],
-            "description": "Composer package for Laravel 5.0 and above to allow for directory-based authentication",
-            "time": "2018-04-30T21:56:20+00:00"
-        },
-        {
-            "name": "csun-metalab/laravel-force-https",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/csun-metalab/laravel-force-https.git",
-                "reference": "87d1e4505d27733ce9b2956d27cf33714cc0c9d8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/csun-metalab/laravel-force-https/zipball/87d1e4505d27733ce9b2956d27cf33714cc0c9d8",
-                "reference": "87d1e4505d27733ce9b2956d27cf33714cc0c9d8",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/ForceHttps/"
-                ],
-                "psr-4": {
-                    "CSUNMetaLab\\ForceHttps\\": "src/ForceHttps/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matthew Fritz",
-                    "email": "mattf@burbankparanormal.com"
-                }
-            ],
-            "description": "A small Composer package for Laravel 5.0 and above to force HTTPS in the URL",
-            "time": "2018-01-30T19:32:22+00:00"
-        },
-        {
-            "name": "csun-metalab/laravel-proxypass",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/csun-metalab/laravel-proxypass.git",
-                "reference": "dc64a99045e45ffaf39dd128a996d9f7e8ad49f7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/csun-metalab/laravel-proxypass/zipball/dc64a99045e45ffaf39dd128a996d9f7e8ad49f7",
-                "reference": "dc64a99045e45ffaf39dd128a996d9f7e8ad49f7",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/ProxyPass/"
-                ],
-                "psr-0": {
-                    "CSUNMetaLab\\ProxyPass\\": "src/ProxyPass/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matthew Fritz",
-                    "email": "mattf@burbankparanormal.com"
-                }
-            ],
-            "description": "Composer package for Laravel that resolves the correct absolute URLs when behind a proxy",
-            "time": "2017-11-08T18:56:10+00:00"
-        },
-        {
-            "name": "csun-metalab/laravel-support",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/csun-metalab/laravel-support.git",
-                "reference": "e6393c184cdcd1e03960c071e6fc825d618b75e1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/csun-metalab/laravel-support/zipball/e6393c184cdcd1e03960c071e6fc825d618b75e1",
-                "reference": "e6393c184cdcd1e03960c071e6fc825d618b75e1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/Support/"
-                ],
-                "exclude-from-classmap": [
-                    "src/Support/Models",
-                    "src/Support/migrations"
-                ],
-                "psr-4": {
-                    "CSUNMetaLab\\Support\\": "src/Support/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matthew Fritz",
-                    "email": "mattf@burbankparanormal.com"
-                }
-            ],
-            "description": "Composer package for Laravel 5.0 and above to allow for feedback and support requests within an application",
-            "time": "2018-01-26T22:59:51+00:00"
-        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -645,22 +485,20 @@
         {
             "name": "guzzlehttp/psr7",
             "version": "1.4.2",
-
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "9f83dded91781a01c63574e387eaa769be769115"
+                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
-                "reference": "9f83dded91781a01c63574e387eaa769be769115",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
+                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0",
-                "psr/http-message": "~1.0",
-                "ralouphie/getallheaders": "^2.0.5"
+                "psr/http-message": "~1.0"
             },
             "provide": {
                 "psr/http-message-implementation": "1.0"
@@ -701,7 +539,6 @@
             "keywords": [
                 "http",
                 "message",
-                "psr-7",
                 "request",
                 "response",
                 "stream",
@@ -709,58 +546,6 @@
                 "url"
             ],
             "time": "2017-03-20T17:10:46+00:00"
-        },
-        {
-            "name": "hughbertd/oauth2-unsplash",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/HughbertD/oauth2-unsplash.git",
-                "reference": "f451f4a49dca4027f6edaa850d2fccdfa8721bfe"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/HughbertD/oauth2-unsplash/zipball/f451f4a49dca4027f6edaa850d2fccdfa8721bfe",
-                "reference": "f451f4a49dca4027f6edaa850d2fccdfa8721bfe",
-                "shasum": ""
-            },
-            "require": {
-                "league/oauth2-client": ">=1.0",
-                "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Unsplash\\OAuth2\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Hugh Downer",
-                    "email": "hugh.downer@gmail.com"
-                }
-            ],
-            "description": "Unsplash OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
-            "keywords": [
-                "Authentication",
-                "SSO",
-                "Unsplash",
-                "authorization",
-                "identity",
-                "idp",
-                "oauth",
-                "oauth2",
-                "single sign on"
-            ],
-            "time": "2017-12-14T13:08:42+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1851,55 +1636,6 @@
             "time": "2018-07-19T23:38:55+00:00"
         },
         {
-            "name": "shweshi/laravel-unsplash-wrapper",
-            "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/shweshi/Laravel-Unsplash-Wrapper.git",
-                "reference": "cf5af5c9141dcbcf6fd115f39d56d6eefe8d0089"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/shweshi/Laravel-Unsplash-Wrapper/zipball/cf5af5c9141dcbcf6fd115f39d56d6eefe8d0089",
-                "reference": "cf5af5c9141dcbcf6fd115f39d56d6eefe8d0089",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "~6.0",
-                "illuminate/support": "~5.1",
-                "php": "~5.6|~7.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashServiceProvider",
-                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashUsersServiceProvider",
-                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashPhotosServiceProvider",
-                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashCollectionsServiceProvider",
-                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashSearchServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "shweshi\\LaravelUnsplashWrapper\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Shashi Prakash Gautam",
-                    "email": "contactmespg@gmail.com"
-                }
-            ],
-            "description": "A Laravel wrapper for Unsplash",
-            "time": "2018-02-10T18:25:09+00:00"
-        },
-        {
             "name": "swiftmailer/swiftmailer",
             "version": "v6.1.3",
             "source": {
@@ -2433,7 +2169,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
+                    "email": "backendtea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -2831,56 +2567,6 @@
             "time": "2018-10-02T16:36:10+00:00"
         },
         {
-            "name": "tiesa/ldap",
-            "version": "dev-master",
-            "target-dir": "Toyota/Component/Ldap",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ccottet/ldap.git",
-                "reference": "0759f17996fbb434ee5155dc527b95d8059c6d41"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ccottet/ldap/zipball/0759f17996fbb434ee5155dc527b95d8059c6d41",
-                "reference": "0759f17996fbb434ee5155dc527b95d8059c6d41",
-                "shasum": ""
-            },
-            "require": {
-                "ext-ldap": "*",
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": ">=3.7.13"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Toyota\\Component\\Ldap\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Cyril Cottet",
-                    "email": "cyril.cottet@gmail.com"
-                }
-            ],
-            "description": "LDAP made easy & practical to use in PHP",
-            "homepage": "https://github.com/ccottet/ldap",
-            "keywords": [
-                "ldap"
-            ],
-            "time": "2013-02-04 07:37:38"
-        },
-        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.1",
             "source": {
@@ -3039,6 +2725,166 @@
                 "laravel-dump-server"
             ],
             "time": "2018-10-04T07:22:24+00:00"
+        },
+        {
+            "name": "csun-metalab/laravel-directory-authentication",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/csun-metalab/laravel-directory-authentication.git",
+                "reference": "d39145657c414887f6a2f84214a93ec4b033e489"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/csun-metalab/laravel-directory-authentication/zipball/d39145657c414887f6a2f84214a93ec4b033e489",
+                "reference": "d39145657c414887f6a2f84214a93ec4b033e489",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/Authentication/"
+                ],
+                "psr-4": {
+                    "CSUNMetaLab\\Authentication\\": "src/Authentication/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Fritz",
+                    "email": "mattf@burbankparanormal.com"
+                }
+            ],
+            "description": "Composer package for Laravel 5.0 and above to allow for directory-based authentication",
+            "time": "2018-04-30T21:56:20+00:00"
+        },
+        {
+            "name": "csun-metalab/laravel-force-https",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/csun-metalab/laravel-force-https.git",
+                "reference": "87d1e4505d27733ce9b2956d27cf33714cc0c9d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/csun-metalab/laravel-force-https/zipball/87d1e4505d27733ce9b2956d27cf33714cc0c9d8",
+                "reference": "87d1e4505d27733ce9b2956d27cf33714cc0c9d8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/ForceHttps/"
+                ],
+                "psr-4": {
+                    "CSUNMetaLab\\ForceHttps\\": "src/ForceHttps/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Fritz",
+                    "email": "mattf@burbankparanormal.com"
+                }
+            ],
+            "description": "A small Composer package for Laravel 5.0 and above to force HTTPS in the URL",
+            "time": "2018-01-30T19:32:22+00:00"
+        },
+        {
+            "name": "csun-metalab/laravel-proxypass",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/csun-metalab/laravel-proxypass.git",
+                "reference": "dc64a99045e45ffaf39dd128a996d9f7e8ad49f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/csun-metalab/laravel-proxypass/zipball/dc64a99045e45ffaf39dd128a996d9f7e8ad49f7",
+                "reference": "dc64a99045e45ffaf39dd128a996d9f7e8ad49f7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/ProxyPass/"
+                ],
+                "psr-0": {
+                    "CSUNMetaLab\\ProxyPass\\": "src/ProxyPass/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Fritz",
+                    "email": "mattf@burbankparanormal.com"
+                }
+            ],
+            "description": "Composer package for Laravel that resolves the correct absolute URLs when behind a proxy",
+            "time": "2017-11-08T18:56:10+00:00"
+        },
+        {
+            "name": "csun-metalab/laravel-support",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/csun-metalab/laravel-support.git",
+                "reference": "e6393c184cdcd1e03960c071e6fc825d618b75e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/csun-metalab/laravel-support/zipball/e6393c184cdcd1e03960c071e6fc825d618b75e1",
+                "reference": "e6393c184cdcd1e03960c071e6fc825d618b75e1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/Support/"
+                ],
+                "exclude-from-classmap": [
+                    "src/Support/Models",
+                    "src/Support/migrations"
+                ],
+                "psr-4": {
+                    "CSUNMetaLab\\Support\\": "src/Support/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Fritz",
+                    "email": "mattf@burbankparanormal.com"
+                }
+            ],
+            "description": "Composer package for Laravel 5.0 and above to allow for feedback and support requests within an application",
+            "time": "2018-01-26T22:59:51+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -4686,6 +4532,55 @@
             "time": "2016-10-03T07:35:21+00:00"
         },
         {
+            "name": "shweshi/laravel-unsplash-wrapper",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shweshi/Laravel-Unsplash-Wrapper.git",
+                "reference": "cf5af5c9141dcbcf6fd115f39d56d6eefe8d0089"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shweshi/Laravel-Unsplash-Wrapper/zipball/cf5af5c9141dcbcf6fd115f39d56d6eefe8d0089",
+                "reference": "cf5af5c9141dcbcf6fd115f39d56d6eefe8d0089",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "illuminate/support": "~5.1",
+                "php": "~5.6|~7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashServiceProvider",
+                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashUsersServiceProvider",
+                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashPhotosServiceProvider",
+                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashCollectionsServiceProvider",
+                        "shweshi\\LaravelUnsplashWrapper\\Providers\\UnsplashSearchServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "shweshi\\LaravelUnsplashWrapper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shashi Prakash Gautam",
+                    "email": "contactmespg@gmail.com"
+                }
+            ],
+            "description": "A Laravel wrapper for Unsplash",
+            "time": "2018-02-10T18:25:09+00:00"
+        },
+        {
             "name": "theseer/tokenizer",
             "version": "1.1.0",
             "source": {
@@ -4724,6 +4619,56 @@
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
             "time": "2017-04-07T12:08:54+00:00"
+        },
+        {
+            "name": "tiesa/ldap",
+            "version": "dev-master",
+            "target-dir": "Toyota/Component/Ldap",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ccottet/ldap.git",
+                "reference": "0759f17996fbb434ee5155dc527b95d8059c6d41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ccottet/ldap/zipball/0759f17996fbb434ee5155dc527b95d8059c6d41",
+                "reference": "0759f17996fbb434ee5155dc527b95d8059c6d41",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ldap": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=3.7.13"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Toyota\\Component\\Ldap\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cyril Cottet",
+                    "email": "cyril.cottet@gmail.com"
+                }
+            ],
+            "description": "LDAP made easy & practical to use in PHP",
+            "homepage": "https://github.com/ccottet/ldap",
+            "keywords": [
+                "ldap"
+            ],
+            "time": "2013-02-04T07:37:38+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -4778,13 +4723,12 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "tiesa/ldap": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.1.3"
+        "php": "^7.1.3",
+        "ext-json": "^1.6"
     },
     "platform-dev": []
 }
