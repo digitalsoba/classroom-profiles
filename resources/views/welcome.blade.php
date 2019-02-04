@@ -74,7 +74,7 @@
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
-                        @endif
+                      /BB1212  @endif
                     @endauth
                 </div>
             @endif

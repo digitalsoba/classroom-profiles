@@ -47,7 +47,9 @@ class EquipmentsController extends Controller
      */
     public function show($Building_Room)
     {
-        $data= Equipment::find($Building_Room);
+        $data= ['roomData'=>Equipment::find($Building_Room),
+                'mainData'=>Equipment::all()];
+
         return view('pages.equipDetail')->with('data',$data);
         return Equipment::find($Building_Room);
     }
