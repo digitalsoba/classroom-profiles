@@ -34,7 +34,7 @@ export default {
   methods: {
     goToNewPage: function() {
       console.log(this.$refs.selectField.value);
-      window.location = "equip/" + this.$refs.selectField.value;
+      window.location = this.$refs.selectField.value;
     }
   }
 };

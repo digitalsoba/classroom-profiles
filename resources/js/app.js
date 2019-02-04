@@ -21,7 +21,7 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('equipment', require('./components/equipment.vue').default);
-Vue.component('equipment2', require('./components/equipment2.vue').default);
+Vue.component('equipmentdata', require('./components/equipmentdata.vue').default);
 
 
 /**

@@ -19,7 +19,7 @@
                 window.location = url;
             }
         }
-    </script> -->
+    </script>
 </head>
 <body>
     @include('layout.topnavbar')
