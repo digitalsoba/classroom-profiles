@@ -13,7 +13,8 @@ class MapsController extends Controller
             'rooms' =>
             [
                 request('room')
-            ]
+            ],
+            'connected' => false
         ]);
     }
 
@@ -27,7 +28,19 @@ class MapsController extends Controller
                 'LO1322',
                 'JD1600A',
                 'META+LAB'
-            ]
+            ],
+            'connected' => true
+        ]);
+    }
+
+    //Draws the route between a collection of rooms, in the order given
+    public function mapRoute()
+    {
+        //seperates the rooms on commas
+        $rooms = explode(',', request('rooms'));
+        return view('map', [
+            'rooms' => $rooms,
+            'connected' => true
         ]);
     }
 }
