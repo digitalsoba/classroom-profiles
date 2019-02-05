@@ -2,13 +2,16 @@
 
 namespace App;
 
+use CSUNMetaLab\Authentication\MetaUser;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends MetaUser
 {
-    use Notifiable;
+    public $incrementing = false;
+    protected $primaryKey = "user_id";
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'username','user_id', 'email', 'password',
     ];
 
     /**
@@ -27,4 +30,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function getEmailUriAttribute() {
+        return explode('@',$this->email)[0];
+    }
+
+    public function scopeWhereEmailURI($query, string $email) {
+        return $query->where('email','LIKE', $email.'@%.edu');
+    }
 }

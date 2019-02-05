@@ -1,18 +1,7 @@
-<div class="tab-container">
-    <ul class="tabs cf">
 
-        <li class="tab__list">
-            <a class="tab__link" href="/equip">Equipment</a>
-        </li>
-        <li class="tab__list">
-            <a class="tab__link" href="images.html">Images</a>
-        </li>
-        <li class="tab__list">
-            <a class="tab__link" href="indoor.html">Indoor Amenities</a>
-        </li>
-        <li class="tab__list">
-            <a class="tab__link" href="next-class.html">Next Class</a>
-        </li>
-
-    </ul>
-</div>
+<ul class="nav nav-metaphor"> 
+    <li class="nav-item flex-fill text-center"> <a class="nav-link " href="/equip">Equipment</a> </li> 
+    <li class="nav-item flex-fill text-center"> <a class="nav-link" href="/image">Images</a> </li> 
+    <li class="nav-item flex-fill text-center"> <a class="nav-link" href="#">Indoor Amenities</a> </li> 
+    <li class="nav-item flex-fill text-center"> <a class="nav-link" href="#">Next class</a> </li> 
+</ul>

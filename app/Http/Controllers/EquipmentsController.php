@@ -12,6 +12,11 @@ class EquipmentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $data= Equipment::all();
@@ -47,7 +52,9 @@ class EquipmentsController extends Controller
      */
     public function show($Building_Room)
     {
-        $data= Equipment::find($Building_Room);
+        $data= ['roomData'=>Equipment::find($Building_Room),
+                'mainData'=>Equipment::all()];
+
         return view('pages.equipDetail')->with('data',$data);
         return Equipment::find($Building_Room);
     }
