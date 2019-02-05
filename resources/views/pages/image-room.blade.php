@@ -1,13 +1,9 @@
-/**
- * Created by PhpStorm.
- * User: nikitha
- * Date: 12/10/2018
- * Time: 10:00 AM
- */
+
 
 @extends("layout.app")
 
 @section('content')
+    <h3>These are the images for the room: {{$classroom}} </h3>
 
     <div class="row">
         <div class="col-md-4">
@@ -36,6 +32,8 @@
                     </div>
                 </a>
             </div>
+
+        </div>
 {{--
             -------------3D images--------------
 --}}
@@ -124,7 +122,7 @@
                     pannellum.viewer('panorama1', {
                         "type": "equirectangular",
 
-                        "panorama": "{{url('http://facplan-arcgisweb1.csun.edu/360/'.$building.'/'.$roomNumber.'/'.$room.'.jpg')}}" ,
+                        "panorama": "{{url('http://facplan-arcgisweb1.csun.edu/360/'.$building.'/'.$roomNumber.'/'.$classroom.'.jpg')}}" ,
 
                         "autoLoad": true,
 

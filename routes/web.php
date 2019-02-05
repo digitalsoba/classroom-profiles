@@ -11,8 +11,6 @@
 |
 */
 
-
-
 /*
 Route::get('/equip', function () {
     return "This is equip";
@@ -32,12 +30,21 @@ Route::get('/', function () {
     return view('pages.index');
 });
 
+Route::post('store', 'ImageController@store');
 
-Route::get('/image', function () {
-    return view('image');
-})-> name('image');
 
-Route::get('/{classroom}', 'ImageController@interactiveImages',['middleware' => ['Cors']]);
+//Route::get('/image', function () {
+//    return view('pages.image');
+//})-> name('image');
+
+Route::get('/image', 'ImageController@index')-> name('image');
+
+Route::get('image/{room}', 'ImageController@interactiveImages')->name('image-room');
+
+
+//Route::resource("images","Controller");
+
+Route::get('imag/{classroom}', 'ImageController@interactiveImages',['middleware' => ['Cors']]);
 
 //To test getting a room given as a query
 Route::get('/map', 'MapsController@map');
