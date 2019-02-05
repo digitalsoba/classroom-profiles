@@ -33,11 +33,11 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name(
 
 Route::get('/image', 'ImageController@index',['middleware' => ['auth']])-> name('image');
 
+Route::get('image/{room}', 'ImageController@interactiveImages')->name('image-room');
 Route::get('image/{room}', 'ImageController@imageAPI',['middleware' => ['auth']])->name('room-image');
 
 
 //Route::resource("images","Controller");
-
 
 //To test getting a room given as a query
 Route::get('/map', 'MapsController@map');
