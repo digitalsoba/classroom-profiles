@@ -9,11 +9,11 @@
             integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
             crossorigin=""></script>
 
-    <link rel="stylesheet" href="{{ asset('css/mapStyle.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
     <div id="map"></div>
-    <script type="text/javascript" src="{{ asset('js/mapScripts.js') }}"></script><br>
+    <script type="text/javascript" src="{{ asset('js/map-scripts.js') }}"></script><br>
 
     <?php
         //check that there are rooms in the array to map
