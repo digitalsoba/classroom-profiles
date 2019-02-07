@@ -68,7 +68,7 @@ steps:
     registry: 
       from_secret: registry
 
-- name: grab .env
+- name: Update ECS cluster service (prod)
   image: mesosphere/aws-cli
   environment:
      AWS_ACCESS_KEY_ID:
