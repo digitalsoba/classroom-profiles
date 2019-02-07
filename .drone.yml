@@ -53,7 +53,7 @@ steps:
        from_secret: aws_secret_access_key
      AWS_DEFAULT_REGION: us-west-2
   commands:
-    - aws s3 cp s3://matabit/test/.env.dev .env
+    - aws s3 cp s3://matabit/prod/prod.env .env
 
 - name: Deploy Image  
   image: plugins/ecr
