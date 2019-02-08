@@ -7,7 +7,10 @@ use App\User;
 
 class NextClassController extends Controller
 {
-    //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function retrieveEmail(){
 
