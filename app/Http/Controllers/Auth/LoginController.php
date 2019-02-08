@@ -55,10 +55,9 @@ class LoginController extends Controller
         if (auth()->attempt($credentials)==true) {
 
             // Successful login. Get the user instance.
-            $user = auth()->user();
+
             return redirect('/')->with('try');
         } else {
-
             return view('pages.login');
         }
 
