@@ -40,7 +40,6 @@ class User extends MetaUser
     }
 
     public function retrieveAuthorizedEmail(){
-
         $user = auth()->user();
         return $user->email;
     }

@@ -51,7 +51,6 @@ class LoginController extends Controller
     public function postLogin(Request $request)
     {
         $credentials = $request->all('username', 'password');
-
         if (auth()->attempt($credentials)==true) {
 
             // Successful login. Get the user instance.

@@ -26,7 +26,7 @@ Route::post('/login', 'Auth\LoginController@postLogin')->name('login');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
-Route::get('/email','\App\Http\Controllers\NextClassController@RetrieveEmail');
+Route::get('/email','\App\Http\Controllers\NextClassController@retrieveEmail');
 
 Route::get('/image', 'ImageController@index',['middleware' => ['auth']])-> name('image');
 
