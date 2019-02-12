@@ -10897,6 +10897,12 @@ div.datepicker-calendar.default button.datepicker-close {
   width: 100%;
 }
 
+#map {
+  height: 650px;
+  width: 1200px;
+  border: solid black;
+}
+
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
