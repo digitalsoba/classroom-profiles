@@ -38,4 +38,9 @@ class User extends MetaUser
     public function scopeWhereEmailURI($query, string $email) {
         return $query->where('email','LIKE', $email.'@%.edu');
     }
+
+    public function retrieveAuthorizedEmail(){
+        $user = auth()->user();
+        return $user->email;
+    }
 }
