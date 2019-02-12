@@ -10,12 +10,7 @@ steps:
 - name: Build
   image: composer
   commands:
-  - composer install --no-interaction \
-    --ignore-platform-reqs \
-    --no-interaction \
-    --no-plugins \
-    --no-scripts \
-    --prefer-dist
+  - composer install --no-interaction ignore-platform-reqs no-interaction no-plugins no-scripts prefer-dist
 
 
 - name: PHPUnit Test
