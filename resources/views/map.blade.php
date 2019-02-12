@@ -10,11 +10,10 @@
             crossorigin=""></script>
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <script src="{{ asset('js/app.js') }}"></script>
-
 </head>
 <body>
-        <div id="map"></div>
+    <div id="map"></div>
+    <script type="text/javascript" src="{{ asset('js/map-scripts.js') }}"></script><br>
 
     <?php
         //check that there are rooms in the array to map
