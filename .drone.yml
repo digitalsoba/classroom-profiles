@@ -76,7 +76,7 @@ steps:
        from_secret: aws_secret_access_key
      AWS_DEFAULT_REGION: us-west-2
   commands:
-    - aws ecs update-service --cluster matabit_cluster --service test-ecs-service --force-new-deployment
+    - aws ecs update-service --cluster matabit_cluster --service prod-service --force-new-deployment
 
 trigger:
   status:
