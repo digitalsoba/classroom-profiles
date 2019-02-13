@@ -26,12 +26,7 @@ RUN yarn install \
     && yarn production
 
 # PHP/Apache 
-FROM php:7.3-rc-apache
-
-# Install php extensions
-RUN docker-php-ext-install pdo_mysql \
-    # Enable apache modules
-    && a2enmod headers rewrite 
+FROM ainlavong/classroom-profiles:latest
 
 # Add apache.conf file 
 COPY ./deploy/apache.conf /etc/apache2/sites-enabled/000-default.conf  
@@ -46,13 +41,6 @@ COPY --from=frontend /app/mix-manifest.json /var/www/html/mix-manifest.json
 
 # Change /var/www permission
 RUN chown -hR www-data:www-data /var/www/html/storage /var/www/html/bootstrap 
-
-# Build Args
-ARG DB_DATABASE
-ARG DB_HOST
-ARG DB_USERNAME
-ARG DB_PASSWORD
-ARG MAPBOX_API_KEY
 
 # Expose port 80 and 443
 EXPOSE 80 443
