@@ -10,8 +10,7 @@ steps:
 - name: build
   image: composer
   commands:
-  - composer install --no-interaction
-
+  - composer install --no-interaction --ignore-platform-reqs --no-interaction --no-plugins --no-scripts
 
 - name: PHPUnit Test
   image: php:7.3-rc-cli-alpine

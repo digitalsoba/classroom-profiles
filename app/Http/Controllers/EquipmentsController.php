@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Equipment;
+use App\Models\Equipment;
 
 class EquipmentsController extends Controller
 {
@@ -12,6 +12,11 @@ class EquipmentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $data= Equipment::all();
