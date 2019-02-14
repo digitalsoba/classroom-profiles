@@ -29,7 +29,7 @@ RUN yarn install \
 FROM ainlavong/classroom-profiles:latest
 
 # Add apache.conf file 
-COPY ./deploy/apache.conf /etc/apache2/sites-enabled/000-default.conf  
+COPY ./apache.conf /etc/apache2/sites-enabled/000-default.conf  
 
 COPY . /var/www/html
 

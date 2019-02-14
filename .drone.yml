@@ -40,7 +40,7 @@ steps:
 #   - pull_request
 ---
 kind: pipeline
-name: deploy
+name: deploy prod
 steps:
 
 - name: grab .env
@@ -53,6 +53,7 @@ steps:
      AWS_DEFAULT_REGION: us-west-2
   commands:
     - aws s3 cp s3://matabit/prod/prod.env .env
+    - aws s3 cp s3://matabit/prod/apache.conf .
 
 - name: Deploy Image  
   image: plugins/ecr
