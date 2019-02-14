@@ -1,6 +1,6 @@
 ---
 kind: pipeline
-name: Default
+name: build-test
 
 platform:
   os: linux
@@ -40,60 +40,60 @@ steps:
 #   - pull_request
 #   - push
 ---
-# kind: pipeline
-# name: deploy dev
-# steps:
+kind: pipeline
+name: deploy dev
+steps:
 
-# - name: Grab some important files
-#   image: mesosphere/aws-cli
-#   environment:
-#      AWS_ACCESS_KEY_ID:
-#        from_secret: aws_access_key_id
-#      AWS_SECRET_ACCESS_KEY:
-#        from_secret: aws_secret_access_key
-#      AWS_DEFAULT_REGION: us-west-2
-#   commands:
-#     - aws s3 cp s3://matabit/dev/dev.env .env
-#     - aws s3 cp s3://matabit/dev/apache.conf .
+- name: Grab some important files
+  image: mesosphere/aws-cli
+  environment:
+     AWS_ACCESS_KEY_ID:
+       from_secret: aws_access_key_id
+     AWS_SECRET_ACCESS_KEY:
+       from_secret: aws_secret_access_key
+     AWS_DEFAULT_REGION: us-west-2
+  commands:
+    - aws s3 cp s3://matabit/dev/dev.env .env
+    - aws s3 cp s3://matabit/dev/apache.conf .
 
-# - name: Deploy Image  
-#   image: plugins/ecr
-#   settings:
-#     tags:
-#       - dev
-#     region: us-west-2
-#     access_key: 
-#       from_secret: aws_access_key_id
-#     secret_key: 
-#       from_secret: aws_secret_access_key
-#     repo: 
-#       from_secret: repo
-#     registry: 
-#       from_secret: registry
+- name: Deploy Image  
+  image: plugins/ecr
+  settings:
+    tags:
+      - dev
+    region: us-west-2
+    access_key: 
+      from_secret: aws_access_key_id
+    secret_key: 
+      from_secret: aws_secret_access_key
+    repo: 
+      from_secret: repo
+    registry: 
+      from_secret: registry
 
-# - name: Update ECS cluster service (prod)
-#   image: mesosphere/aws-cli
-#   environment:
-#      AWS_ACCESS_KEY_ID:
-#        from_secret: aws_access_key_id
-#      AWS_SECRET_ACCESS_KEY:
-#        from_secret: aws_secret_access_key
-#      AWS_DEFAULT_REGION: us-west-2
-#   commands:
-#     - aws ecs update-service --cluster matabit_cluster --service dev-service --force-new-deployment
+- name: Update ECS cluster service (prod)
+  image: mesosphere/aws-cli
+  environment:
+     AWS_ACCESS_KEY_ID:
+       from_secret: aws_access_key_id
+     AWS_SECRET_ACCESS_KEY:
+       from_secret: aws_secret_access_key
+     AWS_DEFAULT_REGION: us-west-2
+  commands:
+    - aws ecs update-service --cluster matabit_cluster --service dev-service --force-new-deployment
 
-# # trigger:
-# #   branch:
-# #   - master
-# #   event:
-# #   - push
-# #   status:
-# #   - success
+# trigger:
+#   branch:
+#   - master
+#   event:
+#   - push
+#   status:
+#   - success
 
-# depends_on:
-# - build-test
+depends_on:
+- build-test
 
-# ---
+---
 kind: pipeline
 name: deploy prod
 steps:
