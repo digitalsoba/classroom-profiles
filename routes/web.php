@@ -11,10 +11,6 @@
 |
 */
 
-
-
-
-
 Route::get('/', function () {
     return view('pages.index');
 });
@@ -27,17 +23,9 @@ Route::post('/login', 'Auth\LoginController@postLogin')->name('login');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 
-//Route::get('/image', function () {
-//    return view('pages.image');
-//})-> name('image');
-
 Route::get('/image', 'ImageController@index',['middleware' => ['auth']])-> name('image');
 
-Route::get('image/{room}', 'ImageController@interactiveImages')->name('image-room');
-Route::get('image/{room}', 'ImageController@imageAPI',['middleware' => ['auth']])->name('room-image');
-
-
-//Route::resource("images","Controller");
+Route::get('image/{room}', 'ImageController@interactiveImages', ['middleware' => ['auth']])->name('image-room');
 
 //To test getting a room given as a query
 Route::get('/map', 'MapsController@map');
