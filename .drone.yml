@@ -1,6 +1,6 @@
 ---
 kind: pipeline
-name: build-test
+name: Built-test
 
 platform:
   os: linux
@@ -39,7 +39,6 @@ steps:
 #   event:
 #   - pull_request
 #   - push
----
 ---
 kind: pipeline
 name: deploy dev
