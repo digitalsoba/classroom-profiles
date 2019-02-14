@@ -1,6 +1,6 @@
 ---
 kind: pipeline
-name: Built-test
+name: Default
 
 platform:
   os: linux
