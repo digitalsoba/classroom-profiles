@@ -43,4 +43,4 @@ COPY --from=frontend /app/mix-manifest.json /var/www/html/mix-manifest.json
 RUN chown -hR www-data:www-data /var/www/html/storage /var/www/html/bootstrap 
 
 # Expose port 80 and 443
-EXPOSE 80 443
+EXPOSE 80 443 636
