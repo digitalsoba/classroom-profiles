@@ -19,7 +19,7 @@ steps:
   - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
 
-- name: slack
+- name: Slack
   image: plugins/slack
   when:
   status: [ success, failure ]
@@ -69,7 +69,7 @@ steps:
     registry: 
       from_secret: registry
 
-- name: Update ECS cluster service (prod)
+- name: Update ECS cluster service (dev)
   image: mesosphere/aws-cli
   environment:
      AWS_ACCESS_KEY_ID:
@@ -85,12 +85,6 @@ trigger:
   - dev
   event:
   - push
-  status:
-  - success
-
-depends_on:
-- build-test
-
 ---
 kind: pipeline
 name: deploy prod
@@ -140,9 +134,4 @@ trigger:
   - master
   event:
   - push
-  status:
-  - success
-
-depends_on:
-- build-test
 ...
