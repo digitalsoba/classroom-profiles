@@ -19,6 +19,10 @@
 
         {!! Form::submit('Submit', ['class' => 'btn btn-rounded btn-primary']) !!}
         {!! Form::close() !!}
+    @if (session()->has('message')) <div class="alert alert-danger">{!! session('message') !!}</div>
+    @endif
+
+
 </div>
 
 

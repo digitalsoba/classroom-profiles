@@ -15,7 +15,6 @@
             <a class="nav-item nav-link" href="#">Classrooms</a>
             <a class="nav-item nav-link" href="#">Parking</a>
             <a class="nav-item nav-link" href="#">Food</a>
-            {{--<a href="{{ route('login') }}" class="nav-item nav-link">Log In</a>--}}
             @if (Route::has('login'))
             @auth
             <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
