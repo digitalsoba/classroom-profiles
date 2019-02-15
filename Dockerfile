@@ -40,8 +40,7 @@ COPY --from=frontend /app/public/css/ /var/www/html/public/css/
 COPY --from=frontend /app/mix-manifest.json /var/www/html/mix-manifest.json
 
 # Change /var/www permission
-RUN chown -hR www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
+RUN chown -hR www-data:www-data /var/www/html/storage /var/www/html/bootstrap \
   && php artisan key:generate
 
-# Expose port 80, 443, 636
 EXPOSE 80 443 636
