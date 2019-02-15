@@ -6,8 +6,7 @@
         <h2>Please login</h2>
     </div>
         {!! Form::open(['route' => 'login']) !!}
-        {{ csrf_field() }}
-        <div class="form-group">
+\        <div class="form-group">
             {!! Form::label('username', 'Username') !!}
             {!! Form::text('username', null, ['class' => 'form-control']) !!}
         </div>
