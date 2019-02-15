@@ -19,7 +19,7 @@ steps:
   - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
 
-- name: slack
+- name: Slack
   image: plugins/slack
   when:
   status: [ success, failure ]
