@@ -59,14 +59,14 @@ class LoginController extends Controller
         ]);
 
 
-        if ($validator->fails()) {
-            $request->session()->flash('message', 'Your Username/Password is required!');
+        if ($validator->fails()) {  //if the validator fails, that means the username or password field was left blank
+            $request->session()->flash('message', 'Your Username/Password is required!'); //message will flash
         return redirect()->intended($this->redirectPath());
         }
-        $credentials = $request->all('username', 'password');
-        if (auth()->attempt($credentials)==true) {
+        $credentials = $request->all('username', 'password');   //csun student credentials
+        if (auth()->attempt($credentials)==true) {  //if they're correct csun creds
 
-            return redirect('/')->with('try');
+            return redirect('/'); //go back to homepage
         } else {
             $request->session()->flash('message', 'Your Username/Password combination is incorrect');
             return view('pages.login');
