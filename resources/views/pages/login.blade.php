@@ -6,7 +6,7 @@
         <h2>Please login</h2>
     </div>
         {!! Form::open(['route' => 'login']) !!}
-        @csrf
+        {{ csrf_field() }}
         <div class="form-group">
             {!! Form::label('username', 'Username') !!}
             {!! Form::text('username', null, ['class' => 'form-control']) !!}
@@ -21,9 +21,5 @@
         {!! Form::close() !!}
     @if (session()->has('message')) <div class="alert alert-danger">{!! session('message') !!}</div>
     @endif
-
-
 </div>
-
-
 @endsection
