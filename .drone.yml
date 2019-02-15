@@ -85,12 +85,6 @@ trigger:
   - dev
   event:
   - push
-  status:
-  - success
-
-depends_on:
-- build-test
-
 ---
 kind: pipeline
 name: deploy prod
@@ -140,9 +134,4 @@ trigger:
   - master
   event:
   - push
-  status:
-  - success
-
-depends_on:
-- build-test
 ...
