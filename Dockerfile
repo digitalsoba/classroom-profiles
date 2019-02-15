@@ -43,5 +43,4 @@ COPY --from=frontend /app/mix-manifest.json /var/www/html/mix-manifest.json
 RUN chown -hR www-data:www-data /var/www/html/storage /var/www/html/bootstrap \
   && php artisan key:generate
 
-# Expose port 80, 443, 636
 EXPOSE 80 443 636
