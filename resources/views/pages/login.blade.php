@@ -6,7 +6,6 @@
         <h2>Please login</h2>
     </div>
         {!! Form::open(['route' => 'login']) !!}
-
         <div class="form-group">
             {!! Form::label('username', 'Username') !!}
             {!! Form::text('username', null, ['class' => 'form-control']) !!}
@@ -19,7 +18,7 @@
 
         {!! Form::submit('Submit', ['class' => 'btn btn-rounded btn-primary']) !!}
         {!! Form::close() !!}
+    @if (session()->has('message')) <div class="alert alert-danger">{!! session('message') !!}</div>
+    @endif
 </div>
-
-
 @endsection

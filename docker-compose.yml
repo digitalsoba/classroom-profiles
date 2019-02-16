@@ -18,6 +18,6 @@ services:
     restart: 'no'
     container_name: composer
     image: composer:latest
-    command: install
+    command: install --ignore-platform-reqs --no-interaction --no-plugins --no-scripts --prefer-dist
     volumes:
       - .:/app/
