@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('pages.index');
+    return view('welcome');
 });
 
 Route::post('store', 'ImageController@store');

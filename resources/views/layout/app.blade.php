@@ -38,14 +38,16 @@
 
     @yield("content")
 
-    {{-- Font Awesome --}}
+     Font Awesome
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
         crossorigin="anonymous"></script>
-    {{-- Footer --}}
+     Footer
     @include("layout.footer")
 
-    {{-- Compiled app.js file --}}
+     Compiled app.js file
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
+
 </html>
+
