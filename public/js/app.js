@@ -1838,12 +1838,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "equipment",
   props: ["equip"],
@@ -1867,11 +1861,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
 //
 //
 //
@@ -36845,8 +36834,6 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
           _c(
             "button",
             {
@@ -36859,7 +36846,8 @@ var render = function() {
               }
             },
             [_vm._v("View equipment")]
-          )
+          ),
+          _c("br")
         ])
       ])
     ])
@@ -36872,7 +36860,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col" }, [
-        _c("h2", { staticClass: "text-center" }, [_vm._v("All Classes")])
+        _c("h2", { staticClass: "text-center" }, [_vm._v("Choose a Class")])
       ])
     ])
   }
@@ -36919,8 +36907,6 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
           _c(
             "button",
             {
@@ -36934,7 +36920,9 @@ var render = function() {
             },
             [_vm._v("View equipment")]
           )
-        ])
+        ]),
+        _vm._v(" "),
+        _c("br")
       ])
     ])
   ])
@@ -48547,8 +48535,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\jeken\source\github\classroom-profiles\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\jeken\source\github\classroom-profiles\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/charlie/Desktop/www/html/classroom-profiles/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/charlie/Desktop/www/html/classroom-profiles/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
