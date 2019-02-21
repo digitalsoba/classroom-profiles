@@ -50,13 +50,13 @@ class EquipmentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($Building_Room)
+    public function show($room)
     {
-        $data= ['roomData'=>Equipment::find($Building_Room),
+        $data= ['roomData'=>Equipment::find($room),
                 'mainData'=>Equipment::all()];
 
-        return view('pages.equipDetail')->with('data',$data);
-        return Equipment::find($Building_Room);
+        return view('pages.information_for_guest')->with('data',$data);
+
     }
 
     /**

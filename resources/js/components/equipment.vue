@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h2 class="text-center">All Classes</h2>
+        <h2 class="text-center">Choose a Class</h2>
       </div>
     </div>
     <div class="row text-center">
@@ -13,13 +13,7 @@
               <option v-for="item in equip">{{item.Building_Room}}</option>
             </select>
           </div>
-
-          <br>
-          <button
-            type="button"
-            @click="goToNewPage()"
-            class="btn btn-rounded btn-primary"
-          >View equipment</button>
+          <button type="button" @click="goToNewPage()" class="btn btn-rounded btn-primary">View equipment</button><br>
         </form>
       </div>
     </div>
