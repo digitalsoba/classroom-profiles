@@ -13,6 +13,7 @@
 </head>
 <body>
     <div id="map"></div>
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script><br>
     <script type="text/javascript" src="{{ asset('js/map-scripts.js') }}"></script><br>
 
     <?php
@@ -29,7 +30,7 @@
             {
                 //Calls leaflet to load the area's map data and put it on screen
                 echo '<script type="text/javascript">',
-                    'start("'.env('MAPBOX_API_KEY','Mapbox API Key is missing').'");',
+                    'startMap("'.env('MAPBOX_API_KEY','Mapbox API Key is missing').'");',
                 '</script>';
                 $roomInfo = [];
                 foreach ($rooms as $room)

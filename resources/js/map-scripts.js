@@ -22,7 +22,7 @@ function addPoint(lat, long, building, name) {
  * Calls leaflet and Open Street Map, gets our map information and adds it to our map object.
  * @param accessToken   Open Street Map's API access token.
  */
-function start(accessToken) {
+function startMap(accessToken) {
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> ' +
             'contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
