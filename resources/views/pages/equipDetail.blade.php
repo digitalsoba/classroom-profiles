@@ -66,11 +66,11 @@
                     <td>Support Contact Number</td>
                     <td>{{$data['roomData']->Support_Contact_Number}}</td>
                 </tr>
-
-
             </tbody>
         </table>
     </div>
+
+
 
 </div>
 

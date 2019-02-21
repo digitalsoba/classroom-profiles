@@ -13,14 +13,9 @@
               <option v-for="item in equip">{{item.Building_Room}}</option>
             </select>
           </div>
-
-          <br>
-          <button
-            type="button"
-            @click="goToNewPage()"
-            class="btn btn-rounded btn-primary"
-          >View equipment</button>
+          <button type="button" @click="goToNewPage()" class="btn btn-rounded btn-primary">View equipment</button>
         </form>
+        <br>
       </div>
     </div>
   </div>
