@@ -12,12 +12,8 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup2">
         <div class="navbar-nav text-center">
             <a class="nav-item nav-link" href="/">Home</a>
-            <a class="nav-item nav-link" href="#">Classrooms</a>
-            <a class="nav-item nav-link" href="#">Parking</a>
-            <a class="nav-item nav-link" href="#">Food</a>
             @if (Route::has('login'))
             @auth
-            <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
             <a href="{{ route('logout') }}" class="nav-item nav-link active">Log Out</a>
             @else
             <a href="{{ route('login') }}" class="nav-item nav-link active">Log In</a>
