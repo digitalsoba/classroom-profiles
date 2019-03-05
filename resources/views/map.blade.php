@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
+    @extends('layouts.app')
+
+    @section('content')
+        <example-component></example-component>
+    @endsection
+
+    <h1>Map Demo</h1>
     <div id="map"></div>
     <script type="text/javascript" src="{{ asset('js/app.js') }}"></script><br>
     <script type="text/javascript" src="{{ asset('js/map-scripts.js') }}"></script><br>
