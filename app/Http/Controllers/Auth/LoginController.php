@@ -64,6 +64,7 @@ class LoginController extends Controller
         return redirect()->intended($this->redirectPath());
         }
         $credentials = $request->all('username', 'password');   //csun student credentials
+
         if (auth()->attempt($credentials)==true) {  //if they're correct csun creds
 
             return redirect('/'); //go back to homepage
