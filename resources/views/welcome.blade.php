@@ -1,5 +1,9 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
+<link href="{{asset('css/app.css')}}" >
     {{--<head>--}}
         {{--<meta charset="utf-8">--}}
         {{--<meta name="viewport" content="width=device-width, initial-scale=1">--}}
@@ -98,10 +102,8 @@
 
         <div id="app">
             <div class="container">
-
-            <home></home>
             <br><br>
-
+            <welcome></welcome>
             </div>
         </div>
 
