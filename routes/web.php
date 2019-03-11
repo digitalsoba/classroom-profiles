@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/home', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/', 'WelcomeController@index');
 
 Route::post('store', 'ImageController@store');
 
