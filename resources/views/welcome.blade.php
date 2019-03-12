@@ -14,7 +14,8 @@
 
 <div id="app">
 
-    <welcome :equip="{{$data}}"></welcome>
+    <topnavbar></topnavbar>
+    <equipment :equip="{{$data}}"></equipment>
 
 </div>
 
