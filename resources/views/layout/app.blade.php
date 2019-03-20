@@ -13,6 +13,31 @@
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <title>Classroom Profile</title>
 
+    <style>
+        .class-search
+        {
+            color: #DB363C;
+            position: fixed;
+            right: 5px;
+            top: 50px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 10px 15px;
+        }
+        .class-search .class-search-inner
+        {
+            display: none;
+        }
+        .class-search input
+        {
+            border-radius: 8px;
+            width: 120px;
+        }
+        .class-search:hover .class-search-inner
+        {
+            display: inline;
+        }
+    </style>
     <!--<script type="text/javascript">
         function goToNewPage() {
             var url = document.getElementById('list').value;
@@ -24,6 +49,16 @@
 </head>
 <body>
     @include('layout.topnavbar')
+
+    <div class="class-search">
+
+        <i class="fas fa-search"></i>
+        <div class="class-search-inner">
+            Enter a class<br>
+            <input type="search" placeholder="EX. JD2211">
+        </div>
+    </div>
+
     <div class="container-fluid">
         <div class="row">
             <div class="mapouter">
