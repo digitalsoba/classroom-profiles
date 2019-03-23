@@ -16,7 +16,12 @@
             @auth
             <a href="{{ route('logout') }}" class="nav-item nav-link active">Log Out</a>
             @else
-            <a href="{{ route('login') }}" class="nav-item nav-link active">Log In</a>
+            <div id="app">
+                <modal v-if="showModal" @close="showModal = false" header="Login">
+                    <login></login>
+                </modal>
+                <span id="show-modal" @click="showModal = true" class="nav-item nav-link active">Log In</span>
+            </div>
             @endauth
             @endif
         </div>
