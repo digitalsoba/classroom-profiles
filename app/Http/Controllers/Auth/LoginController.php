@@ -8,6 +8,9 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Auth;
+use Illuminate\Support\Facades\Validator;
+use Session;
+
 
 class LoginController extends Controller
 {
@@ -30,7 +33,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/login';
     protected $username = 'username';
 
     /**
@@ -50,19 +53,28 @@ class LoginController extends Controller
 
     public function postLogin(Request $request)
     {
-        $credentials = $request->all('username', 'password');
-        if (auth()->attempt($credentials)==true) {
+        $validator = Validator::make($request->all(), [
+            'username' => 'required',
+            'password' => 'required'
+        ]);
 
-            // Successful login. Get the user instance.
 
-            return redirect('/')->with('try');
+        if ($validator->fails()) {  //if the validator fails, that means the username or password field was left blank
+            $request->session()->flash('message', 'Your Username/Password is required!'); //message will flash
+        return redirect()->intended($this->redirectPath());
+        }
+        $credentials = $request->all('username', 'password');   //csun student credentials
+        if (auth()->attempt($credentials)==true) {  //if they're correct csun creds
+
+            return redirect('/'); //go back to homepage
         } else {
+            $request->session()->flash('message', 'Your Username/Password combination is incorrect');
             return view('pages.login');
         }
 
     }
 
-    public function logout(Request $request) {
+    public function logout() {
         Auth::logout();
         return redirect('/login');
     }

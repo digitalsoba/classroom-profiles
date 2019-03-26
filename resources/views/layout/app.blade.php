@@ -12,14 +12,15 @@
     <script>try { Typekit.load(); } catch (e) { }</script>
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <title>Classroom Profile</title>
-    <script type="text/javascript">
+
+    <!--<script type="text/javascript">
         function goToNewPage() {
             var url = document.getElementById('list').value;
             if (url != 'none') {
                 window.location = url;
             }
         }
-    </script>
+    </script>-->
 </head>
 <body>
     @include('layout.topnavbar')
