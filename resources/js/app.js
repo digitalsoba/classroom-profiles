@@ -23,6 +23,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('equipment', require('./components/equipment.vue').default);
 Vue.component('equipmentdata', require('./components/equipmentdata.vue').default);
 
+Vue.component('userEquipment', require('./components/userEquipment.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
