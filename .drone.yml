@@ -18,6 +18,7 @@ steps:
   - cp .env.test .env
   - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
+  - ls storage/logs
 
 - name: Slack
   image: plugins/slack
