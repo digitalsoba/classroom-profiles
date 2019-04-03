@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/', 'WelcomeController@index');
 
 Route::post('store', 'ImageController@store');
 
@@ -37,4 +39,14 @@ Route::get('/mapTest', 'MapsController@mapTest');
 Route::get('/route', 'MapsController@mapRoute');
 
 
-Route::resource("equip","EquipmentsController",['middleware' => ['auth']]);
+//Route::resource("equip","EquipmentsController",['middleware' => ['auth']]);
+//guest
+Route::get('/equip', 'MapForGuestController@map');
+Route::get('/equip', 'EquipmentsController@index');
+Route::get('/equip/{room}', 'EquipmentsController@show');
+//Route::get('/equip/{room}', 'MapForGuestController@map1');
+
+//Route::get('equip/{room}', function () {
+//    return view("layout.guestPage");
+//});
+
