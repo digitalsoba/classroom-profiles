@@ -18,7 +18,6 @@
                 </div>
             </div>
         </nav>
-        <hr class="hr-metaphor">
     </div>
 </template>
 

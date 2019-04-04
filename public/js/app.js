@@ -1838,9 +1838,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "equipment",
   props: ["equip"],
@@ -1908,7 +1905,6 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-//
 //
 //
 //
@@ -36926,42 +36922,37 @@ var render = function() {
     _vm._v(" "),
     _c("br"),
     _vm._v(" "),
-    _c("div", { staticClass: "row text-center" }, [
-      _c("div", { staticClass: "col" }, [
-        _c("form", [
-          _c("div", { staticClass: "form-group" }, [
-            _c(
-              "select",
-              {
-                ref: "selectField",
-                staticClass: "form-control",
-                attrs: { id: "list", accesskey: "target" }
-              },
-              _vm._l(_vm.equip, function(item) {
-                return _c("option", [_vm._v(_vm._s(item.Building_Room))])
-              }),
-              0
-            ),
-            _vm._v(" "),
-            _c("br")
-          ]),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-rounded btn-primary",
-              attrs: { type: "button" },
-              on: {
-                click: function($event) {
-                  _vm.goToNewPage()
-                }
-              }
-            },
-            [_vm._v("View Equipment")]
-          ),
-          _c("br")
-        ])
-      ])
+    _c("form", [
+      _c("div", { staticClass: "form-group" }, [
+        _c(
+          "select",
+          {
+            ref: "selectField",
+            staticClass: "form-control",
+            attrs: { id: "list", accesskey: "target" }
+          },
+          _vm._l(_vm.equip, function(item) {
+            return _c("option", [_vm._v(_vm._s(item.Building_Room))])
+          }),
+          0
+        )
+      ]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-rounded btn-primary",
+          attrs: { type: "button" },
+          on: {
+            click: function($event) {
+              _vm.goToNewPage()
+            }
+          }
+        },
+        [_vm._v("View Equipment")]
+      )
     ])
   ])
 }
@@ -36972,10 +36963,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col" }, [
-        _c("h2", { staticClass: "text-left" }, [_vm._v("Choose a Classroom")]),
+        _c("h3", { staticClass: "text-left" }, [_vm._v("Choose a Classroom")]),
         _vm._v(" "),
-        _c("h5", { staticClass: "text-left" }, [
-          _vm._v("View equipment for the classroom selected")
+        _c("h6", { staticClass: "text-left" }, [
+          _vm._v("(View Equipment for the Classroom Selected)")
         ])
       ])
     ])
@@ -37144,9 +37135,7 @@ var staticRenderFns = [
             ]
           )
         ]
-      ),
-      _vm._v(" "),
-      _c("hr", { staticClass: "hr-metaphor" })
+      )
     ])
   }
 ]
