@@ -2,10 +2,12 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h2 class="text-center">Choose a Class</h2>
+        <h2 class="text-left">Choose a Classroom</h2>
+        <h5 class="text-left">View equipment for the classroom selected</h5>
       </div>
     </div>
-    <div class="row text-center">
+    <br>
+    <div class="row">
       <div class="col">
         <form>
           <div class="form-group">
@@ -13,7 +15,7 @@
               <option v-for="item in equip">{{item.Building_Room}}</option>
             </select>
           </div>
-          <button type="button" @click="goToNewPage()" class="btn btn-rounded btn-primary">View equipment</button><br>
+          <button type="button" @click="goToNewPage()" class="btn btn-rounded btn-primary">View Equipment</button>
         </form>
       </div>
     </div>

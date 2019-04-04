@@ -15,7 +15,19 @@
 <div id="app">
 
     <topnavbar></topnavbar>
+    <br>
     <equipment :equip="{{$data}}"></equipment>
+
+    <br>
+    <br>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-md-5"><hr class="hr-metaphor"></div>
+        <div class="col-xs-6 col-md-2"><h4 class="text-center">OR</h4></div>
+        <div class="col-xs-6 col-md-5"><hr class="hr-metaphor"></div>
+    </div>
+    </div>
 
 </div>
 
@@ -24,7 +36,9 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="container">
-            <h2>Login to view your classes</h2>
+            <h2 class="text-md-left">Login</h2>
+            <h5 class="text-md-left">View you Class Schedule with Routes</h5>
+            <br>
             {!! Form::open(['route' => 'login']) !!}
 
             <div class="form-group">

@@ -13,12 +13,12 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup2">
                 <div class="navbar-nav text-center">
-                    <a class="nav-item nav-link active" href='/home'>Home</a>
                     <a class="nav-item nav-link" href='login'>Login</a>
                     <a class="nav-item nav-link" href='logout'>Logout</a>
                 </div>
             </div>
         </nav>
+        <hr class="hr-metaphor">
     </div>
 </template>
 

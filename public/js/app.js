@@ -1838,6 +1838,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "equipment",
   props: ["equip"],
@@ -33783,7 +33786,7 @@ return jQuery;
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global) {/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.14.6
+ * @version 1.14.7
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -34351,7 +34354,11 @@ function isFixed(element) {
   if (getStyleComputedProperty(element, 'position') === 'fixed') {
     return true;
   }
-  return isFixed(getParentNode(element));
+  var parentNode = getParentNode(element);
+  if (!parentNode) {
+    return false;
+  }
+  return isFixed(parentNode);
 }
 
 /**
@@ -35007,18 +35014,23 @@ function getRoundedOffsets(data, shouldRound) {
   var _data$offsets = data.offsets,
       popper = _data$offsets.popper,
       reference = _data$offsets.reference;
+  var round = Math.round,
+      floor = Math.floor;
 
-
-  var isVertical = ['left', 'right'].indexOf(data.placement) !== -1;
-  var isVariation = data.placement.indexOf('-') !== -1;
-  var sameWidthOddness = reference.width % 2 === popper.width % 2;
-  var bothOddWidth = reference.width % 2 === 1 && popper.width % 2 === 1;
   var noRound = function noRound(v) {
     return v;
   };
 
-  var horizontalToInteger = !shouldRound ? noRound : isVertical || isVariation || sameWidthOddness ? Math.round : Math.floor;
-  var verticalToInteger = !shouldRound ? noRound : Math.round;
+  var referenceWidth = round(reference.width);
+  var popperWidth = round(popper.width);
+
+  var isVertical = ['left', 'right'].indexOf(data.placement) !== -1;
+  var isVariation = data.placement.indexOf('-') !== -1;
+  var sameWidthParity = referenceWidth % 2 === popperWidth % 2;
+  var bothOddWidth = referenceWidth % 2 === 1 && popperWidth % 2 === 1;
+
+  var horizontalToInteger = !shouldRound ? noRound : isVertical || isVariation || sameWidthParity ? round : floor;
+  var verticalToInteger = !shouldRound ? noRound : round;
 
   return {
     left: horizontalToInteger(bothOddWidth && !isVariation && shouldRound ? popper.left - 1 : popper.left),
@@ -36912,6 +36924,8 @@ var render = function() {
   return _c("div", { staticClass: "container" }, [
     _vm._m(0),
     _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
     _c("div", { staticClass: "row text-center" }, [
       _c("div", { staticClass: "col" }, [
         _c("form", [
@@ -36927,7 +36941,9 @@ var render = function() {
                 return _c("option", [_vm._v(_vm._s(item.Building_Room))])
               }),
               0
-            )
+            ),
+            _vm._v(" "),
+            _c("br")
           ]),
           _vm._v(" "),
           _c(
@@ -36941,7 +36957,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("View equipment")]
+            [_vm._v("View Equipment")]
           ),
           _c("br")
         ])
@@ -36956,7 +36972,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col" }, [
-        _c("h2", { staticClass: "text-center" }, [_vm._v("Choose a Class")])
+        _c("h2", { staticClass: "text-left" }, [_vm._v("Choose a Classroom")]),
+        _vm._v(" "),
+        _c("h5", { staticClass: "text-left" }, [
+          _vm._v("View equipment for the classroom selected")
+        ])
       ])
     ])
   }
@@ -37106,15 +37126,6 @@ var staticRenderFns = [
                 _c(
                   "a",
                   {
-                    staticClass: "nav-item nav-link active",
-                    attrs: { href: "/home" }
-                  },
-                  [_vm._v("Home")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
                     staticClass: "nav-item nav-link",
                     attrs: { href: "login" }
                   },
@@ -37133,7 +37144,9 @@ var staticRenderFns = [
             ]
           )
         ]
-      )
+      ),
+      _vm._v(" "),
+      _c("hr", { staticClass: "hr-metaphor" })
     ])
   }
 ]
@@ -49020,8 +49033,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/anthony/Projects/classroom-profiles/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/anthony/Projects/classroom-profiles/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /c/wamp64/www/classroom-profiles/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /c/wamp64/www/classroom-profiles/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
