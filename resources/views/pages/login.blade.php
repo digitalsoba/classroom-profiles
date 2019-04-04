@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <h2>Please login</h2>
+        <h2>Please Login</h2>
     </div>
         {!! Form::open(['route' => 'login']) !!}
         <div class="form-group">
