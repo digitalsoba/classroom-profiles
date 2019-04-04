@@ -27,7 +27,8 @@ class ImageController extends Controller {
 
     public function index()
     {
-        return view('pages.image');
+        $data= Equipment::all();
+        return view('pages.image')->with('data',$data);;
     }
 
     public function store(Request $request)
