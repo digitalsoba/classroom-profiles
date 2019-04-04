@@ -4,7 +4,7 @@
 @section('content')
 
     <!--following is map function  -->
-    <div id="map" class="container">
+    <div id="map">
         <script type="text/javascript" src="{{ asset('js/map-scripts.js') }}"></script><br>
         <div class="container">
             <?php
