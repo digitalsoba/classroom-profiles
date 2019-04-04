@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Equipment;
 
-class EquipmentsController extends Controller
+class EquipCsunUserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,17 +14,17 @@ class EquipmentsController extends Controller
      */
     public function __construct()
     {
-       // $this->middleware('auth');
+         $this->middleware('auth');
     }
 
     public function index()
     {
         $data= Equipment::all();
-        return view('pages.equip')->with('data',$data);
+        return view('pages.csunIndex')->with('data',$data);
     }
 
     /**
-      * Show the form for creating a new resource.
+     * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
@@ -53,9 +53,9 @@ class EquipmentsController extends Controller
     public function show($room)
     {
         $data= ['roomData'=>Equipment::find($room),
-                'mainData'=>Equipment::all()];
+            'mainData'=>Equipment::all()];
 
-        return view('pages.information_for_guest')->with('data',$data);
+        return view('pages.information_for_csunUser')->with('data',$data);
 
     }
 

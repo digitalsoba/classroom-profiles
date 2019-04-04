@@ -14,7 +14,6 @@
 <body>
 
 <div id="app">
-
     <topnavbar></topnavbar>
 </div>
 
