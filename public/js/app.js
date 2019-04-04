@@ -1982,6 +1982,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'modal',
   props: ['header', 'footer'],
@@ -37861,7 +37862,16 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "modal-body" }, [_vm._t("default")], 2),
+          _c(
+            "div",
+            { staticClass: "modal-body" },
+            [
+              _vm._t("default", [
+                _vm._v("\n                Default content here\n            ")
+              ])
+            ],
+            2
+          ),
           _vm._v(" "),
           _c("div", { staticClass: "modal-footer" }, [
             _vm._v(
