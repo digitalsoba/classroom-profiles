@@ -18,7 +18,7 @@ steps:
   - cp .env.test .env
   - php artisan key:generate
   - vendor/bin/phpunit --configuration phpunit.xml
-  
+
 - name: Slack
   image: plugins/slack
   when:
@@ -54,31 +54,31 @@ steps:
     - aws s3 cp s3://matabit/dev/dev.env .env
     - aws s3 cp s3://matabit/dev/apache.conf .
 
-# - name: Deploy Image  
-#   image: plugins/ecr
-#   settings:
-#     tags:
-#       - dev
-#     region: us-west-2
-#     access_key: 
-#       from_secret: aws_access_key_id
-#     secret_key: 
-#       from_secret: aws_secret_access_key
-#     repo: 
-#       from_secret: repo
-#     registry: 
-#       from_secret: registry
+- name: Deploy Image  
+  image: plugins/ecr
+  settings:
+    tags:
+      - dev
+    region: us-west-2
+    access_key: 
+      from_secret: aws_access_key_id
+    secret_key: 
+      from_secret: aws_secret_access_key
+    repo: 
+      from_secret: repo
+    registry: 
+      from_secret: registry
 
-# - name: Update ECS cluster service (dev)
-#   image: mesosphere/aws-cli
-#   environment:
-#      AWS_ACCESS_KEY_ID:
-#        from_secret: aws_access_key_id
-#      AWS_SECRET_ACCESS_KEY:
-#        from_secret: aws_secret_access_key
-#      AWS_DEFAULT_REGION: us-west-2
-#   commands:
-#     - aws ecs update-service --cluster matabit_cluster --service dev-service --force-new-deployment
+- name: Update ECS cluster service (dev)
+  image: mesosphere/aws-cli
+  environment:
+     AWS_ACCESS_KEY_ID:
+       from_secret: aws_access_key_id
+     AWS_SECRET_ACCESS_KEY:
+       from_secret: aws_secret_access_key
+     AWS_DEFAULT_REGION: us-west-2
+  commands:
+    - aws ecs update-service --cluster matabit_cluster --service dev-service --force-new-deployment
 
 trigger:
   branch:
@@ -102,32 +102,32 @@ steps:
     - aws s3 cp s3://matabit/prod/prod.env .env
     - aws s3 cp s3://matabit/prod/apache.conf .
 
-# - name: Deploy Image  
-#   image: plugins/ecr
-#   settings:
-#     tags:
-#       - prod
-#       - latest
-#     region: us-west-2
-#     access_key: 
-#       from_secret: aws_access_key_id
-#     secret_key: 
-#       from_secret: aws_secret_access_key
-#     repo: 
-#       from_secret: repo
-#     registry: 
-#       from_secret: registry
+- name: Deploy Image  
+  image: plugins/ecr
+  settings:
+    tags:
+      - prod
+      - latest
+    region: us-west-2
+    access_key: 
+      from_secret: aws_access_key_id
+    secret_key: 
+      from_secret: aws_secret_access_key
+    repo: 
+      from_secret: repo
+    registry: 
+      from_secret: registry
 
-# - name: Update ECS cluster service (prod)
-#   image: mesosphere/aws-cli
-#   environment:
-#      AWS_ACCESS_KEY_ID:
-#        from_secret: aws_access_key_id
-#      AWS_SECRET_ACCESS_KEY:
-#        from_secret: aws_secret_access_key
-#      AWS_DEFAULT_REGION: us-west-2
-#   commands:
-#     - aws ecs update-service --cluster matabit_cluster --service prod-service --force-new-deployment
+- name: Update ECS cluster service (prod)
+  image: mesosphere/aws-cli
+  environment:
+     AWS_ACCESS_KEY_ID:
+       from_secret: aws_access_key_id
+     AWS_SECRET_ACCESS_KEY:
+       from_secret: aws_secret_access_key
+     AWS_DEFAULT_REGION: us-west-2
+  commands:
+    - aws ecs update-service --cluster matabit_cluster --service prod-service --force-new-deployment
 
 trigger:
   branch:
