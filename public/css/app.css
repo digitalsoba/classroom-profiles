@@ -10910,3 +10910,7 @@ div.datepicker-calendar.default button.datepicker-close {
   width: 100%;
 }
 
+.nav-item:hover {
+  cursor: pointer;
+}
+
