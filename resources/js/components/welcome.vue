@@ -29,7 +29,6 @@
         <div class="row text-center">
             <div class="col">
                 <form>
-                    <meta name="csrf-token" content="{{ csrf_token() }}">
                     <div class="form-group">
                         <select id="list" accesskey="target" ref="selectField" class="form-control">
                             <option v-for="item in equip">{{item.Building_Room}}</option>

@@ -5,7 +5,7 @@
 
 
     <!--following is map function-->
-    <div id="map">
+    <div id="map" class="container">
         <script type="text/javascript" src="{{ asset('js/map-scripts.js') }}"></script><br>
     <div class="container">
         <?php
@@ -107,7 +107,6 @@
                 </tbody>
             </table>
         </div>
-
         <div id="app">
             <equipmentdata :equip="{{$data['mainData']}}"></equipmentdata>
         </div>

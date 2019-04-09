@@ -24,10 +24,8 @@ Vue.component('topnavbar', require('./components/topnavbar.vue').default);
 Vue.component('welcome', require('./components/welcome.vue').default);
 Vue.component('equipment', require('./components/equipment.vue').default);
 Vue.component('equipmentdata', require('./components/equipmentdata.vue').default);
-
-Vue.component('userEquipment', require('./components/userEquipment.vue').default);
-
-
+Vue.component('modal', require('./components/modal.vue').default);
+Vue.component('login', require('./components/login.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

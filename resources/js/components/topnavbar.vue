@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid">
-        <!--<h2>hi</h2>-->
+       <!--<h2>hi</h2>-->
         <nav class="navbar navbar-metaphor navbar-metaphor--light navbar-expand-md">
             <a class="navbar-brand" href="#">
                 <span class="sr-only">CSUN Logo</span>
@@ -13,8 +13,19 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup2">
                 <div class="navbar-nav text-center">
-                    <!--<a class="nav-item nav-link" href='login'>Login</a>-->
-                    <!--<a class="nav-item nav-link" href='logout'>Logout</a>-->
+                    <a class="nav-item nav-link active" href='/home'>Home</a>
+
+<div id="app">
+    <a class="nav-item nav-link" @click="showModal">Login</a>
+    <modal v-show="isModalVisible" @close="closeModal" header="Login">
+        <div class="app-body">
+            <slot>defualt of topnav.VUE</slot>
+        </div>
+    </modal>
+</div>
+
+
+                    <a class="nav-item nav-link" href='logout'>Logout</a>
                 </div>
             </div>
         </nav>
@@ -22,4 +33,26 @@
 </template>
 
 <script>
+  import login from './login.vue';
+  import modal from './modal.vue';
+
+  export default {
+    name: 'app',
+    components: {
+      modal,
+    },
+    data () {
+      return {
+        isModalVisible: false,
+      };
+    },
+    methods: {
+      showModal() {
+        this.isModalVisible = true;
+      },
+      closeModal() {
+        this.isModalVisible = false;
+      }
+    },
+  };
 </script>
