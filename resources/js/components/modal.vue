@@ -1,4 +1,5 @@
 <template>
+  <transition name="modal-fade">
     <div id="modal">
         <div class="modal-mask">
           <div class="modal-wrapper">
@@ -11,34 +12,41 @@
 
               <div class="modal-body">
                 <slot>
-                    Default content here
+                    Default content here of Modal
                 </slot>
-                </div>
+              </div>
 
               <div class="modal-footer">
                   {{footer}}
-                  <button class="modal-default-button" @click="$emit('close')">
-                    Close
+                  <button class="modal-default-button" @click="close"
+                  aria-label="Close modal"
+                  >
+                  Close
                   </button>
+
+
+
+
               </div>
             </div>
           </div>
         </div>
     </div>
+  </transition>
 </template>
 
-
 <script>
-    export default {
-        name: 'modal',
-        props: ['header','footer'],
-        data() {
-            return {
-                showModal: false
-            }
-        },
-    }
+  export default {
+    name: 'modal',
+    props: ['header','footer'],
+    methods: {
+      close() {
+        this.$emit('close');
+      },
+    },
+  };
 </script>
+
 
 <style scoped>
     .modal-mask {
