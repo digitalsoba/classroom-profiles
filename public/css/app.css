@@ -10898,9 +10898,9 @@ div.datepicker-calendar.default button.datepicker-close {
 }
 
 #map {
-  height: 650px;
+  height: 570px;
   width: 100%;
-  border: solid black;
+  margin-top: 1%;
 }
 
 .gmap_canvas {
@@ -10910,7 +10910,6 @@ div.datepicker-calendar.default button.datepicker-close {
   width: 100%;
 }
 
-<<<<<<< HEAD
 .navbar-metaphor .navbar-brand__subbrand {
   position: relative;
   padding: 0.1rem 0 0.3rem 0.8rem;
@@ -10932,13 +10931,14 @@ div.datepicker-calendar.default button.datepicker-close {
   color: #fff;
   background-color: #960101;
   border-color: #cf2f1a;
-=======
+}
+
 .class-search {
   z-index: 500;
   color: #DB363C;
   position: fixed;
   right: 5px;
-  top: 50x;
+  top: 50px;
   background-color: white;
   border-radius: 20px;
   padding: 10px 15px;
@@ -10955,6 +10955,5 @@ div.datepicker-calendar.default button.datepicker-close {
 
 .class-search:hover .class-search-inner {
   display: inline;
->>>>>>> 62396fc935d9cbe47b5236b628def49f4bd4f57d
 }
 
