@@ -37128,7 +37128,7 @@ var staticRenderFns = [
             "navbar navbar-metaphor navbar-metaphor--light navbar-expand-md"
         },
         [
-          _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
+          _c("a", { staticClass: "navbar-brand", attrs: { href: "/logout" } }, [
             _c("span", { staticClass: "sr-only" }, [_vm._v("CSUN Logo")]),
             _vm._v(" "),
             _c("span", { staticClass: "navbar-brand__subbrand" }, [
@@ -37158,7 +37158,15 @@ var staticRenderFns = [
               staticClass: "collapse navbar-collapse justify-content-end",
               attrs: { id: "navbarNavAltMarkup2" }
             },
-            [_c("div", { staticClass: "navbar-nav text-center" })]
+            [
+              _c("div", { staticClass: "navbar-nav text-center" }, [
+                _c(
+                  "a",
+                  { staticClass: "btn btn-danger", attrs: { href: "/logout" } },
+                  [_vm._v("Logout/Home")]
+                )
+              ])
+            ]
           )
         ]
       )

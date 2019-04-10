@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <!--<h2>hi</h2>-->
         <nav class="navbar navbar-metaphor navbar-metaphor--light navbar-expand-md">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/logout">
                 <span class="sr-only">CSUN Logo</span>
                 <span class="navbar-brand__subbrand">
                     Classroom Profiles
@@ -14,7 +14,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup2">
                 <div class="navbar-nav text-center">
                     <!--<a class="nav-item nav-link" href='login'>Login</a>-->
-                    <!--<a class="nav-item nav-link" href='logout'>Logout</a>-->
+                    <a class="btn btn-danger" href='/logout'>Logout/Home</a>
                 </div>
             </div>
         </nav>

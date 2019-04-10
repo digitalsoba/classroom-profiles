@@ -10108,11 +10108,10 @@ html {
   padding: 0.1rem 0 0.3rem 0.8rem;
   margin-left: 10.8rem;
   top: -0.2rem;
-  font-size: 2.3rem;
+  font-size: 2rem;
   border-left: 1px solid #bec6c3;
   letter-spacing: -0.01rem;
-  color: #28292b;
-
+  color: #55565a;
 }
 
 @media (max-width: 767.98px) {
@@ -10909,5 +10908,28 @@ div.datepicker-calendar.default button.datepicker-close {
   background: none !important;
   height: 500px;
   width: 100%;
+}
+
+.navbar-metaphor .navbar-brand__subbrand {
+  position: relative;
+  padding: 0.1rem 0 0.3rem 0.8rem;
+  margin-left: 10.8rem;
+  top: -0.2rem;
+  font-size: 2.5rem;
+  border-left: 1px solid #bec6c3;
+  letter-spacing: -0.01rem;
+  color: #0e1116;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #d22030;
+  border-color: #e64b36;
+}
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #960101;
+  border-color: #cf2f1a;
 }
 
