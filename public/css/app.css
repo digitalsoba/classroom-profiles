@@ -10108,11 +10108,10 @@ html {
   padding: 0.1rem 0 0.3rem 0.8rem;
   margin-left: 10.8rem;
   top: -0.2rem;
-  font-size: 2.3rem;
+  font-size: 2rem;
   border-left: 1px solid #bec6c3;
   letter-spacing: -0.01rem;
-  color: #28292b;
-
+  color: #55565a;
 }
 
 @media (max-width: 767.98px) {
