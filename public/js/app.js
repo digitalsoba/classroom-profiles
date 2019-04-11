@@ -37157,15 +37157,7 @@ var staticRenderFns = [
               staticClass: "collapse navbar-collapse justify-content-end",
               attrs: { id: "navbarNavAltMarkup2" }
             },
-            [
-              _c("div", { staticClass: "navbar-nav text-center" }, [
-                _c(
-                  "a",
-                  { staticClass: "btn btn-danger", attrs: { href: "/logout" } },
-                  [_vm._v("Logout/Home")]
-                )
-              ])
-            ]
+            [_c("div", { staticClass: "navbar-nav text-center" })]
           )
         ]
       )
@@ -48685,10 +48677,10 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue").default);
+Vue.component('equipmentdata', __webpack_require__(/*! ./components/equipmentdata.vue */ "./resources/js/components/equipmentdata.vue").default);
 Vue.component('topnavbar', __webpack_require__(/*! ./components/topnavbar.vue */ "./resources/js/components/topnavbar.vue").default);
 Vue.component('welcome', __webpack_require__(/*! ./components/welcome.vue */ "./resources/js/components/welcome.vue").default);
 Vue.component('equipment', __webpack_require__(/*! ./components/equipment.vue */ "./resources/js/components/equipment.vue").default);
-Vue.component('equipmentdata', __webpack_require__(/*! ./components/equipmentdata.vue */ "./resources/js/components/equipmentdata.vue").default);
 Vue.component('userEquipment', __webpack_require__(/*! ./components/userEquipment.vue */ "./resources/js/components/userEquipment.vue").default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
