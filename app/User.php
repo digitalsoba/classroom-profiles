@@ -43,4 +43,9 @@ class User extends MetaUser
         $user = auth()->user();
         return $user->email;
     }
+
+    public function getClasses(){
+
+
+    }
 }
