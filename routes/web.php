@@ -11,11 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/', 'WelcomeController@index');
+
+Route::get('/CsunUser', function () {
+    return view('layout.csunUser');
 });
 
 Route::post('store', 'ImageController@store');
+Route::post('userstore', 'ImageCsunUserController@userstore');
 
 Route::get('/login', 'Auth\LoginController@getLogin');
 Route::post('/login', 'Auth\LoginController@postLogin')->name('login');
@@ -38,4 +45,19 @@ Route::get('/route', 'MapsController@mapRoute');
 
 Route::get('/sched','NextClassController@getSchedules');
 
-Route::resource("equip","EquipmentsController",['middleware' => ['auth']]);
+//Route::resource("equip","EquipmentsController",['middleware' => ['auth']]);
+//guest
+Route::get('/equip', 'MapForGuestController@map');
+Route::get('/equip', 'EquipmentsController@index');
+Route::get('/equip/{room}', 'EquipmentsController@show');
+
+Route::get('/CsunUser', 'EquipCsunUserController@index');
+Route::get('/CsunUser/{room}', 'EquipCsunUserController@show');
+Route::get('/CsunUserImage', 'ImageCsunUserController@index',['middleware' => ['auth']])-> name('image');
+Route::get('CsunUserImage/{room}', 'ImageCsunUserController@interactiveImages', ['middleware' => ['auth']])->name('csun_user_image_room');
+
+
+//Route::get('equip/{room}', function () {
+//    return view("layout.guestPage");
+//});
+

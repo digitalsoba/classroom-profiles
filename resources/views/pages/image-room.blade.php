@@ -1,10 +1,52 @@
 
-
-@extends("layout.app")
+@extends("layout.guestPage")
 
 @section('content')
-    <h3>These are the images for the room: {{$classroom}} </h3>
 
+    <!--following is map function  -->
+    <div id="map">
+        <script type="text/javascript" src="{{ asset('js/map-scripts.js') }}"></script><br>
+        <div class="container">
+            <?php
+            //Calls leaflet to load the area's map data and put it on screen
+            echo '<script type="text/javascript">',
+                'start("'.env('MAPBOX_API_KEY','Mapbox API Key is missing').'");',
+            '</script>';
+            //Creates an Http Client using Guzzle to make our API requests
+            $client = new \GuzzleHttp\Client();
+            //calls the Waldo api, asking for information on the given room and stores the result
+            $result = $client->request('GET',
+                'https://api.metalab.csun.edu/waldo/1.0/rooms?room='.$classroom,
+                ['verify' => false]);
+            $roomInfo = [];
+            $resultRooms = json_decode($result->getBody())->{'rooms'};
+            $foundRoom = $resultRooms[0];
+            array_push($roomInfo, [
+                $foundRoom->latitude,
+                $foundRoom->longitude,
+                $foundRoom->room_number,
+                $foundRoom->building_name]);
+            $roomJSON =json_encode($roomInfo);
+            echo '<script type="text/javascript">',
+                'addMultiplePoints('.$roomJSON.', "true");',
+            '</script>';
+            ?>
+        </div>
+    </div>
+
+    <div class="container nav-fill">
+        <ul class="nav nav-metaphor">
+            <li class="nav-item flex-fill text-center "> <a class="nav-link  " href="/equip/{{$classroom}}">Equipment</a> </li>
+            <li class="nav-item flex-fill text-center"> <a class="nav-link active" href="/image/{{$classroom}}">Images</a> </li>
+        </ul>
+    </div>
+    <div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center">These are the images for the room: {{$classroom}}</h2>
+        </div>
+    </div>
+    <br>
     <div class="row">
         <div class="col-md-4">
             <div class="thumbnail">
@@ -34,6 +76,7 @@
             </div>
 
         </div>
+    </div>
 {{--
             -------------3D images--------------
 --}}
