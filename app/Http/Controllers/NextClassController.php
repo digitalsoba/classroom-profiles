@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
-use Response;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 
 class NextClassController extends Controller
