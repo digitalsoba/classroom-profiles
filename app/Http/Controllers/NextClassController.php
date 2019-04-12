@@ -38,23 +38,37 @@ class NextClassController extends Controller
         $results = $response->getBody()->getContents();
         $classes = json_decode($results)->classes;
         $classes[0]->class_number = '16087';
-        $classes[0]->catalog_number = '282';
-        $urlClass = 'https://api.metalab.csun.edu/curriculum/api/2.0/terms/Spring-2019/classes/'.$classes[0]->subject.'-'.$classes[0]->catalog_number;
-        $response = $client->get($urlClass);
-        $scheduleResults = $response->getBody()->getContents();
-        $schedule = json_decode($scheduleResults);
+        $classes[1]->class_number = '16544';
 
-        foreach ($schedule->classes as $schedules){
+        foreach ($classes as $class){
 
-            $meetings = $schedules->meetings;
-            foreach ($meetings as $location){
+            $urlClass = 'https://api.metalab.csun.edu/curriculum/api/2.0/terms/Spring-2019/classes/'.$class->class_number;
+            $response = $client->get($urlClass);
+            $scheduleResults = $response->getBody()->getContents();
+            $schedule = json_decode($scheduleResults);
 
-                $room[] = $location->location;
+            $scheduleResultsArray[] = $schedule;
+        }
+
+
+        foreach ($scheduleResultsArray as $schedules){
+
+            $classes = $schedules->classes;
+
+            foreach ($classes as $class){
+
+                foreach ($class->meetings as $meeting){
+
+                    $locations[] = $meeting->location;
+
+
+
+                }
             }
 
         }
 
-        return $room;
+        return $locations;
 
     }
 
