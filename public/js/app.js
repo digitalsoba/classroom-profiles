@@ -37313,7 +37313,7 @@ var staticRenderFns = [
             "navbar navbar-metaphor navbar-metaphor--light navbar-expand-md"
         },
         [
-          _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
+          _c("a", { staticClass: "navbar-brand", attrs: { href: "/logout" } }, [
             _c("span", { staticClass: "sr-only" }, [_vm._v("CSUN Logo")]),
             _vm._v(" "),
             _c("span", { staticClass: "navbar-brand__subbrand" }, [
@@ -48863,10 +48863,10 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
+Vue.component('equipmentdata', __webpack_require__(/*! ./components/equipmentdata.vue */ "./resources/js/components/equipmentdata.vue")["default"]);
 Vue.component('topnavbar', __webpack_require__(/*! ./components/topnavbar.vue */ "./resources/js/components/topnavbar.vue")["default"]);
 Vue.component('welcome', __webpack_require__(/*! ./components/welcome.vue */ "./resources/js/components/welcome.vue")["default"]);
 Vue.component('equipment', __webpack_require__(/*! ./components/equipment.vue */ "./resources/js/components/equipment.vue")["default"]);
-Vue.component('equipmentdata', __webpack_require__(/*! ./components/equipmentdata.vue */ "./resources/js/components/equipmentdata.vue")["default"]);
 Vue.component('userEquipment', __webpack_require__(/*! ./components/userEquipment.vue */ "./resources/js/components/userEquipment.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
