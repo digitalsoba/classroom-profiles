@@ -37,8 +37,8 @@ class NextClassController extends Controller
 
         $results = $response->getBody()->getContents();
         $classes = json_decode($results)->classes;
-        $classes[0]->class_number = '16087';
-        $classes[1]->class_number = '16544';
+       // $classes[0]->class_number = '16087';
+        //$classes[1]->class_number = '16544';
 
         foreach ($classes as $class){
 
@@ -69,57 +69,6 @@ class NextClassController extends Controller
         }
 
         return $locations;
-
-    }
-
-    public function getSchedulesDB(){
-
-
-        $id = '105751033';
-        $tableid = NextClass::where('classes_members_members_id', $id)->get();
-       // $tableid = NextClass::where('classes_members_members_id',$id)->pluck('classes_subject','classes_catalog_number'); //TRYING TO RETURN ALL INSTANCES OF USER ID TO RETURN THEIR CLASSES
-        //$subject = $tableid->classes_subject;
-      //  $catalog_number = $tableid->classes_catalog_number;
-      //  dd($tableid);
-
-       $s= DB::table('roster')->where('classes_members_members_id',$id)->get();
-
-        $subset = $tableid->map(function ($tablei) {
-            return collect($tablei->toArray())
-                ->only(['classes_catalog_number'])
-                ->all();});
-        $subject = $tableid->map(function ($tablei) {
-            return collect($tablei->toArray())
-                ->only(['classes_subject'])
-                ->all();});
-
-       // dd($subset);
-       // $s = $tableid->classes_catalog_number;
-//        $client = new Client();
-        //$response = [];
-
-        $client = new Client();
-        $urlClass = 'https://api.metalab.csun.edu/curriculum/api/2.0/terms/Spring-2019/classes/' . $subject. '-' . $subset;
-        $response = $client->get($urlClass);
-       // dd($response);
-        foreach ($subset as $subsets) {
-
-            $client = new Client();
-            $urlClass = 'https://api.metalab.csun.edu/curriculum/api/2.0/terms/Spring-2019/classes/' . $subsets['classes_subject'] . '-' . $subsets['classes_catalog_number'];
-            $response = $client->get($urlClass);
-           // return [$client->get($urlClass)];
-            $t[] = $response;
-           // var_dump($t);
-        }
-        //dd($subsets->getBody());
-//        foreach ($class as $classes){
-//
-//
-//        }
-
-        //dd($response);
-        return $response;
-
 
     }
 
