@@ -3,7 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
-use ElasticApm;
+//use ElasticApm;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -36,8 +36,8 @@ class Handler extends ExceptionHandler
     public function report(Exception $exception)
     {
         parent::report($exception);
-        ElasticApm::captureThrowable($exception);
-        ElasticApm::send();
+        //ElasticApm::captureThrowable($exception);
+        //ElasticApm::send();
     }
 
     /**
