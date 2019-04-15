@@ -25,7 +25,7 @@
 
             <div class="container-fluid">
                 <div class="row">
-                    <div class="mapouter">
+                    <div id="map">
                         <div class="gmap_canvas">
                             <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=csun&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>

@@ -10898,19 +10898,61 @@ div.datepicker-calendar.default button.datepicker-close {
 }
 
 #map {
-  height: 650px;
+  height: 570px;
   width: 100%;
-  border: solid black;
 }
 
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
-  height: 500px;
+  height: 100%;
   width: 100%;
 }
 
-.nav-item:hover {
-  cursor: pointer;
+.navbar-metaphor .navbar-brand__subbrand {
+  position: relative;
+  padding: 0.1rem 0 0.3rem 0.8rem;
+  margin-left: 10.8rem;
+  top: -0.2rem;
+  font-size: 2.5rem;
+  border-left: 1px solid #bec6c3;
+  letter-spacing: -0.01rem;
+  color: #0e1116;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #d22030;
+  border-color: #e64b36;
+}
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #960101;
+  border-color: #cf2f1a;
+}
+
+.class-search {
+  z-index: 500;
+  color: #DB363C;
+  position: fixed;
+  right: 5px;
+  top: 50px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.class-search .class-search-inner {
+  display: none;
+}
+
+.class-search input {
+  border-radius: 8px;
+  width: 120px;
+}
+
+.class-search:hover .class-search-inner {
+  display: inline;
 }
 

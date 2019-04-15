@@ -20,11 +20,10 @@ window.Vue = require('vue');
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('equipmentdata', require('./components/equipmentdata.vue').default);
 Vue.component('topnavbar', require('./components/topnavbar.vue').default);
 Vue.component('welcome', require('./components/welcome.vue').default);
 Vue.component('equipment', require('./components/equipment.vue').default);
-Vue.component('equipmentdata', require('./components/equipmentdata.vue').default);
-
 Vue.component('userEquipment', require('./components/userEquipment.vue').default);
 
 
@@ -35,5 +34,5 @@ Vue.component('userEquipment', require('./components/userEquipment.vue').default
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
 });

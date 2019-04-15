@@ -9,7 +9,13 @@
 namespace App\Models;
 
 
-class NextClass
+use Illuminate\Database\Eloquent\Model;
+
+class NextClass extends Model
 {
+    protected $table="roster";
+    protected $primaryKey="classes_members_members_id";
+    public $incrementing = false;
+
 
 }
