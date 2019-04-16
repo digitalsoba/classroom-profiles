@@ -3,7 +3,6 @@
 @section('content')
 
 
-
     <!--following is map function-->
     <div id="map">
         <script type="text/javascript" src="{{ asset('js/map-scripts.js') }}"></script><br>
@@ -107,10 +106,6 @@
                 </tbody>
             </table>
         </div>
-
-        <div id="app">
             <equipmentdata :equip="{{$data['mainData']}}"></equipmentdata>
-        </div>
-
 
 @endsection
