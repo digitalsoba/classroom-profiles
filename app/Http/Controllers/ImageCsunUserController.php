@@ -1,41 +1,27 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: nikitha
- * Date: 12/10/2018
- * Time: 10:09 AM
- */
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-
-class ImageController extends Controller {
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
+class ImageCsunUserController extends Controller
+{
     public function __construct()
     {
-      //  $this->middleware('auth');
+          $this->middleware('auth');
     }
 
 
     public function index()
     {
-        $data= Equipment::all();
-        return view('pages.image')->with('data',$data);;
+        return view('pages.userImage');
     }
 
-    public function store(Request $request)
+    public function userstore(Request $request)
     {
         $room = $request->input('room');
 
-        return redirect()->route('image-room', ['room' => $room]);
+        return redirect()->route('csun_user_image_room', ['room' => $room]);
 
     }
 
@@ -49,12 +35,9 @@ class ImageController extends Controller {
         $building = substr($classroom,0,2);  //stores building of classroom. Ex: JD
         $roomNumber = substr($classroom,2);  //stores room number. Ex: 2216
 
-        return view('pages.image-room',['classroom'=>$classroom, 'building'=>$building,'roomNumber'=>$roomNumber]);
+        return view('pages.csun_user_image_room',['classroom'=>$classroom, 'building'=>$building,'roomNumber'=>$roomNumber]);
 
     }
 
     //returns 3D images of a specific classroom
-
-
-
 }

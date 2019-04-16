@@ -64,9 +64,10 @@ class LoginController extends Controller
         return redirect()->intended($this->redirectPath());
         }
         $credentials = $request->all('username', 'password');   //csun student credentials
+
         if (auth()->attempt($credentials)==true) {  //if they're correct csun creds
 
-            return redirect('/'); //go back to homepage
+            return redirect('/CsunUser'); //go back to homepage
         } else {
             $request->session()->flash('message', 'Your Username/Password combination is incorrect');
             return view('pages.login');
@@ -76,6 +77,6 @@ class LoginController extends Controller
 
     public function logout() {
         Auth::logout();
-        return redirect('/login');
+        return redirect('/');
     }
 }
