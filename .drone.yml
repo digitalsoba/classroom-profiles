@@ -17,16 +17,17 @@ steps:
   commands:
   - cp .env.test .env
   - php artisan key:generate
+  - php artisan migrate --seed
   - vendor/bin/phpunit --configuration phpunit.xml
+
+services:
+- name: database
+  image: mariadb
+  ports:
+  - 3306
   environment:
-    DB_HOST:
-      from_secret: DB_HOST
-    DB_DATABASE:
-      from_secret: DB_DATABASE
-    DB_USERNAME:
-      from_secret: DB_USERNAME
-    DB_PASSWORD:
-      from_secret: DB_PASSWORD
+    MYSQL_ROOT_PASSWORD: test
+    MYSQL_DATABASE: test
 
 trigger:
   event:
@@ -49,6 +50,7 @@ steps:
   image: node:carbon-alpine
   commands:
     - npm test
+
 trigger:
   event:
   - pull_request
