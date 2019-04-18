@@ -29,9 +29,9 @@ services:
     MYSQL_ROOT_PASSWORD: test
     MYSQL_DATABASE: test
 
-# trigger:
-#   event:
-#   - pull_request
+trigger:
+  event:
+  - pull_request
 ---
 kind: pipeline
 name: Frontend Test
@@ -51,7 +51,7 @@ steps:
   commands:
     - npm test
 
-# trigger:
-#   event:
-#   - pull_request
+trigger:
+  event:
+  - pull_request
 ...
