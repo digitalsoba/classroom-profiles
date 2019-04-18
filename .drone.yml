@@ -28,9 +28,9 @@ steps:
     DB_PASSWORD:
       from_secret: DB_PASSWORD
 
-trigger:
-  event:
-  - pull_request
+# trigger:
+#   event:
+#   - pull_request
 ---
 kind: pipeline
 name: Frontend Test
@@ -49,7 +49,8 @@ steps:
   image: node:carbon-alpine
   commands:
     - npm test
-trigger:
-  event:
-  - pull_request
+
+# trigger:
+#   event:
+#   - pull_request
 ...
