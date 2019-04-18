@@ -25,6 +25,7 @@ Vue.component('topnavbar', require('./components/topnavbar.vue').default);
 Vue.component('welcome', require('./components/welcome.vue').default);
 Vue.component('equipment', require('./components/equipment.vue').default);
 Vue.component('userEquipment', require('./components/userEquipment.vue').default);
+Vue.component('modal', require('./components/modal.vue').default);
 
 
 /**
