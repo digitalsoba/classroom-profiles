@@ -3,7 +3,8 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
-
+use Closure;
+use Illuminate\Support\Facades\Auth;
 class Authenticate extends Middleware
 {
     /**
@@ -12,10 +13,14 @@ class Authenticate extends Middleware
      * @param  \Illuminate\Http\Request  $request
      * @return string
      */
-    protected function redirectTo($request)
+    public function handle($request, Closure $next)
     {
-        if (! $request->expectsJson()) {
-            return route('login');
+        if ( Auth::check() && Auth::user() )
+        {
+            return $next($request);
         }
+
+        return redirect('CsunUser');
+
     }
 }
