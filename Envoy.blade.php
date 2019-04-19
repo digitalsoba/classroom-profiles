@@ -1,5 +1,4 @@
-@servers(['dev' => ['anthony@dev.matabit.org']])
-@servers(['prod' => ['anthony@matabit.org']])
+@servers(['dev' => 'anthony@dev.matabit.org', 'prod' => 'matabit.org'])
 
 @task('update-dev', ['on' => 'dev'])
     cd /var/www/dev/laravel
