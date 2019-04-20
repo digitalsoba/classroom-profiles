@@ -1962,6 +1962,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "userEquipment",
   props: ["equip"],
@@ -37188,6 +37193,8 @@ var render = function() {
   return _c("div", { staticClass: "container" }, [
     _vm._m(0),
     _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
     _c("div", { staticClass: "row text-center" }, [
       _c("div", { staticClass: "col" }, [
         _c("form", [
@@ -37230,9 +37237,35 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "nav nav-metaphor" }, [
+      _c("li", { staticClass: "nav-item flex-fill text-center" }, [
+        _c("a", { staticClass: "nav-link", attrs: { href: "CsunUser" } }, [
+          _vm._v("Equipment")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "nav-item flex-fill text-center" }, [
+        _c(
+          "a",
+          { staticClass: "nav-link", attrs: { href: " CsunUserImage" } },
+          [_vm._v("Images")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "nav-item flex-fill text-center" }, [
+        _c("a", { staticClass: "nav-link", attrs: { href: "/" } }, [
+          _vm._v("Class Route")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col" }, [
-        _c("h2", { staticClass: "text-center" }, [_vm._v("Choose a Class")])
+        _c("h2", { staticClass: "text-center" }, [_vm._v("Choose a Classroom")])
       ])
     ])
   }

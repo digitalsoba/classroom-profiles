@@ -145,9 +145,12 @@
                 });
 
             </script>
-
         </div>
     </div>
+    </div>
+
+    <div id="app">
+        <equipmentdata :equip="{{$data['mainData']}}"></equipmentdata>
     </div>
 
 @endsection

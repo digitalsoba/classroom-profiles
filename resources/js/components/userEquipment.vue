@@ -1,8 +1,13 @@
 <template>
     <div class="container">
+        <ul class="nav nav-metaphor">
+            <li class="nav-item flex-fill text-center"> <a class="nav-link" href="CsunUser">Equipment</a> </li>
+            <li class="nav-item flex-fill text-center"> <a class="nav-link" href=" CsunUserImage">Images</a> </li>
+            <li class="nav-item flex-fill text-center"> <a class="nav-link" href="/">Class Route</a> </li>
+        </ul>
         <div class="row">
             <div class="col">
-                <h2 class="text-center">Choose a Class</h2>
+                <h2 class="text-center">Choose a Classroom</h2>
             </div>
         </div>
         <div class="row text-center">

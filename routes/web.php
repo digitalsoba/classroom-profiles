@@ -17,9 +17,9 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('/CsunUser', function () {
-    return view('layout.csunUser');
-});
+//Route::get('/CsunUser', function () {
+//    return view('layout.csunUser');
+//});
 
 Route::post('store', 'ImageController@store');
 Route::post('userstore', 'ImageCsunUserController@userstore');

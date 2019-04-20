@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Equipment;
 use Illuminate\Http\Request;
 
 class ImageCsunUserController extends Controller
@@ -14,14 +15,17 @@ class ImageCsunUserController extends Controller
 
     public function index()
     {
-        return view('pages.userImage');
+        $data= Equipment::all();
+        return view('pages.userImage')->with('data',$data);
     }
 
     public function userstore(Request $request)
     {
         $room = $request->input('room');
 
-        return redirect()->route('csun_user_image_room', ['room' => $room]);
+        //return view('pages.csunIndex')->with('data',$data);
+
+        return redirect()->route('csun_user_image_room', ['room' => $room, 'data'=>$data]);
 
     }
 
@@ -34,8 +38,11 @@ class ImageCsunUserController extends Controller
         $classroom = $room; //stores classroom. Ex: JD2216
         $building = substr($classroom,0,2);  //stores building of classroom. Ex: JD
         $roomNumber = substr($classroom,2);  //stores room number. Ex: 2216
+        $data= ['roomData'=>Equipment::find($room),
+            'mainData'=>Equipment::all()];
 
-        return view('pages.csun_user_image_room',['classroom'=>$classroom, 'building'=>$building,'roomNumber'=>$roomNumber]);
+        return view('pages.csun_user_image_room',['classroom'=>$classroom, 'building'=>$building,'roomNumber'=>$roomNumber,
+                                                        'data'=>$data]);
 
     }
 

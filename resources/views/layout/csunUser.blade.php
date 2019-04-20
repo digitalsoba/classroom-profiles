@@ -47,7 +47,7 @@
     </div>
 </div>
 
-@include('layout.csunUserBotNavbar')
+{{--@include('layout.csunUserBotNavbar')--}}
 
 @yield("content")
 
@@ -56,6 +56,7 @@
         integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
         crossorigin="anonymous"></script>
 {{-- Footer --}}
+
 @include("layout.footer")
 
 {{-- Compiled app.js file --}}
