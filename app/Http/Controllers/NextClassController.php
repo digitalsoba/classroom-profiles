@@ -61,8 +61,6 @@ class NextClassController extends Controller
 
                     $locations[] = $meeting->location;
 
-
-
                 }
             }
 
@@ -70,6 +68,16 @@ class NextClassController extends Controller
 
         return $locations;
 
+    }
+
+    public function mapFromSchedule()
+    {
+        $locations = $this->getSchedules();
+        //seperates the rooms on commas
+        return view('map', [
+            'rooms' => $locations,
+            'connected' => true
+        ]);
     }
 
 

@@ -43,6 +43,8 @@ Route::get('/mapTest', 'MapsController@mapTest');
 //Gets the route between of a collection of rooms, in the order given
 Route::get('/route', 'MapsController@mapRoute');
 
+Route::get('/routeWithSchedule', 'NextClassController@mapFromSchedule');
+
 Route::get('/schedules','NextClassController@getSchedules');
 
 //Route::resource("equip","EquipmentsController",['middleware' => ['auth']]);
