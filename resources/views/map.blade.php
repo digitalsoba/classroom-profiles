@@ -30,6 +30,7 @@
                 //Calls leaflet to load the area's map data and put it on screen
                 echo '<script type="text/javascript">',
                     'start("'.env('MAPBOX_API_KEY','Mapbox API Key is missing').'");',
+                '</script>';
                 $roomInfo = [];
                 foreach ($rooms as $room)
                 {
