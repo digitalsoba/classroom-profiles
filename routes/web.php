@@ -17,9 +17,9 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('/CsunUser', function () {
-    return view('layout.csunUser');
-});
+//Route::get('/CsunUser', function () {
+//    return view('layout.csunUser');
+//});
 
 Route::post('store', 'ImageController@store');
 Route::post('userstore', 'ImageCsunUserController@userstore');
@@ -42,6 +42,8 @@ Route::get('/mapTest', 'MapsController@mapTest');
 
 //Gets the route between of a collection of rooms, in the order given
 Route::get('/route', 'MapsController@mapRoute');
+
+Route::get('/routeWithSchedule', 'NextClassController@mapFromSchedule');
 
 Route::get('/schedules','NextClassController@getSchedules');
 

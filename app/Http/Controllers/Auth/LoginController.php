@@ -10,8 +10,6 @@ use Carbon\Carbon;
 use Auth;
 use Illuminate\Support\Facades\Validator;
 use Session;
-
-
 class LoginController extends Controller
 {
     /*
