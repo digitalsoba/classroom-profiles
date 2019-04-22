@@ -70,6 +70,22 @@ class NextClassController extends Controller
 
     }
 
+    public function getClassSchedules(){
+
+        $client = new Client();
+        $email = $this->retrieveEmail();//DO NOT DELETE
+        //dd($email); DO NOT DELETE
+        //$url = 'https://api.sandbox.csun.edu/metalab/roster/api/2.1/memberships/nr_'.$email.'/classes'; METALAB API DO NOT DELETE
+        $url = 'https://2lgp8pinel.execute-api.us-west-2.amazonaws.com/default/roster-api'; //DUMMY API
+        $response = $client->get($url);
+
+        $results = $response->getBody()->getContents();
+        $classes = json_decode($results)->classes;
+
+        return $classes;
+
+    }
+
     public function mapFromSchedule()
     {
         $locations = $this->getSchedules();
