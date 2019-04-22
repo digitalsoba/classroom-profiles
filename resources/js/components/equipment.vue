@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h3 class="text-left">Choose a Classroom</h3>
-                <h6 class="text-left">(View Equipment for the Classroom Selected)</h6>
+                <h3>Choose a Classroom</h3>
+                <h6>(View Equipment for the Classroom Selected)</h6>
             </div>
         </div>
         <br>
@@ -33,3 +33,10 @@
         }
     };
 </script>
+<style type="text/css">
+    .col {
+
+    text-align: center
+    }
+   
+</style>

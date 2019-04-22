@@ -33,8 +33,11 @@
         </div>
     </topnavbar>
     <br>
+    <div class="center">
     <equipment :equip="{{$data}}"></equipment>
     <br>
+    <br>
+    </div>
         <div class="container">
             <div class="row">
                 <div class="col-xs-6 col-md-5"><hr class="hr-metaphor"></div>
@@ -141,3 +144,12 @@
 </body>
 
 </html>
+<style type="text/css">
+    .center {
+        margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em;
+    text-align: center
+}
+</style>
