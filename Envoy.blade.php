@@ -1,4 +1,4 @@
-@servers(['dev' => 'anthony@dev.matabit.org', 'prod' => 'matabit.org'])
+@servers(['dev' => 'dev.matabit.org', 'prod' => 'matabit.org'])
 
 @task('update-dev', ['on' => 'dev'])
     cd /var/www/dev/laravel
@@ -13,3 +13,4 @@
     sudo git pull
     sudo composer install
 @endtask
+
