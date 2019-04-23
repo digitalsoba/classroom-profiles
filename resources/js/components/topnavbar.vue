@@ -2,7 +2,7 @@
     <div class="container-fluid">
        <!--<h2>hi</h2>-->
         <nav class="navbar navbar-metaphor navbar-metaphor--light navbar-expand-md">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/logout">
                 <span class="sr-only">CSUN Logo</span>
                 <span class="navbar-brand__subbrand">
                     Classroom Profiles
