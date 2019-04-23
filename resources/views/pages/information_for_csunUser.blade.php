@@ -1,4 +1,4 @@
-@extends("layout.guestPage")
+@extends("layout.csunUser")
 
 @section('content')
 

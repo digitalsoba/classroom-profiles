@@ -45,7 +45,7 @@ Route::get('/route', 'MapsController@mapRoute');
 
 Route::get('/routeWithSchedule', 'NextClassController@mapFromSchedule');
 
-Route::get('/schedules','NextClassController@getSchedules');
+Route::get('/classschedules','NextClassController@getClassSchedules');
 
 Route::get('/classschedules','NextClassController@getClassSchedules');
 
