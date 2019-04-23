@@ -38292,13 +38292,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
-      _c("span", { staticClass: "sr-only" }, [_vm._v("CSUN Logo")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "navbar-brand__subbrand" }, [
-        _vm._v("\n                    Classroom Profiles\n                ")
-      ])
-    ])
+    return _c(
+      "a",
+      { staticClass: "navbar-brand", attrs: { href: "/logout" } },
+      [
+        _c("span", { staticClass: "sr-only" }, [_vm._v("CSUN Logo")]),
+        _vm._v(" "),
+        _c("span", { staticClass: "navbar-brand__subbrand" }, [
+          _vm._v("\n                    Classroom Profiles\n                ")
+        ])
+      ]
+    )
   },
   function() {
     var _vm = this
