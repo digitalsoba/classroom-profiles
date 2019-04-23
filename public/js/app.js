@@ -37253,9 +37253,11 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("li", { staticClass: "nav-item flex-fill text-center" }, [
-        _c("a", { staticClass: "nav-link", attrs: { href: "/" } }, [
-          _vm._v("Class Route")
-        ])
+        _c(
+          "a",
+          { staticClass: "nav-link", attrs: { href: "classschedules" } },
+          [_vm._v("Class Route")]
+        )
       ])
     ])
   },
