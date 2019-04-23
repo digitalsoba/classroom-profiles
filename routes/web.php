@@ -17,14 +17,14 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('/CsunUser', function () {
-    return view('layout.csunUser');
-});
+//Route::get('/CsunUser', function () {
+//    return view('layout.csunUser');
+//});
 
 Route::post('store', 'ImageController@store');
 Route::post('userstore', 'ImageCsunUserController@userstore');
 
-Route::get('/login', 'Auth\LoginController@getLogin');
+Route::get('/login', 'Auth\LoginController@getLogin')->name('loginView');
 Route::post('/login', 'Auth\LoginController@postLogin')->name('login');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
@@ -43,7 +43,11 @@ Route::get('/mapTest', 'MapsController@mapTest');
 //Gets the route between of a collection of rooms, in the order given
 Route::get('/route', 'MapsController@mapRoute');
 
+Route::get('/routeWithSchedule', 'NextClassController@mapFromSchedule');
+
 Route::get('/schedules','NextClassController@getSchedules');
+
+Route::get('/classschedules','NextClassController@getClassSchedules');
 
 //Route::resource("equip","EquipmentsController",['middleware' => ['auth']]);
 //guest

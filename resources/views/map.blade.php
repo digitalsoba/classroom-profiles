@@ -55,6 +55,7 @@
                                 $client = new \GuzzleHttp\Client();
                                 //calls the Waldo api, asking for information on the given room and stores the result
                                 //this is a synchronous call, can also be implemented asynchronously
+
                                 $result = $client->request('GET',
                                     'https://api.metalab.csun.edu/waldo/1.0/rooms?room='.$room,
                                     ['verify' => false]);

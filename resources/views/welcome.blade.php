@@ -56,7 +56,7 @@
             <h3 class="text-md-left">Login to View Schedule</h3>
             <h6 class="text-md-left">(View your Class Schedule with Routes)</h6>
             <br>
-            {!! Form::open(['route' => 'login']) !!}
+            {!! Form::open(['url' => '/login']) !!}
 
             <div class="form-group">
                 {!! Form::label('username', 'Username') !!}
