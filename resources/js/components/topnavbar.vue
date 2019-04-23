@@ -14,7 +14,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup2">
                 <div class="navbar-nav text-center">
                     <!--<a class="nav-item nav-link" href='login'>Login</a>-->
-                   <!-- <a class="btn btn-danger" href='/logout'>Logout/Home</a>-->
+                   <!-- <a class="btn btn-danger" href='/logout'>Home</a>-->
                 </div>
             </div>
         </nav>

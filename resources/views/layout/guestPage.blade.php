@@ -20,7 +20,11 @@
 </head>
 
 <body>
-@include('layout.topnavbar')
+{{--@include('layout.topnavbar')--}}
+<div id="app">
+      <topnavbar></topnavbar>
+</div>
+
 <div class="class-search">
       <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search"
             role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
@@ -33,6 +37,7 @@
             <input type="search" placeholder="EX. JD2211">
       </div>
 </div>
+
 
 @yield("content")
 
