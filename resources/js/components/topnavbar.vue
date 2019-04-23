@@ -14,8 +14,9 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup2">
                 <div class="navbar-nav text-center">
                     <a class="nav-item nav-link active" href='/home'>Home</a>
-
-<div id="app">
+                    <a v-if="login" class="nav-item nav-link" href='logout'>Logout</a>
+                   
+<div v-else id="app">
     <a class="nav-item nav-link" @click="showModal">Login</a>
     <modal v-show="isModalVisible" @close="closeModal" header="Login">
         <div class="app-body">
@@ -25,7 +26,6 @@
 </div>
 
 
-                    <a class="nav-item nav-link" href='logout'>Logout</a>
                 </div>
             </div>
         </nav>
