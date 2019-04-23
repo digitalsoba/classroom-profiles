@@ -81,9 +81,7 @@ class NextClassController extends Controller
 
         $results = $response->getBody()->getContents();
         $classes = json_decode($results)->classes;
-
         return view('pages.csun_user_route_schedule')->with('classes',$classes);
-
 
     }
 

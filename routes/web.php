@@ -47,6 +47,8 @@ Route::get('/routeWithSchedule', 'NextClassController@mapFromSchedule');
 
 Route::get('/classschedules','NextClassController@getClassSchedules');
 
+Route::get('/classschedules','NextClassController@getClassSchedules');
+
 //Route::resource("equip","EquipmentsController",['middleware' => ['auth']]);
 //guest
 Route::get('/equip', 'MapForGuestController@map');
