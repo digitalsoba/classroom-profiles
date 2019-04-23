@@ -10900,13 +10900,12 @@ div.datepicker-calendar.default button.datepicker-close {
 #map {
   height: 570px;
   width: 100%;
-  margin-top: 1%;
 }
 
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
-  height: 100%;
+  height: 500px;
   width: 100%;
 }
 
