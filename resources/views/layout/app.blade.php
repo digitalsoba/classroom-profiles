@@ -39,7 +39,8 @@
 <div id="app">
     <topnavbar>
         <div class="container">
-            {!! Form::open(['route' => 'login']) !!}
+          {!! Form::open(['url' => '/login']) !!}
+
             <div class="form-group">
                 {!! Form::label('username', 'Username') !!}
                 {!! Form::text('username', null, ['class' => 'form-control']) !!}
@@ -49,11 +50,9 @@
                 {!! Form::label('password', 'Password') !!}
                 {!! Form::password('password', ['class' => 'form-control']) !!}
             </div>
-
-                {!! Form::submit('Submit', ['class' => 'btn btn-rounded btn-primary']) !!}
-                {!! Form::close() !!}
-            @if (session()->has('message')) <div class="alert alert-danger">{!! session('message') !!}</div>
-            @endif
+            <br>
+            {!! Form::submit('Submit', ['class' => 'btn btn-rounded btn-primary']) !!}
+            {!! Form::close() !!}
         </div>
     </topnavbar>
 </div>

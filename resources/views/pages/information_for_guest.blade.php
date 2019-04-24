@@ -3,7 +3,6 @@
 @section('content')
 
 
-
     <!--following is map function-->
     <div id="map">
         <script type="text/javascript" src="{{ asset('js/map-scripts.js') }}"></script><br>
@@ -31,15 +30,15 @@
         ?>
     </div>
     </div>
-    
+
     <div class="container nav-fill">
         <ul class="nav nav-metaphor">
-            <li class="nav-item flex-fill text-center tab-content shadow"> 
+            <li class="nav-item flex-fill text-center tab-content shadow">
                 <a class="nav-link active " href="/equip/{{$data['roomData']->Building_Room}}">Equipment</a> </li>
             <li class="nav-item flex-fill text-center"> <a class="nav-link" href="/image/{{$data['roomData']->Building_Room}}">Images</a> </li>
         </ul>
     </div>
-   
+
         <div class="container">
             <table class="mytable">
                 <thead>
@@ -108,8 +107,6 @@
                 </tbody>
             </table>
         </div>
-
-        <div id="app">
             <equipmentdata :equip="{{$data['mainData']}}"></equipmentdata>
         </div>
 
@@ -122,7 +119,7 @@
     }
 
     tbody tr:hover {background-color:#f5f5f5;}
- 
+
     table {
         border-collapse: collapse;
         width: 100%;

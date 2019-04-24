@@ -13,48 +13,12 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup2">
                 <div class="navbar-nav text-center">
-                    <a class="nav-item nav-link" href='/home'>Home</a>
-                   
-<div id="app">
-    <a class="nav-item nav-link" @click="showModal">Login</a>
-    <modal v-show="isModalVisible" @close="closeModal" header="Login">
-        <div class="app-body">
-            <slot>defualt of topnav.VUE</slot>
-        </div>
-    </modal>
-</div>
-
+                  <br>
                 </div>
             </div>
         </nav>
     </div>
 </template>
 
-<script>
-  import modal from './modal.vue';
-
-  export default {
-    name: 'app',
-    components: {
-      modal,
-    },
-    data () {
-      return {
-        isModalVisible: false,
-      };
-    },
-    methods: {
-      showModal() {
-        this.isModalVisible = true;
-      },
-      closeModal() {
-        this.isModalVisible = false;
-      }
-    },
-  };
-</script>
-<style>
-    .nav-item:hover {
-    cursor: pointer;
-}
-</style>
+<script></script>
+<style></style>

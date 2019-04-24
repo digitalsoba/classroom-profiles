@@ -1,20 +1,10 @@
-@extends("layout.guestPage")
+@extends("layout.csunUser")
 
 @section('content')
 
 
-
     <!--following is map space holder-->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=csun&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- following is  nav bar-->
     <div class="container nav-fill">
         <ul class="nav nav-metaphor">
@@ -130,4 +120,3 @@
     }
     .tab-pane{ padding:10px;}
 </style>
-@endsection

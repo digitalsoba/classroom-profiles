@@ -20,23 +20,11 @@
 </head>
 
 <body>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Classroom Profiles</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
-<body>
-
+{{--@include('layout.topnavbar')--}}
 <div id="app">
-    <topnavbar>
-        <div class="container">
-            {!! Form::open(['route' => 'login']) !!}
+      <topnavbar>
+        {!! Form::open(['url' => '/login']) !!}
+
             <div class="form-group">
                 {!! Form::label('username', 'Username') !!}
                 {!! Form::text('username', null, ['class' => 'form-control']) !!}
@@ -46,14 +34,12 @@
                 {!! Form::label('password', 'Password') !!}
                 {!! Form::password('password', ['class' => 'form-control']) !!}
             </div>
-
-                {!! Form::submit('Submit', ['class' => 'btn btn-rounded btn-primary']) !!}
-                {!! Form::close() !!}
-            @if (session()->has('message')) <div class="alert alert-danger">{!! session('message') !!}</div>
-            @endif
-        </div>
-    </topnavbar>
+            <br>
+            {!! Form::submit('Submit', ['class' => 'btn btn-rounded btn-primary']) !!}
+        {!! Form::close() !!}
+      </topnavbar>
 </div>
+
 <div class="class-search">
       <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search"
             role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
@@ -66,6 +52,7 @@
             <input type="search" placeholder="EX. JD2211">
       </div>
 </div>
+
 
 @yield("content")
 

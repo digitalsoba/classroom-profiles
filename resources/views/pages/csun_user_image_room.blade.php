@@ -1,19 +1,9 @@
 
-@extends("layout.guestPage")
+@extends("layout.csunUser")
 
 @section('content')
 
-    <!--following is map function  -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=csun&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div class="container nav-fill">
         <ul class="nav nav-metaphor">
@@ -156,11 +146,13 @@
                 });
 
             </script>
-
         </div>
     </div>
     </div>
 
+    <div id="app">
+        <equipmentdata :equip="{{$data['mainData']}}"></equipmentdata>
+    </div>
 <style>
     .shadow {
         -webkit-box-shadow: 0px 10px 4px -2px rgba(0,0,0,0.75);
