@@ -13,8 +13,8 @@
     <div class="container-fluid">
         <ul class="nav nav-metaphor">
             <li class="nav-item flex-fill text-center"> <a class="nav-link" href="CsunUser">Equipment</a> </li>
-            <li class="nav-item flex-fill text-center"> <a class="nav-link" href=" CsunUserImage">Images</a> </li>
-            <li class="nav-item flex-fill text-center"> <a class="nav-link" href="classschedules">Class Route</a> </li>
+            <li class="nav-item flex-fill text-center"> <a class="nav-link" href="CsunUserImage">Images</a> </li>
+            <li class="nav-item flex-fill text-center"> <a class="nav-link" href="classschedules">class schedules</a> </li>
         </ul>
         <h3>Class Schedule</h3>
         <table>
