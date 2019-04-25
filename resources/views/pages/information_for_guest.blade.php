@@ -40,7 +40,7 @@
     </div>
 
         <div class="container">
-            <table class="mytable">
+            <table>
                 <thead>
                 <tr>
                     <th>Equipment</th>
