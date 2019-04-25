@@ -13,7 +13,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup2">
                 <div class="navbar-nav text-center">
-                    <a class="nav-item nav-link" href='/home'>Home</a>
+                    <a class="nav-item nav-link" href='/'>Home</a>
                    
 <div id="app">
     <a class="nav-item nav-link" @click="showModal">Login</a>
