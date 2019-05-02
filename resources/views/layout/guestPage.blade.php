@@ -22,7 +22,22 @@
 <body>
 {{--@include('layout.topnavbar')--}}
 <div id="app">
-      <topnavbar></topnavbar>
+      <topnavbar>
+        {!! Form::open(['url' => '/login']) !!}
+
+            <div class="form-group">
+                {!! Form::label('username', 'Username') !!}
+                {!! Form::text('username', null, ['class' => 'form-control']) !!}
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('password', 'Password') !!}
+                {!! Form::password('password', ['class' => 'form-control']) !!}
+            </div>
+            <br>
+            {!! Form::submit('Submit', ['class' => 'btn btn-rounded btn-primary']) !!}
+        {!! Form::close() !!}
+      </topnavbar>
 </div>
 
 <div class="class-search">

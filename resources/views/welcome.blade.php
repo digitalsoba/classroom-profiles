@@ -13,7 +13,8 @@
 <body>
 
 <div id="app">
-    <topnavbar></topnavbar>
+    <welnavbar>
+    </welnavbar>
     <br>
     <equipment :equip="{{$data}}"></equipment>
     <br>

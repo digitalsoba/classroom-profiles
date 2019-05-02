@@ -40,7 +40,7 @@
     </div>
 
         <div class="container">
-            <table class="table table--responsive table--striped table--bordered table--padded table--hover">
+            <table>
                 <thead>
                 <tr>
                     <th>Equipment</th>

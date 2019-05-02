@@ -18,7 +18,7 @@
 
               <div class="modal-footer">
                   {{footer}}
-                  <button class="modal-default-button" @click="close"
+                  <button class="btn btn-rounded btn-primary" @click="close"
                   aria-label="Close modal"
                   >
                   Close
