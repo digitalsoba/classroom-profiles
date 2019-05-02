@@ -10,7 +10,7 @@
         <ul class="nav nav-metaphor">
             <li class="nav-item flex-fill text-center "> <a class="nav-link active " href="/CsunUser/{{$data['roomData']->Building_Room}}">Equipment</a> </li>
             <li class="nav-item flex-fill text-center"> <a class="nav-link" href="/CsunUserImage/{{$data['roomData']->Building_Room}}">Images</a> </li>
-            <li class="nav-item flex-fill text-center"> <a class="nav-link" href="/CsunUserImage/{{$data['roomData']->Building_Room}}">Route</a> </li>
+            <li class="nav-item flex-fill text-center"> <a class="nav-link" href="/classschedules">Class Schedules</a></li>
         </ul>
     </div>
     <!-- following is equipment data table-->

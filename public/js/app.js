@@ -37256,7 +37256,7 @@ var staticRenderFns = [
         _c(
           "a",
           { staticClass: "nav-link", attrs: { href: "classschedules" } },
-          [_vm._v("Class Route")]
+          [_vm._v("Class Schedules")]
         )
       ])
     ])

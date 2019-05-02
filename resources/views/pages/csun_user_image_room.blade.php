@@ -9,7 +9,7 @@
         <ul class="nav nav-metaphor">
             <li class="nav-item flex-fill text-center "> <a class="nav-link  " href="/CsunUser/{{$classroom}}">Equipment</a> </li>
             <li class="nav-item flex-fill text-center"> <a class="nav-link active" href="/CsunUserImage/{{$classroom}}">Images</a> </li>
-            <li class="nav-item flex-fill text-center"> <a class="nav-link active" href="/CsunUserImage/{{$classroom}}">Route</a> </li>
+            <li class="nav-item flex-fill text-center"> <a class="nav-link" href="/classschedules">Class Schedules</a></li>
         </ul>
     </div>
     <div class="container">
