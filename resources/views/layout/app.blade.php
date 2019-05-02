@@ -23,7 +23,39 @@
     </script>-->
 </head>
 <body>
-    @include('layout.topnavbar')
+    <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Classroom Profiles</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+</head>
+<body>
+
+<div id="app">
+    <topnavbar>
+        <div class="container">
+          {!! Form::open(['url' => '/login']) !!}
+
+            <div class="form-group">
+                {!! Form::label('username', 'Username') !!}
+                {!! Form::text('username', null, ['class' => 'form-control']) !!}
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('password', 'Password') !!}
+                {!! Form::password('password', ['class' => 'form-control']) !!}
+            </div>
+            <br>
+            {!! Form::submit('Submit', ['class' => 'btn btn-rounded btn-primary']) !!}
+            {!! Form::close() !!}
+        </div>
+    </topnavbar>
+</div>
     <div class="container-fluid">
         <div class="row">
             <div class="mapouter">
