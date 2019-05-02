@@ -34,7 +34,6 @@ class ImageController extends Controller {
     public function store(Request $request)
     {
         $room = $request->input('room');
-
         return redirect()->route('image-room', ['room' => $room]);
 
     }

@@ -4,7 +4,7 @@
 @section('content')
 
     <div class="container">
-        <h3>Find a Classroom</h3>
+       <!-- <h3>Find a Classroom</h3>
 
         {!! Form::open(['action'=> 'ImageCsunUserController@userstore', 'method'=>'POST']) !!}
 
@@ -14,6 +14,10 @@
 
         {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
         {!! Form::close() !!}
+        -->
+         <div id="app">
+             <user-equipment :equip="{{$data}}"></user-equipment>
+        </div>
 
     </div>
 

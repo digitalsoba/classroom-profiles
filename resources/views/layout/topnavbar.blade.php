@@ -1,29 +1,19 @@
-
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Classroom Profiles</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
-<body>
-
-<div id="app">
-    <topnavbar></topnavbar>
+<div class="container-fluid">
+    <nav class="navbar navbar-metaphor navbar-metaphor--light navbar-expand-md">
+            <a class="navbar-brand" href="logout">
+                <span class="sr-only">CSUN Logo</span>
+                <span class="navbar-brand__subbrand">
+                    Classroom Profiles
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup2" aria-controls="navbarNavAltMarkup2" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup2">
+                <div class="navbar-nav text-center">
+                    <!--<a class="nav-item nav-link" href='login'>Login</a>-->
+                    <a class="btn btn-danger" href='logout'>Logout</a>
+                </div>
+            </div>
+ </nav>
 </div>
-
-<script src="{{ asset('js/app.js') }}"></script>
-<!-- Your Code Here -->
-<div class="row">
-    <div class="col-sm-12"></div>
-</div>
-
-</body>
-
-</html>
-
