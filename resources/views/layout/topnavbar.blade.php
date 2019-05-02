@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <nav class="navbar navbar-metaphor navbar-metaphor--light navbar-expand-md">
-            <a class="navbar-brand" href="logout">
+            <a class="navbar-brand" href="{{route('logout')}}">
                 <span class="sr-only">CSUN Logo</span>
                 <span class="navbar-brand__subbrand">
                     Classroom Profiles
@@ -12,7 +12,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup2">
                 <div class="navbar-nav text-center">
                     <!--<a class="nav-item nav-link" href='login'>Login</a>-->
-                    <a class="btn btn-danger" href='logout'>Logout</a>
+                    <a class="btn btn-danger" href="{{route('logout')}}">Logout</a>
                 </div>
             </div>
  </nav>
