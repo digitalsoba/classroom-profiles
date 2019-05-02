@@ -31,6 +31,7 @@ function start(accessToken) {
         id: 'mapbox.streets',
         accessToken: accessToken
     }).addTo(mymap);
+    mymap.zoom = 5;
 }
 
 /**

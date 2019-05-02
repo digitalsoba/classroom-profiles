@@ -4,7 +4,8 @@
 
 
     <!--following is map space holder-->
-
+    @component('layout.map', ['rooms' => [ $data['roomData']->Building_Room], 'connected' => 'false' ])
+    @endcomponent
     <!-- following is  nav bar-->
     <div class="container nav-fill">
         <ul class="nav nav-metaphor">
