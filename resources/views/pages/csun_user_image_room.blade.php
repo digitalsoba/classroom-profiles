@@ -3,6 +3,8 @@
 
 @section('content')
 
+    @component('layout.map', ['rooms' => [ $classroom ], 'connected' => 'false' ])
+    @endcomponent
 
 
     <div class="container nav-fill">
