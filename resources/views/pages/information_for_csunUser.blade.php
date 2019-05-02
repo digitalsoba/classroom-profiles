@@ -120,3 +120,4 @@
     }
     .tab-pane{ padding:10px;}
 </style>
+@endsection
