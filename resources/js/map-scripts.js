@@ -1,7 +1,7 @@
 //Sets the starting area of the map to show the area around CSUN
 var mymap = L.map('map', {
     center: [34.2410366, -118.5298632],
-    zoom: 13
+    zoom: 15
 });
 
 /**
@@ -31,6 +31,7 @@ function start(accessToken) {
         id: 'mapbox.streets',
         accessToken: accessToken
     }).addTo(mymap);
+    mymap.zoom = 15;
 }
 
 /**

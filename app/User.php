@@ -11,7 +11,7 @@ class User extends MetaUser
 {
     public $incrementing = false;
     protected $primaryKey = "user_id";
-    protected $keyType = 'string';
+   // protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
@@ -42,5 +42,10 @@ class User extends MetaUser
     public function retrieveAuthorizedEmail(){
         $user = auth()->user();
         return $user->email;
+    }
+
+    public function getClasses(){
+
+
     }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Classroom Profiles</title>
 
     <!-- Fonts -->
@@ -13,17 +13,18 @@
 <body>
 
 <div id="app">
-    <topnavbar></topnavbar>
+    <welnavbar>
+    </welnavbar>
     <br>
     <equipment :equip="{{$data}}"></equipment>
     <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6 col-md-5"><hr class="hr-metaphor"></div>
-                <div class="col-xs-6 col-md-2"><h4 class="text-center">OR</h4></div>
-                <div class="col-xs-6 col-md-5"><hr class="hr-metaphor"></div>
-            </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-5"><hr class="hr-metaphor"></div>
+            <div class="col-xs-6 col-md-2"><h4 class="text-center">OR</h4></div>
+            <div class="col-xs-6 col-md-5"><hr class="hr-metaphor"></div>
         </div>
+    </div>
     <br>
 </div>
 
