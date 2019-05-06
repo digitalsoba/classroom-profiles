@@ -3,6 +3,8 @@
 
 @section('content')
 
+    @component('layout.map', ['rooms' => [ ], 'connected' => 'false' ])
+    @endcomponent
     <div class="container">
        <!-- <h3>Find a Classroom</h3>
 
