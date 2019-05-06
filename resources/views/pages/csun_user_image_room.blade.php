@@ -23,6 +23,7 @@
         </ul>
     </div>
     <div class="container">
+        <br>
         <div class="row">
             <div class="col">
                 <h2 class="text-center">These are the images for the room: {{$classroom}}</h2>
@@ -55,39 +56,17 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="">
-                        <img src="https://cdn.metalab.csun.edu/classrooms/EU103/front.jpg" alt="Lights" style="width:100%">
-                        <div class="caption">
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="">
-                        <img src="https://cdn.metalab.csun.edu/classrooms/EU103/exit.jpg" alt="Nature" style="width:100%">
-                        <div class="caption">
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="">
-                        <img src="https://cdn.metalab.csun.edu/classrooms/EU103/media.jpg" alt="Fjords" style="width:100%">
-                        <div class="caption">
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-        </div>
         {{--
                     -------------3D images--------------
         --}}
+
+        <br>
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center">This is the 3D image for the room: {{$classroom}}</h2>
+            </div>
+        </div>
+        <br>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
