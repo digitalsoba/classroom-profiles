@@ -13,17 +13,18 @@
 <body>
 
 <div id="app">
-    <topnavbar></topnavbar>
+    <welnavbar>
+    </welnavbar>
     <br>
     <equipment :equip="{{$data}}"></equipment>
     <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6 col-md-5"><hr class="hr-metaphor"></div>
-                <div class="col-xs-6 col-md-2"><h4 class="text-center">OR</h4></div>
-                <div class="col-xs-6 col-md-5"><hr class="hr-metaphor"></div>
-            </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-5"><hr class="hr-metaphor"></div>
+            <div class="col-xs-6 col-md-2"><h4 class="text-center">OR</h4></div>
+            <div class="col-xs-6 col-md-5"><hr class="hr-metaphor"></div>
         </div>
+    </div>
     <br>
 </div>
 
@@ -35,7 +36,7 @@
             <h3 class="text-md-left">Login to View Schedule</h3>
             <h6 class="text-md-left">(View your Class Schedule with Routes)</h6>
             <br>
-            {!! Form::open(['url' => '/login']) !!}
+            {!! Form::open(['route' => 'login']) !!}
 
             <div class="form-group">
                 {!! Form::label('username', 'Username') !!}

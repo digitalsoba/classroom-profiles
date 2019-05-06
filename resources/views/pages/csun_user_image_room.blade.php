@@ -11,12 +11,13 @@
         <ul class="nav nav-metaphor">
             <li class="nav-item flex-fill text-center "> <a class="nav-link  " href="/CsunUser/{{$classroom}}">Equipment</a> </li>
             <li class="nav-item flex-fill text-center"> <a class="nav-link active" href="/CsunUserImage/{{$classroom}}">Images</a> </li>
-            <li class="nav-item flex-fill text-center"> <a class="nav-link active" href="/CsunUserImage/{{$classroom}}">Route</a> </li>
+            <li class="nav-item flex-fill text-center"> <a class="nav-link" href="/classschedules">Class Schedules</a></li>
         </ul>
     </div>
     <div class="container">
         <div class="row">
             <div class="col">
+                <br>
                 <h2 class="text-center">These are the images for the room: {{$classroom}}</h2>
             </div>
         </div>
@@ -154,5 +155,12 @@
     <div id="app">
         <equipmentdata :equip="{{$data['mainData']}}"></equipmentdata>
     </div>
-
+<style>
+    .shadow {
+        -webkit-box-shadow: 0px 10px 4px -2px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 10px 4px -2px rgba(0,0,0,0.75);
+        box-shadow: 0px 10px 4px -2px rgba(0,0,0,0.75);
+    }
+    .tab-pane{ padding:10px;}
+</style>
 @endsection
