@@ -2,38 +2,41 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="csrf-token" content="{{csrf_token()}}">
-<script>window.Laravel = { csrfToken: '{{csrf_token()}}' }</script>
-<link rel="icon" href="//www.csun.edu/sites/default/themes/csun/favicon.ico" type="image/x-icon">
-<script>try { Typekit.load(); } catch (e) { }</script>
-<link href="{{asset('css/app.css')}}" rel="stylesheet">
-<title>Classroom Profile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{csrf_token()}}">
+    <script>window.Laravel={csrfToken:'{{csrf_token()}}'}</script>
+    <link rel="icon" href="//www.csun.edu/sites/default/themes/csun/favicon.ico" type="image/x-icon">
+    <script>try { Typekit.load(); } catch (e) { }</script>
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <title>Classroom Profile</title>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
-      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-      crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
-      integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
-      crossorigin=""></script>
-<script>
-      document.addEventListener('keydown', logKey);
-      var lastKey;
-      function logKey(e) {
-            lastKey = `${e.code}`;
-      }
 
-      function searchRoom() {
-            //alert(lastKey);
-            var searchValue = document.getElementById("floatingSearch").value;
-            if(lastKey == 'Enter')
-            {
-                  alert("equip/" + searchValue);
-                  window.location = searchValue;
-            }
-      }
-</script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+          integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+          crossorigin=""></script>
+    <script>
+          document.addEventListener('keydown', logKey);
+          var lastKey;
+          function logKey(e) {
+                lastKey = `${e.code}`;
+          }
+
+          function searchRoom() {
+                //alert(lastKey);
+                var searchValue = document.getElementById("floatingSearch").value;
+                if(lastKey == 'Enter')
+                {
+                      alert("equip/" + searchValue);
+                      window.location = searchValue;
+                }
+          }
+    </script>
 </head>
 
 <body>
