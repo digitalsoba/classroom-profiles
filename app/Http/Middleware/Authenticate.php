@@ -21,7 +21,7 @@ class Authenticate extends Middleware
            // return url('/CsunUser');
 
         }
-        return redirect('/CsunUser');
+       // return redirect('/CsunUser');
 
     }
 }
