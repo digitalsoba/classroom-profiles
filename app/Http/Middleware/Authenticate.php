@@ -19,7 +19,7 @@ class Authenticate extends Middleware
             return $next($request);
         }
 
-        return url('/login');
+        return url('/CsunUser');
 
     }
 }
