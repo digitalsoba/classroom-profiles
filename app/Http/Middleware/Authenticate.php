@@ -16,11 +16,12 @@ class Authenticate extends Middleware
     {
         if ( Auth::check() && Auth::user() )
         {
-            return url('/CsunUser');
+            return $next($request);
+
+           // return url('/CsunUser');
 
         }
-        return $next($request);
-
+        return redirect('/CsunUser');
 
     }
 }
