@@ -25,11 +25,9 @@
           }
 
           function searchRoom() {
-                //alert(lastKey);
                 var searchValue = document.getElementById("floatingSearch").value;
                 if(lastKey == 'Enter')
                 {
-                      alert("equip/" + searchValue);
                       window.location = searchValue;
                 }
           }
