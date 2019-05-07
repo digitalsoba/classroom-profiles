@@ -1,67 +1,65 @@
 
-@extends("layout.guestPage")
+@extends("layout.csunUser")
 
 @section('content')
 
-    <!--following is map function  -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=csun&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
+    @component('layout.map', ['rooms' => [ $classroom ], 'connected' => 'false' ])
+    @endcomponent
+
 
     <div class="container nav-fill">
         <ul class="nav nav-metaphor">
             <li class="nav-item flex-fill text-center "> <a class="nav-link  " href="/CsunUser/{{$classroom}}">Equipment</a> </li>
             <li class="nav-item flex-fill text-center"> <a class="nav-link active" href="/CsunUserImage/{{$classroom}}">Images</a> </li>
-            <li class="nav-item flex-fill text-center"> <a class="nav-link active" href="/CsunUserImage/{{$classroom}}">Route</a> </li>
+            <li class="nav-item flex-fill text-center"> <a class="nav-link" href="/classschedules">Class Schedules</a></li>
         </ul>
     </div>
     <div class="container">
+        <br>
         <div class="row">
             <div class="col">
+                <br>
                 <h2 class="text-center">These are the images for the room: {{$classroom}}</h2>
             </div>
         </div>
         <br>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="">
-                        <img src="https://cdn.metalab.csun.edu/classrooms/EU103/front.jpg" alt="Lights" style="width:100%">
-                        <div class="caption">
-                        </div>
-                    </a>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://cdn.metalab.csun.edu/classrooms/EU103/exit.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://cdn.metalab.csun.edu/classrooms/EU103/exit.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://cdn.metalab.csun.edu/classrooms/EU103/media.jpg" alt="Third slide">
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="">
-                        <img src="https://cdn.metalab.csun.edu/classrooms/EU103/exit.jpg" alt="Nature" style="width:100%">
-                        <div class="caption">
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="">
-                        <img src="https://cdn.metalab.csun.edu/classrooms/EU103/media.jpg" alt="Fjords" style="width:100%">
-                        <div class="caption">
-                        </div>
-                    </a>
-                </div>
-
-            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
         {{--
                     -------------3D images--------------
         --}}
+
+        <br>
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center">This is the 3D image for the room: {{$classroom}}</h2>
+            </div>
+        </div>
+        <br>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -155,9 +153,19 @@
                 });
 
             </script>
-
         </div>
     </div>
     </div>
 
+    <div id="app">
+        <equipmentdata :equip="{{$data['mainData']}}"></equipmentdata>
+    </div>
+<style>
+    .shadow {
+        -webkit-box-shadow: 0px 10px 4px -2px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 10px 4px -2px rgba(0,0,0,0.75);
+        box-shadow: 0px 10px 4px -2px rgba(0,0,0,0.75);
+    }
+    .tab-pane{ padding:10px;}
+</style>
 @endsection
