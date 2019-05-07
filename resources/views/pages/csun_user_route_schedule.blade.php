@@ -1,6 +1,8 @@
 @extends("layout.csunUser")
 
 @section('content')
+    @component('layout.map', ['rooms' => [ ], 'connected' => 'false' ])
+    @endcomponent
 <style>
     table,
     th,
