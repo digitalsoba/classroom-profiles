@@ -1,0 +1,58 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Update the repository cache on Ubuntu
+      apt: 
+        update_cache: true
+
+    - name: Install nginx
+      apt: 
+        name: nginx
+        state: present 
+
+    - name: Copy production nginx config 
+      template:
+        src: prod.j2
+        dest: /etc/nginx/sites-available/prod
+
+    - name: Remove default syslink
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+
+    - name: Create syslink
+      file:
+        src: /etc/nginx/sites-available/prod
+        dest: /etc/nginx/sites-enabled/prod
+        state: link
+
+    - name: Install php-nginx modules
+      apt:
+        name: "{{ packages }}"
+        state: present
+        update_cache: true
+      vars:
+        packages:
+        - composer
+        - php7.2 
+        - php7.2-curl 
+        - php7.2-common 
+        - php7.2-cli 
+        - php7.2-mysql 
+        - php7.2-mbstring 
+        - php7.2-fpm 
+        - php7.2-xml 
+        - php7.2-zip 
+        - php7.2-ldap
+        - unzip
+        - zip
+
+    - name: Change php7.2-fpm cgi.fix_pathinfo=0
+      lineinfile: 
+        path: /etc/php/7.2/fpm/php.ini 
+        regexp: '^(.*)cgi.fix_pathinfo=' 
+        line: cgi.fix_pathinfo=0
+      notify: 
+      - restart php7.2-fpm
+      - enable php7.2-fpm

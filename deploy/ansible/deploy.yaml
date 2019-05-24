@@ -1,0 +1,32 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Clone master project
+      git:
+        repo: https://github.com/CSUN-Comp490/classroom-profiles.git
+        dest: /var/www/prod/laravel
+        version: master
+
+    - name: Composer install
+      composer:
+        command: install
+        working_dir: /var/www/prod/laravel
+
+    - name: Change laravel permission
+      file:
+        path: /var/www/prod/laravel
+        owner: www-data
+        group: www-data
+        recurse: yes
+
+    - name: Create symlink
+      file:
+        src: /var/www/prod/laravel/public
+        dest: /var/www/prod/public
+        state: link
+
+    - name: Restart nginx
+      service:
+        name: nginx
+        state: restarted
